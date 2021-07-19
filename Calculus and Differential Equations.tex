@@ -1,0 +1,61 @@
+\documentclass{article}
+\usepackage{template}
+
+\usepackage{chngcntr} % Reset counter within sections
+
+\counterwithin*{equation}{section}
+\counterwithin*{equation}{subsection}
+
+\pagestyle{fancy}
+\setlength\headheight{24pt}
+
+\lhead{\className}
+\rhead{\leftmark}
+\cfoot{\thepage}
+
+\newcommand{\uniTitle}{Queensland University of Technology}
+\newcommand{\className}{Calculus and Differential Equations}
+\newcommand{\classTime}{2021, Semester 2}
+\newcommand{\classInstructorName}{Vivien Challis}
+\newcommand{\authorName}{Tarang Janawalkar}
+\newcommand{\authorStudentNumber}{n11032201}
+\newcommand{\classCode}{MXB105}
+
+\usepackage[
+    type={CC},
+    modifier={by-nc-sa},
+    version={4.0},
+    imagewidth={5em},
+]{doclicense}
+
+\date{}
+
+\begin{document}
+\begin{titlepage}
+    \vspace*{\fill}
+    \begin{center}
+        \LARGE
+        \textbf{\className}
+        \texorpdfstring{\}{ }
+        \uniTitle
+        \texorpdfstring{\}{ }
+        \texorpdfstring{\vspace{0.3in}}{ }
+        \normalsize\textit{\classInstructorName}
+        \texorpdfstring{\}{ }
+        \classTime
+    \end{center}
+    \begin{center}
+        \textbf{\authorName}
+    \end{center}
+    \vspace*{\fill}
+    \doclicenseThis
+    \thispagestyle{empty}
+\end{titlepage}
+\newpage
+
+\tableofcontents
+\newpage
+
+
+
+\end{document}
