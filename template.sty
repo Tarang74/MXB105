@@ -14,7 +14,6 @@
 %% Fonts
 
 \usepackage{mathrsfs}
-\usepackage{verbdef}
 
 %% Environments 
 
@@ -76,6 +75,7 @@
 \usepackage[warnings-off={mathtools-colon, mathtools-overbracket}]{unicode-math}
 \setmathfont{Latin Modern Math}
 \setmathfont{TeX Gyre Pagella Math}[range={bb,bbit}, Scale=MatchUppercase]
+\setmathfont[range={\mathcal,\mathbfcal},StylisticSet=1]{XITS Math}
 
 %%% Preamble 
 
@@ -149,8 +149,13 @@
 
 %% Laplace Transform
 
-\newcommand{\laplace}[2]{\mathcal{L} \left\{{#1}\right} \left({#2}\right)}
-\newcommand{\invlaplace}[2]{\mathcal{L}^{-1} \left\{{#1}\right} \left({#2}\right)}
+\newcommand{\laplace}[2]{\mathcal{L} \left\{{#1}\right\} \left({#2}\right)}
+\newcommand{\invlaplace}[2]{\mathcal{L}^{-1} \left\{{#1}\right\} \left({#2}\right)}
+
+%% Fourier Transform
+
+\newcommand{\fourier}[2]{\mathcal{F} \left\{{#1}\right\} \left({#2}\right)}
+\newcommand{\invfourier}[2]{\mathcal{F}^{-1} \left\{{#1}\right\} \left({#2}\right)}
 
 %% Theorems
 

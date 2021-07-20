@@ -31,17 +31,18 @@
 \date{}
 
 \begin{document}
+
 \begin{titlepage}
     \vspace*{\fill}
     \begin{center}
         \LARGE
         \textbf{\className}
-        \texorpdfstring{\}{ }
+        \texorpdfstring{\\}{ }
         \uniTitle
-        \texorpdfstring{\}{ }
+        \texorpdfstring{\\}{ }
         \texorpdfstring{\vspace{0.3in}}{ }
         \normalsize\textit{\classInstructorName}
-        \texorpdfstring{\}{ }
+        \texorpdfstring{\\}{ }
         \classTime
     \end{center}
     \begin{center}
@@ -56,6 +57,172 @@
 \tableofcontents
 \newpage
 
+\section{Integration}
+\subsection{Derivatives}
+Let $a\in\mathbb{R}$ be a constant.
+\begin{table}[H]
+    \renewcommand*{\arraystretch}{1.5}
+    \centering
+    \begin{tabular}{>{$}c<{$} | >{$}c<{$}}
+        \toprule
+        f & \dv{f}{x} \\
+        \midrule
+        a & 0 \\
+        x^a & a x^{a-1} \\
+        a^x & \ln{\left( a \right)} a^x \\
+        \log_a{x}, \: a\in \mathbb{R}\backslash\left\{ 0 \right\} & \frac{1}{a\ln{x}} \\
+        \bottomrule
+    \end{tabular}
+    \begin{tabular}{>{$}c<{$} | >{$}c<{$}}
+        \toprule
+        f & \dv{f}{x} \\
+        \midrule
+        x & 1 \\
+        \sqrt{x} & \frac{1}{2\sqrt{x}} \\
+        \e^x & \e^x \\
+        \ln{x} & \frac{1}{x} \\
+        \bottomrule
+    \end{tabular}
+    \caption{Elementary Function Derivatives}
+\end{table}
+\begin{table}[H]
+    \renewcommand*{\arraystretch}{1.5}
+    \centering
+    \begin{tabular}{>{$}c<{$} | >{$}c<{$}}
+        \toprule
+        f & \dv{f}{x} \\
+        \midrule
+            \sin{\left( ax \right)} &  a\cos{\left( ax \right)} \\
+            \cos{\left( ax \right)} & -a\sin{\left( ax \right)} \\
+            \tan{\left( ax \right)} &  a\sec^2{\left( ax \right)} \\
+            \cot{\left( ax \right)} & -a\csc^2{\left( ax \right)} \\
+            \sec{\left( ax \right)} &  a\sec{\left( ax \right)}\tan{\left( ax \right)} \\
+            \csc{\left( ax \right)} & -a\csc{\left( ax \right)}\cot{\left( ax \right)} \\
+        \bottomrule
+    \end{tabular}
+    \begin{tabular}{>{$}c<{$} | >{$}c<{$}}
+        \toprule
+            f & \dv{f}{x} \\
+        \midrule
+            \sinh{\left( ax \right)} &  a\cosh{\left( ax \right)} \\
+            \cosh{\left( ax \right)} &  a\sinh{\left( ax \right)} \\
+            \tanh{\left( ax \right)} &  a\sech^2{\left( ax \right)} \\
+            \coth{\left( ax \right)} & -a\csch^2{\left( ax \right)} \\
+            \sech{\left( ax \right)} & -a\sech{\left( ax \right)}\tan{\left( ax \right)} \\
+            \csch{\left( ax \right)} & -a\csch{\left( ax \right)}\cot{\left( ax \right)} \\
+        \bottomrule
+    \end{tabular}
+    \caption{Trigonometric Function Derivatives}
+\end{table}
+\begin{table}[H]
+    \renewcommand*{\arraystretch}{1.5}
+    \centering
+    \begin{tabular}{>{$}c<{$} | >{$}c<{$}}
+        \toprule
+            f & \dv{f}{x} \\
+        \midrule
+            \arcsin{\left( ax \right)} &  \frac{a}{\sqrt{1-a^2x^2}} \\
+            \arccos{\left( ax \right)} & -\frac{a}{\sqrt{1-a^2x^2}} \\
+            \arctan{\left( ax \right)} &  \frac{a}{1+a^2x^2} \\
+            \arccot{\left( ax \right)} & -\frac{a}{1+a^2x^2} \\
+            \arcsec{\left( ax \right)} &  \frac{1}{x\sqrt{a^2x^2 - 1}} \\
+            \arccsc{\left( ax \right)} & -\frac{1}{x\sqrt{a^2x^2 - 1}} \\
+        \bottomrule
+    \end{tabular}
+    \begin{tabular}{>{$}c<{$} | >{$}c<{$}}
+        \toprule
+            f & \dv{f}{x} \\
+        \midrule
+            \arcsinh{\left( ax \right)} &  \frac{a}{\sqrt{1+a^2x^2}} \\
+            \arccosh{\left( ax \right)} &  \frac{a}{\sqrt{1-a^2x^2}} \\
+            \arctanh{\left( ax \right)} &  \frac{a}{1-a^2x^2} \\
+            \arccoth{\left( ax \right)} &  \frac{a}{1-a^2x^2} \\
+            \arcsech{\left( ax \right)} & -\frac{1}{a\left( 1+ax \right)\sqrt{\frac{1-ax}{1+ax}}} \\
+            \arccsch{\left( ax \right)} & -\frac{1}{ax^2\sqrt{1+\frac{1}{a^2x^2}}} \\
+        \bottomrule
+    \end{tabular}
+    \caption{Inverse Trigonometric Function Derivatives}
+\end{table}
+\subsection{Partial Fractions}
+\begin{definition}[Partial Fraction Decomposition]
+    \textbf{Partial fraction decomposition} is a \linebreak method where a rational function $\frac{P(x)}{Q(x)}$ is rewritten as a sum of fraction.
+\end{definition}
+\begin{table}[H]
+    \renewcommand*{\arraystretch}{1.5}
+    \centering
+    \begin{tabular}{c | c}
+        \toprule
+            Factor in denominator & Term in partial fraction decomposition \\
+        \midrule
+            $ax+b$ & $\frac{A}{ax+b}$ \\
+            $\left(ax+b\right)^k$ & $\frac{A_1}{ax+b} + \frac{A_2}{\left( ax+b \right)^2} + \cdots + \frac{A_k}{\left( ax+b \right)^k}, \: k \in \mathbb{N}$ \\
+            $ax^2+bx+c$ & $\frac{A}{ax^2+bx+c}$ \\
+            $\left(ax^2+bx+c\right)^k$ & $\frac{A_1x+B_1}{ax^2+bx+c} + \frac{A_2}{\left( ax+b \right)^2} + \cdots + \frac{A_k}{\left( ax+b \right)^k}, \: k \in \mathbb{N}$ \\
+        \bottomrule
+    \end{tabular}
+    \caption{Partial Fraction Forms}
+\end{table}
+\subsection{Integration by Parts}
+\begin{theorem}
+\begin{equation*}
+    \int u \dd{v} = uv - \int v \dd{u}
+\end{equation*}
+\end{theorem}
+\begin{proof}
+    \begin{align*}
+        \dv{}{x}\left( u(x)v(x) \right) &= \dv{u(x)}{x}v(x) + u(x)\dv{v(x)}{x} \\
+        u(x)\dv{v(x)}{x} &= \dv{}{x}\left( u(x)v(x) \right) - \dv{u(x)}{x}v(x) \\
+        \int u(x)\dv{v(x)}{x} \dd{x} &= \int \dv{}{x}\left( u(x)v(x) \right) \dd{x} - \int \dv{u(x)}{x}v(x) \dd{x} \\
+        \int u(x)\dd{v(x)} &= u(x)v(x) - \int v(x) \dd{u(x)}
+    \end{align*}
+\end{proof}
+\subsection{Integration by Substitution}
+\begin{theorem}
+    \begin{equation*}
+        \int f\left(g\left( x \right)\right)\dv{g(x)}{x} \dd{x} = \int f(u) \dd{u}, \: \text{where } u = g(x)
+    \end{equation*}
+\end{theorem}
+\subsection{Trigonometric Identities}
+\begin{equation*}
+    \sin^2{\left( \theta \right)} + \cos^2{\left( \theta \right)} = 1
+\end{equation*}
+\begin{equation*}
+    \tan^2{\left( \theta \right)} + 1 = \sec^2{\left( \theta \right)}
+\end{equation*}
+\begin{equation*}
+    1 + \cot^2{\left( \theta \right)} = \csc^2{\left( \theta \right)}
+\end{equation*}
 
+\subsection{Trigonometric Substitutions}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c | c | }
+        \toprule
+        
+        \midrule
+        
+        \bottomrule
+    \end{tabular}
+    % \caption{}
+    % \label{}
+\end{table}
+\newpage
+\section{Limits, Continuity and Differentiability}
+
+\newpage
+\section{Definite Integrals}
+\newpage
+\section{Taylor and Maclaurin Series}
+\newpage
+\section{Multivariable Functions}
+\newpage
+\section{Double and Triple Integrals}
+\newpage
+\section{Vector-Valued Functions}
+\newpage
+\section{First-Order Differential Equations}
+\newpage
+\section{Second-Order Differential Equations}
+\newpage
 
 \end{document}
