@@ -3,6 +3,17 @@
 
 \usepackage{chngcntr} % Reset counter within sections
 
+% Create nice frames
+\usepackage{mdframed}
+\mdfsetup{skipabove=\topskip,skipbelow=\topskip}
+\mdfdefinestyle{exampledefault}{%
+	rightline=true,
+	innerleftmargin=10,innerrightmargin=10,
+	leftmargin=20,rightmargin=20,
+	topline=false,bottomline=false,
+	frametitlefont=\bf\large
+}
+
 \counterwithin*{equation}{section}
 \counterwithin*{equation}{subsection}
 
@@ -16,7 +27,7 @@
 \newcommand{\uniTitle}{Queensland University of Technology}
 \newcommand{\className}{Calculus and Differential Equations}
 \newcommand{\classTime}{2021, Semester 2}
-\newcommand{\classInstructorName}{Vivien Challis}
+\newcommand{\classInstructorName}{Dr Vivien Challis}
 \newcommand{\authorName}{Tarang Janawalkar}
 \newcommand{\authorStudentNumber}{n11032201}
 \newcommand{\classCode}{MXB105}
@@ -203,7 +214,7 @@ Let $a\in\mathbb{R}$ be a constant.
     $\displaystyle\lim_{x\to x_0} f(x)$ exists if and only if
     $\displaystyle\lim_{x\to {x_0}^+} f(x)$ and $\displaystyle\lim_{x\to {x_0}^-} f(x)$
     exist and are equal.
-
+    
     \noindent For $f:S\to T$,
     \begin{equation*}
         I\subseteq S:\exists L\in I:\lim_{x\to x_0} f(x) = L \iff \lim_{x\to x_0^+} f(x) = \lim_{x\to x_0^-} f(x) = L
@@ -216,10 +227,8 @@ Let $a\in\mathbb{R}$ be a constant.
     then
     $\lim_{x\to x_0}\frac{f(x)}{g(x)} = \lim_{x\to x_0}\frac{f'(x)}{g'(x)}$
     (as long as the limit exists, or diverges to $\pm\infty$).
-    % \begin{equation*}
-    %     \lim_{x\to x_0} f(x) = \lim_{x\to x_0} g(x) = 0 \lor \lim_{x\to x_0} f(x) = \lim_{x\to x_0} g(x) = \pm \infty \implies \lim_{x\to x_0} \frac{f(x)}{g(x)} = \lim_{x\to x_0} \frac{f'(x)}{g'(x)}
-    % \end{equation*}
 \end{theorem}
+\subsection{Continuity}
 \begin{theorem}[Continuity at a Point]
     $f(x)$ is continuous at $c$ iff $\displaystyle \lim_{x\to c} f(x) = f(c)$.
 \end{theorem}
@@ -229,11 +238,12 @@ Let $a\in\mathbb{R}$ be a constant.
     \item $f(x)$ is continuous on $I:\left( a,\:b \right)$ if it is continuous for all $x\in I$.
     \item $f(x)$ is continuous on $I:\left[ a,\:b \right]$ if it is continuous for all $x\in I$, but only right continuous at $a$ and left continuous at $b$.
 \end{itemize}
-    If $f(x)$  is continuous on $\left(-\infty,\:\infty\right)$, $f(x)$ is continuos everywhere.
+    If $f(x)$  is continuous on $\left(-\infty,\:\infty\right)$, $f(x)$ is continuous everywhere.
 \end{theorem}
 \begin{theorem}[Intermediate Value Theorem]
     If $f(x)$ is continuous on $I:\left[ a, \: b \right]$ and $c$ is any number between $f(a)$ and $f(b)$, inclusive, then there exists an $x\in I$ such that $f(x)=c$.
 \end{theorem}
+\subsection{Differentiability}
 \begin{theorem}[Differentiability]
     $f(x)$ is differentiable at $x=x_0$ iff
     \begin{equation*}
@@ -253,7 +263,7 @@ Let $a\in\mathbb{R}$ be a constant.
 \begin{theorem}[Mean Value Theorem]
     If $f(x)$ is continuous on $I:\left[ a,\:b \right]$ and differentiable on $I$, then there exists a point $x_0\in I$ such that
     \begin{equation*}
-        f'(x_0)=\frac{f(b)-f(a)}{b-a}
+        \dv{f}{x}(x_0)=\frac{f(b)-f(a)}{b-a}
     \end{equation*}
 \end{theorem}
 \newpage
@@ -264,9 +274,21 @@ Let $a\in\mathbb{R}$ be a constant.
         A = \int_a^b f(x) \dd{x} 
     \end{equation*} 
 \end{theorem}
-Properties of Definite Integrals:
-\
-\subsection{Reimann Sums}
+\begin{figure}[H]
+	\begin{mdframed}[style=exampledefault,frametitle={Properties of Definite Integrals}]
+		\begin{theorem}
+			Suppose that $f(x)$ and $g(x)$ are continuous on the interval $I$, with $a,\:b,\:c\in I$ and $k\in\mathbb{R}$ then
+			\begin{enumerate}[label=\normalfont\alph*)]
+				\item $\displaystyle\int_a^a f(x) \dd{x} = 0$.
+				\item $\displaystyle\int_a^b f(x) \dd{x} = -\int_b^a f(x) \dd{x}$.
+				\item $\displaystyle\int_a^b kf(x) \dd{x} = k\int_a^b f(x) \dd{x}$.
+				\item $\displaystyle\int_a^b \bigl(f(x) \pm g(x)\bigr) \dd{x} = \int_a^b f(x) \dd{x} \pm \int_a^b g(x) \dd{x}$.
+				\item $\displaystyle\int_a^b f(x) \dd{x} = \int_a^c f(x) \dd{x} + \int_c^b f(x) \dd{x}$.
+			\end{enumerate}
+		\end{theorem}
+	\end{mdframed}
+\end{figure}
+\subsection{Riemann Sums}
 \begin{theorem}
     Let $A$ be the area under $f(x)$ on the interval $\left[ a,\:b \right]$, then
     \begin{equation*}
@@ -274,25 +296,65 @@ Properties of Definite Integrals:
     \end{equation*}
     where $n$ is the number of rectangles, $x_k$ is the centre of the rectangle $k$, and $\Delta x_k$ is the width of the rectangle $k$. If every rectangle has the same width, then
     \begin{equation*}
-        \Delta x_k = \frac{b-a}{n}
+        \forall k:\Delta x_k = \frac{b-a}{n}
     \end{equation*}
 \end{theorem}
+\subsection{Fundamental Theorem of Calculus}
+The fundamental theorem of calculus provides a logical connection between infinite series (definite integrals) and antiderivatives (indefinite integrals).
 \begin{theorem}[The Fundamental Theorem of Calculus: Part 1]
     If $f(x)$ is continuous on $\left[ a,\:b \right]$ and $F$ is any antiderivative of $f$ on $\left[ a,\:b \right]$ then
     \begin{equation*}
-        \int_a^b f(x)\dd{x} = F(b) - F(b)
+        \int_a^b f(x)\dd{x} = F(b) - F(a)
+    \end{equation*}
+    Equivalently
+    \begin{equation*}
+        \int_a^b \dv{x}F(x) \dd{x} = F(b) - F(a) \equiv \left.F(x)\right|_a^b
     \end{equation*}
 \end{theorem}
 \begin{theorem}[The Fundamental Theorem of Calculus: Part 2]
-    If $f(x)$ is continuous on $I$ then it has an antiderivative on $I$.
+    If $f(x)$ is continuous on $I$ then it has an antiderivative on $I$. In particular, if $a\in I$, then the function $F$ defined by
     \begin{equation*}
-        \int_a^b f(x)\dd{x} = F(b) - F(b)
+        F(x) = \int_a^x f(t)\dd{t}
+    \end{equation*}
+    is an antiderivative of $f(x)$. That is,
+    \begin{equation*}
+        \dv{x}F(x) = f(x) \iff \dv{}{x}(\int_a^x f(t) \dd{t}) = f(x)
+    \end{equation*}
+\end{theorem}
+\begin{theorem}
+    Differentiation and integration are inverse operations.
+\end{theorem}
+\newpage
+\subsection{Taylor and Maclaurin Polynomials}
+\begin{theorem}[Taylor Polynomials]
+    If $f(x)$ is a $n$ differentiable function at $x_0$, then the $n$th degree Taylor polynomial for $f(x)$ near $x_0$, is given by
+    \begin{equation*}
+        f(x) \approx P_n(x) = \sum_{k=0}^n \frac{f^{\left( k \right)}(x_0)}{k!} \left( x-x_0 \right)^k
+    \end{equation*}
+\end{theorem}
+\begin{theorem}[Maclaurin Polynomials]
+    Evaluating a Taylor polynomial near $0$, gives the $n$th degree Maclaurin polynomial for $f(x)$
+    \begin{equation*}
+        f(x) \approx P_n(x) = \sum_{k=0}^n \frac{f^{\left( k \right)}(0)}{k!} x^k
+    \end{equation*}
+\end{theorem}
+\begin{theorem}[Error in Approximation]
+    Let $R_n(x)$ denote the difference between $f(x)$ and its $n$th Taylor polynomial, that is 
+    \begin{equation*}
+        R_n(x) = f(x) - P_n(x) = f(x) - \sum_{k=0}^n \frac{f^{\left( k \right)}(x_0)}{k!} \left( x-x_0 \right)^k
     \end{equation*}
 \end{theorem}
 \newpage
 \section{Taylor and Maclaurin Series}
+
 \newpage
-\section{Multivariable Functions}
+\section{Multivariable Calculus}
+\begin{definition}
+    A function is multivariable if its domain consists of several variables. In the reals, these functions are defined
+    \begin{equation*}
+        f:\mathbb{R}^n\to\mathbb{R}
+    \end{equation*}
+\end{definition}
 \newpage
 \section{Double and Triple Integrals}
 \newpage
