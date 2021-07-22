@@ -9,5 +9,6 @@
 *.synctex(busy)
 *.synctex.gz
 *.toc
+*.vscode
 *.xdv
 *.zip
