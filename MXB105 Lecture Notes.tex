@@ -2,6 +2,7 @@
 \usepackage{template}
 
 \usepackage{chngcntr} % Reset counter within sections
+\usepackage{multicol}
 
 % Create nice frames
 \usepackage{mdframed}
@@ -10,6 +11,13 @@
 	rightline=true,
 	innerleftmargin=10,innerrightmargin=10,
 	leftmargin=20,rightmargin=20,
+	topline=false,bottomline=false,
+	frametitlefont=\bf\large
+}
+\mdfdefinestyle{exampledefaultcols}{%
+	rightline=false,leftline=true,
+	innerleftmargin=5,innerrightmargin=5,
+	leftmargin=0,rightmargin=0,
 	topline=false,bottomline=false,
 	frametitlefont=\bf\large
 }
@@ -69,39 +77,42 @@
 \newpage
 
 \section{Integration Techniques}
-\subsection{Derivatives}
-Let $a\in\mathbb{R}$ be a constant.
+\subsection{Derivative Table}
+Let $f(x)$ be a function, and $a\in\mathbb{R}$ be a constant.
 \begin{table}[H]
     \renewcommand*{\arraystretch}{1.5}
     \centering
     \begin{tabular}{>{$}c<{$} | >{$}c<{$}}
         \toprule
-        f & \dv{f}{x} \\
+            f & \dv{f}{x} \\
         \midrule
-        a & 0 \\
-        x^a & a x^{a-1} \\
-        a^x & \ln{\left( a \right)} a^x \\
-        \log_a{x}, \: a\in \mathbb{R}\backslash\left\{ 0 \right\} & \frac{1}{a\ln{x}} \\
+            x^a & a x^{a-1} \\
+            \sqrt{x} & \displaystyle \frac{1}{2\sqrt{x}} \\
+            a^x & \ln{\left( a \right)} a^x \\
+            \e^x & \e^x \\
+            \log_a{x}, \: a\in \mathbb{R}\backslash\left\{ 0 \right\} & \displaystyle \frac{1}{a\ln{x}} \\
+            \ln{x} & \displaystyle \frac{1}{x} \\
         \bottomrule
     \end{tabular}
     \begin{tabular}{>{$}c<{$} | >{$}c<{$}}
         \toprule
-        f & \dv{f}{x} \\
+            f & \dv{f}{x} \\
         \midrule
-        x & 1 \\
-        \sqrt{x} & \frac{1}{2\sqrt{x}} \\
-        \e^x & \e^x \\
-        \ln{x} & \frac{1}{x} \\
+            a & 0 \\
+            x & 1 \\
+            a_1 u(x) \pm a_2 v(x) & \displaystyle a_1\dv{u}{x} \pm a_2\dv{v}{x} \\
+            u(x)v(x) & \displaystyle \dv{u}{x}v + u\dv{v}{x} \\
+            \displaystyle \frac{u(x)}{v(x)} & \displaystyle \frac{\dv{u}{x}v - u\dv{v}{x}}{{v(x)}^2} \\
+            u\bigl( v\left( x \right) \bigr) & \displaystyle \dv{u}{v}\dv{v}{x} \\
         \bottomrule
     \end{tabular}
-    \caption{Elementary Function Derivatives}
 \end{table}
 \begin{table}[H]
     \renewcommand*{\arraystretch}{1.5}
     \centering
     \begin{tabular}{>{$}c<{$} | >{$}c<{$}}
         \toprule
-        f & \dv{f}{x} \\
+            f & \dv{f}{x} \\
         \midrule
             \sin{\left( ax \right)} &  a\cos{\left( ax \right)} \\
             \cos{\left( ax \right)} & -a\sin{\left( ax \right)} \\
@@ -109,25 +120,14 @@ Let $a\in\mathbb{R}$ be a constant.
             \cot{\left( ax \right)} & -a\csc^2{\left( ax \right)} \\
             \sec{\left( ax \right)} &  a\sec{\left( ax \right)}\tan{\left( ax \right)} \\
             \csc{\left( ax \right)} & -a\csc{\left( ax \right)}\cot{\left( ax \right)} \\
+            \arcsin{\left( ax \right)} & \displaystyle  \frac{a}{\sqrt{1-a^2x^2}} \\
+            \arccos{\left( ax \right)} & \displaystyle -\frac{a}{\sqrt{1-a^2x^2}} \\
+            \arctan{\left( ax \right)} & \displaystyle  \frac{a}{1+a^2x^2} \\
+            \arccot{\left( ax \right)} & \displaystyle -\frac{a}{1+a^2x^2} \\
+            \arcsec{\left( ax \right)} & \displaystyle  \frac{1}{x\sqrt{a^2x^2 - 1}} \\
+            \arccsc{\left( ax \right)} & \displaystyle -\frac{1}{x\sqrt{a^2x^2 - 1}} \\
         \bottomrule
     \end{tabular}
-    \begin{tabular}{>{$}c<{$} | >{$}c<{$}}
-        \toprule
-            f & \dv{f}{x} \\
-        \midrule
-            \arcsin{\left( ax \right)} &  \frac{a}{\sqrt{1-a^2x^2}} \\
-            \arccos{\left( ax \right)} & -\frac{a}{\sqrt{1-a^2x^2}} \\
-            \arctan{\left( ax \right)} &  \frac{a}{1+a^2x^2} \\
-            \arccot{\left( ax \right)} & -\frac{a}{1+a^2x^2} \\
-            \arcsec{\left( ax \right)} &  \frac{1}{x\sqrt{a^2x^2 - 1}} \\
-            \arccsc{\left( ax \right)} & -\frac{1}{x\sqrt{a^2x^2 - 1}} \\
-        \bottomrule
-    \end{tabular}
-    \caption{Trigonometric Function Derivatives}
-\end{table}
-\begin{table}[H]
-    \renewcommand*{\arraystretch}{1.5}
-    \centering
     \begin{tabular}{>{$}c<{$} | >{$}c<{$}}
         \toprule
             f & \dv{f}{x} \\
@@ -138,21 +138,15 @@ Let $a\in\mathbb{R}$ be a constant.
             \coth{\left( ax \right)} & -a\csch^2{\left( ax \right)} \\
             \sech{\left( ax \right)} & -a\sech{\left( ax \right)}\tan{\left( ax \right)} \\
             \csch{\left( ax \right)} & -a\csch{\left( ax \right)}\cot{\left( ax \right)} \\
+            \arcsinh{\left( ax \right)} & \displaystyle  \frac{a}{\sqrt{1+a^2x^2}} \\
+            \arccosh{\left( ax \right)} & \displaystyle  \frac{a}{\sqrt{1-a^2x^2}} \\
+            \arctanh{\left( ax \right)} & \displaystyle  \frac{a}{1-a^2x^2} \\
+            \arccoth{\left( ax \right)} & \displaystyle  \frac{a}{1-a^2x^2} \\
+            \arcsech{\left( ax \right)} & \displaystyle -\frac{1}{a\left( 1+ax \right)\sqrt{\frac{1-ax}{1+ax}}} \\
+            \arccsch{\left( ax \right)} & \displaystyle -\frac{1}{ax^2\sqrt{1+\frac{1}{a^2x^2}}} \\
         \bottomrule
     \end{tabular}
-    \begin{tabular}{>{$}c<{$} | >{$}c<{$}}
-        \toprule
-            f & \dv{f}{x} \\
-        \midrule
-            \arcsinh{\left( ax \right)} &  \frac{a}{\sqrt{1+a^2x^2}} \\
-            \arccosh{\left( ax \right)} &  \frac{a}{\sqrt{1-a^2x^2}} \\
-            \arctanh{\left( ax \right)} &  \frac{a}{1-a^2x^2} \\
-            \arccoth{\left( ax \right)} &  \frac{a}{1-a^2x^2} \\
-            \arcsech{\left( ax \right)} & -\frac{1}{a\left( 1+ax \right)\sqrt{\frac{1-ax}{1+ax}}} \\
-            \arccsch{\left( ax \right)} & -\frac{1}{ax^2\sqrt{1+\frac{1}{a^2x^2}}} \\
-        \bottomrule
-    \end{tabular}
-    \caption{Hyperbolic Function Derivatives}
+    \caption{Derivatives of Elementary Functions}
 \end{table}
 \subsection{Partial Fractions}
 \begin{definition}[Partial Fraction Decomposition]
@@ -195,14 +189,15 @@ Let $a\in\mathbb{R}$ be a constant.
 \end{theorem}
 \subsection{Trigonometric Substitutions}
 \begin{table}[H]
+    \renewcommand*{\arraystretch}{1.5}
     \centering
     \begin{tabular}{>{$}c<{$} | >{$}c<{$} >{$}c<{$} | >{$}c<{$}}
         \toprule
         \text{Form} & \text{Substitution} & \text{Result} & \text{Domain} \\ 
         \midrule
-        \left(a^2-b^2x^2\right)^n & x=\frac{a}{b}\sin{\left( \theta \right)} & a^2\cos^2{\left( \theta \right)} & \theta\in \left[ -\frac{\pi}{2},\: \frac{\pi}{2} \right] \\
-        \left(a^2+b^2x^2\right)^n & x=\frac{a}{b}\tan{\left( \theta \right)} & a^2\sec^2{\left( \theta \right)} & \theta\in \left( -\frac{\pi}{2},\: \frac{\pi}{2} \right) \\
-        \left(b^2x^2-a^2\right)^n & x=\frac{a}{b}\sec{\left( \theta \right)} & a^2\tan^2{\left( \theta \right)} & \theta\in \left[ 0,\: \frac{\pi}{2} \right) \cup \left(\frac{\pi}{2},\: \pi\right] \\
+        \left(a^2-b^2x^2\right)^n & \displaystyle x=\frac{a}{b}\sin{\left( \theta \right)} & a^2\cos^2{\left( \theta \right)} & \theta\in \left[ -\frac{\pi}{2},\: \frac{\pi}{2} \right] \\
+        \left(a^2+b^2x^2\right)^n & \displaystyle x=\frac{a}{b}\tan{\left( \theta \right)} & a^2\sec^2{\left( \theta \right)} & \theta\in \left( -\frac{\pi}{2},\: \frac{\pi}{2} \right) \\
+        \left(b^2x^2-a^2\right)^n & \displaystyle x=\frac{a}{b}\sec{\left( \theta \right)} & a^2\tan^2{\left( \theta \right)} & \theta\in \left[ 0,\: \frac{\pi}{2} \right) \cup \left(\frac{\pi}{2},\: \pi\right] \\
         \bottomrule
     \end{tabular}
     \caption{Trigonometric substitutions for various forms.}
@@ -251,7 +246,7 @@ Let $a\in\mathbb{R}$ be a constant.
     \end{equation*}
     exists. When this limit exists, it defines the derivative
     \begin{equation*}
-        \lim_{h\to 0} \frac{f(x_0+h)-f(x_0)}{h}
+        \dv{f(x)}{x}\vert_{x=x_0} = \lim_{h\to 0} \frac{f(x_0+h)-f(x_0)}{h}
     \end{equation*}
 \end{theorem}
 \begin{theorem}
@@ -346,7 +341,54 @@ The fundamental theorem of calculus provides a logical connection between infini
 \end{theorem}
 \newpage
 \section{Taylor and Maclaurin Series}
-
+\subsection{Infinite Series}
+\begin{definition}[Taylor Series]
+    If $f(x)$  has derivatives of all orders at $x_0$, then the Taylor series for $f(x)$ about $x=x_0$ is given by
+    \begin{equation*}
+        f(x) = \sum_{n=0}^{\infty} \frac{f^{\left( n \right)}(x_0)}{n!}\left( x-x_0 \right)^n
+    \end{equation*}
+\end{definition}
+\begin{definition}[Maclaurin Series]
+    If a Taylor series is centred on $x_0=0$, it is called a Maclaurin series, defined by
+    \begin{equation*}
+        f(x) = \sum_{n=0}^{\infty} \frac{f^{\left( n \right)}(0)}{n!} x^n
+    \end{equation*}
+\end{definition}
+\begin{definition}[Power Series]
+    Both Taylor and Maclaurin series are examples of \textbf{power series} defined as follows
+    \begin{equation*}
+        \sum_{n=0}^{\infty} c_n\left( x-x_0 \right)^n
+    \end{equation*}
+\end{definition}
+\subsection{Convergence Tests}
+For any infinite series of the form $\displaystyle\sum_{i=i_0}^\infty a_i$.
+\begin{mdframed}[style=exampledefaultcols,frametitle={Alternating Series}]
+    \textbf{Conditions} $a_i = \left( -1 \right)^i b_i$ or $a_i = \left( -1 \right)^{i+1} b_i$. $b_i>0$.
+    \begin{equation*}
+        \text{Is $b_{i+1}\leqslant b_i$ \& $\lim_{i\to\infty}b_i=0$?}\:
+        \begin{cases}
+            \text{YES} & \text{$\sum a_i$ Converges} \\
+            \text{NO} & \text{Inconclusive}
+        \end{cases}
+    \end{equation*}
+\end{mdframed}
+\begin{mdframed}[style=exampledefaultcols,frametitle={Ratio Test}]
+    \textbf{Conditions} $\forall i:a_i>0$ and $\displaystyle \lim_{i\to\infty}\frac{a_{i+1}}{a_i}\neq 1$.
+    \begin{equation*}
+        \text{Is $\lim_{i\to\infty}\frac{a_{i+1}}{a_i} < 1$?}\:
+        \begin{cases}
+            \text{YES} & \text{$\sum a_i$ Converges} \\
+            \text{NO} & \text{$\sum a_i$ Diverges}
+        \end{cases}
+    \end{equation*}
+    \begin{equation*}
+        \text{Is $\lim_{i\to\infty}\abs{\frac{a_{i+1}}{a_i}} < 1$?}\:
+        \begin{cases}
+            \text{YES} & \text{$\sum a_i$ Converges Absolutely} \\
+            \text{NO} & \text{$\sum a_i$ Diverges}
+        \end{cases}
+    \end{equation*}
+\end{mdframed}
 \newpage
 \section{Multivariable Calculus}
 \begin{definition}
