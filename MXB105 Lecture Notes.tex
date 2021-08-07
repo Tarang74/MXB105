@@ -77,7 +77,7 @@
 \newpage
 
 \section{Integration Techniques}
-\subsection{Derivative Table}
+\subsection{Table of Derivatives}
 Let $f(x)$ be a function, and $a\in\mathbb{R}$ be a constant.
 \begin{table}[H]
     \renewcommand*{\arraystretch}{1.5}
@@ -150,19 +150,19 @@ Let $f(x)$ be a function, and $a\in\mathbb{R}$ be a constant.
 \end{table}
 \subsection{Partial Fractions}
 \begin{definition}[Partial Fraction Decomposition]
-    \textbf{Partial fraction decomposition} is a \linebreak method where a rational function $\frac{P(x)}{Q(x)}$ is rewritten as a sum of fraction.
+    \textbf{Partial fraction decomposition} is a \linebreak method where a rational function $\displaystyle \frac{P(x)}{Q(x)}$ is rewritten as a sum of fraction.
 \end{definition}
 \begin{table}[H]
     \renewcommand*{\arraystretch}{1.5}
     \centering
     \begin{tabular}{c | c}
         \toprule
-            Factor in denominator & Term in partial fraction decomposition \\
+            \textbf{Factor in denominator} & \textbf{Term in partial fraction decomposition} \\
         \midrule
-            $ax+b$ & $\frac{A}{ax+b}$ \\
-            $\left(ax+b\right)^k$ & $\frac{A_1}{ax+b} + \frac{A_2}{\left( ax+b \right)^2} + \cdots + \frac{A_k}{\left( ax+b \right)^k}, \: k \in \mathbb{N}$ \\
-            $ax^2+bx+c$ & $\frac{A}{ax^2+bx+c}$ \\
-            $\left(ax^2+bx+c\right)^k$ & $\frac{A_1x+B_1}{ax^2+bx+c} + \frac{A_2}{\left( ax+b \right)^2} + \cdots + \frac{A_k}{\left( ax+b \right)^k}, \: k \in \mathbb{N}$ \\
+            $ax+b$ & $\displaystyle \frac{A}{ax+b}$ \\
+            $\left(ax+b\right)^k, \: k \in \mathbb{N}$ & $\displaystyle \frac{A_1}{ax+b} + \frac{A_2}{\left( ax+b \right)^2} + \cdots + \frac{A_k}{\left( ax+b \right)^k}$ \\
+            $ax^2+bx+c$ & $\displaystyle \frac{A}{ax^2+bx+c}$ \\
+            $\left(ax^2+bx+c\right)^k, \: k \in \mathbb{N}$ & $\displaystyle \frac{A_1x+B_1}{ax^2+bx+c} + \frac{A_2}{\left( ax+b \right)^2} + \cdots + \frac{A_k}{\left( ax+b \right)^k}$ \\
         \bottomrule
     \end{tabular}
     \caption{Partial Fraction Forms}
@@ -173,14 +173,14 @@ Let $f(x)$ be a function, and $a\in\mathbb{R}$ be a constant.
     \int u \dd{v} = uv - \int v \dd{u}
 \end{equation*}
 \end{theorem}
-\begin{proof}
-    \begin{align*}
-        \dv{}{x}\left( u(x)v(x) \right) &= \dv{u(x)}{x}v(x) + u(x)\dv{v(x)}{x} \\
-        u(x)\dv{v(x)}{x} &= \dv{}{x}\left( u(x)v(x) \right) - \dv{u(x)}{x}v(x) \\
-        \int u(x)\dv{v(x)}{x} \dd{x} &= \int \dv{}{x}\left( u(x)v(x) \right) \dd{x} - \int \dv{u(x)}{x}v(x) \dd{x} \\
-        \int u(x)\dd{v(x)} &= u(x)v(x) - \int v(x) \dd{u(x)}
-    \end{align*}
-\end{proof}
+% \begin{proof}
+%     \begin{align*}
+%         \dv{}{x}\left( u(x)v(x) \right) &= \dv{u(x)}{x}v(x) + u(x)\dv{v(x)}{x} \\
+%         u(x)\dv{v(x)}{x} &= \dv{}{x}\left( u(x)v(x) \right) - \dv{u(x)}{x}v(x) \\
+%         \int u(x)\dv{v(x)}{x} \dd{x} &= \int \dv{}{x}\left( u(x)v(x) \right) \dd{x} - \int \dv{u(x)}{x}v(x) \dd{x} \\
+%         \int u(x)\dd{v(x)} &= u(x)v(x) - \int v(x) \dd{u(x)}
+%     \end{align*}
+% \end{proof}
 \subsection{Integration by Substitution}
 \begin{theorem}
     \begin{equation*}
@@ -193,7 +193,7 @@ Let $f(x)$ be a function, and $a\in\mathbb{R}$ be a constant.
     \centering
     \begin{tabular}{>{$}c<{$} | >{$}c<{$} >{$}c<{$} | >{$}c<{$}}
         \toprule
-        \text{Form} & \text{Substitution} & \text{Result} & \text{Domain} \\ 
+        \text{\textbf{Form}} & \text{\textbf{Substitution}} & \text{\textbf{Result}} & \text{\textbf{Domain}} \\ 
         \midrule
         \left(a^2-b^2x^2\right)^n & \displaystyle x=\frac{a}{b}\sin{\left( \theta \right)} & a^2\cos^2{\left( \theta \right)} & \theta\in \left[ -\frac{\pi}{2},\: \frac{\pi}{2} \right] \\
         \left(a^2+b^2x^2\right)^n & \displaystyle x=\frac{a}{b}\tan{\left( \theta \right)} & a^2\sec^2{\left( \theta \right)} & \theta\in \left( -\frac{\pi}{2},\: \frac{\pi}{2} \right) \\
@@ -209,12 +209,12 @@ Let $f(x)$ be a function, and $a\in\mathbb{R}$ be a constant.
     $\displaystyle\lim_{x\to x_0} f(x)$ exists if and only if
     $\displaystyle\lim_{x\to {x_0}^+} f(x)$ and $\displaystyle\lim_{x\to {x_0}^-} f(x)$
     exist and are equal.
-    
-    \noindent For $f:S\to T$,
-    \begin{equation*}
-        I\subseteq S:\exists L\in I:\lim_{x\to x_0} f(x) = L \iff \lim_{x\to x_0^+} f(x) = \lim_{x\to x_0^-} f(x) = L
-    \end{equation*}
 \end{theorem}
+\begin{definition}[Finite limits using the $\varepsilon$-$\delta$ definition]
+    \begin{equation*}
+		\lim_{x\to x_0} f(x) = L \iff \forall\varepsilon>0: \exists\delta>0: \forall x \in I: 0<\abs{x-x_0}<\delta \implies \abs{f(x)-L}<\varepsilon
+	\end{equation*}
+\end{definition}
 \begin{theorem}[L'H\^opital's Rule]
     For two differentiable functions $f(x)$ and $g(x)$.
     If $\displaystyle \lim_{x\to x_0}f(x)=\lim_{x\to x_0}g(x)=0$,
@@ -246,7 +246,7 @@ Let $f(x)$ be a function, and $a\in\mathbb{R}$ be a constant.
     \end{equation*}
     exists. When this limit exists, it defines the derivative
     \begin{equation*}
-        \dv{f(x)}{x}\vert_{x=x_0} = \lim_{h\to 0} \frac{f(x_0+h)-f(x_0)}{h}
+        \dv{f}{x}\vert_{x=x_0} = \lim_{h\to 0} \frac{f(x_0+h)-f(x_0)}{h}
     \end{equation*}
 \end{theorem}
 \begin{theorem}
@@ -256,9 +256,9 @@ Let $f(x)$ be a function, and $a\in\mathbb{R}$ be a constant.
     Differentiability implies continuity.
 \end{theorem}
 \begin{theorem}[Mean Value Theorem]
-    If $f(x)$ is continuous on $I:\left[ a,\:b \right]$ and differentiable on $I$, then there exists a point $x_0\in I$ such that
+    If $f(x)$ is continuous on $I:\left[ a,\:b \right]$ and differentiable on $I$, then there exists a point $c\in I$ such that
     \begin{equation*}
-        \dv{f}{x}(x_0)=\frac{f(b)-f(a)}{b-a}
+        \dv{f}{x}\vert_{x=c}=\frac{f(b)-f(a)}{b-a}
     \end{equation*}
 \end{theorem}
 \newpage
@@ -324,20 +324,21 @@ The fundamental theorem of calculus provides a logical connection between infini
 \begin{theorem}[Taylor Polynomials]
     If $f(x)$ is a $n$ differentiable function at $x_0$, then the $n$th degree Taylor polynomial for $f(x)$ near $x_0$, is given by
     \begin{equation*}
-        f(x) \approx P_n(x) = \sum_{k=0}^n \frac{f^{\left( k \right)}(x_0)}{k!} \left( x-x_0 \right)^k
+        f(x) \approx p_n(x) = \sum_{k=0}^n \frac{f^{\left( k \right)}(x_0)}{k!} \left( x-x_0 \right)^k
     \end{equation*}
 \end{theorem}
 \begin{theorem}[Maclaurin Polynomials]
     Evaluating a Taylor polynomial near $0$, gives the $n$th degree Maclaurin polynomial for $f(x)$
     \begin{equation*}
-        f(x) \approx P_n(x) = \sum_{k=0}^n \frac{f^{\left( k \right)}(0)}{k!} x^k
+        f(x) \approx p_n(x) = \sum_{k=0}^n \frac{f^{\left( k \right)}(0)}{k!} x^k
     \end{equation*}
 \end{theorem}
 \begin{theorem}[Error in Approximation]
     Let $R_n(x)$ denote the difference between $f(x)$ and its $n$th Taylor polynomial, that is 
     \begin{equation*}
-        R_n(x) = f(x) - P_n(x) = f(x) - \sum_{k=0}^n \frac{f^{\left( k \right)}(x_0)}{k!} \left( x-x_0 \right)^k
+        R_n(x) = f(x) - p_n(x) = f(x) - \sum_{k=0}^n \frac{f^{\left( k \right)}(x_0)}{k!} \left( x-x_0 \right)^k = \frac{f^{\left( n+1 \right)}(s)}{\left( n+1 \right)!} \left( x-x_0 \right)^{n+1}
     \end{equation*}
+    where $s$ is between $x_0$ and $x$.
 \end{theorem}
 \newpage
 \section{Taylor and Maclaurin Series}
@@ -359,6 +360,21 @@ The fundamental theorem of calculus provides a logical connection between infini
     \begin{equation*}
         \sum_{n=0}^{\infty} c_n\left( x-x_0 \right)^n
     \end{equation*}
+\end{definition}
+\subsection{Convergence}
+\begin{theorem}[Convergence of a Taylor Series]
+    The equality
+    \begin{equation*}
+        f(x) = \sum_{n=0}^{\infty} \frac{f^{\left( n \right)}(x_0)}{n!} \left( x-x_0 \right)^n
+    \end{equation*}
+    holds at a point $x$ iff 
+    \begin{align*}
+        \lim_{n\to\infty} \left[ f(x) - \sum_{n=0}^{\infty} \frac{f^{\left( n \right)}(x_0)}{n!} \left( x-x_0 \right)^n \right] &= 0 \\
+        \lim_{n\to\infty} R_n(x) &= 0
+    \end{align*}
+\end{theorem}
+\begin{definition}[Interval of Convergence]
+    The interval of convergence of a power series, is the set of $x$ values for which that series converges. 
 \end{definition}
 \subsection{Convergence Tests}
 For any infinite series of the form $\displaystyle\sum_{i=i_0}^\infty a_i$.
@@ -389,14 +405,77 @@ For any infinite series of the form $\displaystyle\sum_{i=i_0}^\infty a_i$.
         \end{cases}
     \end{equation*}
 \end{mdframed}
+\subsection{Table of Maclaurin Series}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c | c | c}
+        \toprule
+        \textbf{Function} & \textbf{Series} & \textbf{Interval of Convergence} \\
+        \midrule
+        $\e^{x}$ & $\sum_{n=0}^{\infty} \frac{x^n}{n!}$ & $-\infty < x < \infty$ \\
+        $\e^{x}$ & $\sum_{n=0}^{\infty} \frac{x^n}{n!}$ & $-\infty < x < \infty$ \\
+        \bottomrule
+    \end{tabular}
+    % \caption{}
+    % \label{}
+\end{table}
 \newpage
 \section{Multivariable Calculus}
+\subsection{Multivariable Functions}
 \begin{definition}
     A function is multivariable if its domain consists of several variables. In the reals, these functions are defined
     \begin{equation*}
         f:\mathbb{R}^n\to\mathbb{R}
     \end{equation*}
 \end{definition}
+\subsection{Level Curves}
+\begin{definition}
+    Level curves or \textit{contour curves} of a function of two variables is a curve along which the function has constant value.
+    \begin{equation*}
+        L_c\left( f \right) = \left\{ \left( x,\: y \right) : f\left(x,\: y\right) = c\right\}
+    \end{equation*}
+\end{definition}
+The level curves of a function can be determined by substituting $z=c$, and solving for $y$.
+\subsection{Limits and Continuity}
+\begin{definition}[Finite Limit of Multivariable Functions using the $\varepsilon$-$\delta$ Definition]
+    \begin{align*}
+		&\lim_{(x,\: \ldots,\: x_n)\to (c_1,\: \ldots,\: c_n)} f(x_1,\: \ldots,\: x_n) = L \\ 
+        &\iff\forall\varepsilon>0: \exists\delta>0: \forall (x_1,\: \ldots,\: x_n) \in I: \\
+        &0<\abs{x_1-c_1,\: \ldots,\: x_n-c_n}<\delta \implies \abs{f(x_1,\: \ldots,\: x_n)-L}<\varepsilon
+	\end{align*}
+\end{definition}
+\begin{theorem}[Limits along Smooth Curves]
+    If $f(x,\: y) \to L$ as $(x,\: y) \to (x_0,\: y_0)$, then $\displaystyle \lim_{(x,\: y) \to (x_0,\: y_0)} = L$ along any smooth curve.
+\end{theorem}
+\begin{theorem}[Existence of a Limit]
+    If the limit of $f(x,\: y)$ fails to exist as $(x,\: y) \to (x_0,\: y_0)$ along some smooth curve, or if $f(x,\: y)$ has different limits as $(x,\: y) \to (x_0,\: y_0)$, then $\displaystyle \lim_{(x,\: y) \to (x_0,\: y_0)}$ does not exist.
+\end{theorem}
+\begin{theorem}[Continuity of Multivariable Functions]
+    A function $f(x_1,\: \ldots,\: x_n)$ is continuous at $(c_1,\: \ldots,\: c_n)$ iff
+    \begin{equation*}
+        \lim_{(x,\: \ldots,\: x_n)\to (c_1,\: \ldots,\: c_n)} f(x_1,\: \ldots,\: x_n) = f(c_1,\: \ldots,\: c_n)
+    \end{equation*}
+\end{theorem}
+Recognising continuous functions:
+\begin{itemize}
+    \item A sum, difference or product of continuous functions is continuos.
+    \item A quotient of continuous functions is continuos expect where the denominator is zero.
+    \item A composition of continuous functions is continuos.
+\end{itemize}
+\subsection{Partial Derivatives}
+\begin{definition}[Partial Differentiation]
+    The partial derivative of a multivariable function is its derivative with respect to one of those variables, while the others are held constant.
+    \begin{equation*}
+        \pdv{f}{x_i}\vert_{(c_1,\: \ldots,\: c_n)} = \lim_{h \to 0} \frac{f(x_1,\: \ldots,\: x_{i-1},\: x_i+h,\: x_{i+1},\: \ldots,\: x_n) - f(x_1,\: \ldots,\: x_i,\: \dots,\: x_n)}{h}
+    \end{equation*}
+\end{definition}
+\subsection{Multivariable Chain Rule}
+\begin{theorem}[Multivariable Chain Rule]
+    Let $f=f(\symbfit{x}(t_1,\: \ldots,\: t_n))$ be the composition of $f$ with $\symbfit{x}=\mqty[x_1 & \cdots & x_m]$, then the partial derivative of $f$ with respect to $t_i$ is given by
+    \begin{equation*}
+        \pdv{f}{t_i} = \grad{f} \vdot \partial_{t_i}\symbfit{x}
+    \end{equation*}
+\end{theorem}
 \newpage
 \section{Double and Triple Integrals}
 \newpage
