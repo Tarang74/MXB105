@@ -148,6 +148,28 @@ Let $f(x)$ be a function, and $a\in\mathbb{R}$ be a constant.
     \end{tabular}
     \caption{Derivatives of Elementary Functions}
 \end{table}
+\subsection{Trigonometric Identities}
+\subsubsection{Pythagorean Identities}
+\begin{equation*}
+	\sin^2{\left( x \right)} + \cos^2{\left( x \right)} = 1
+\end{equation*}
+Dividing by either the sine or cosine function gives:
+\begin{align*}
+	\tan^2{\left( x \right)} + 1 &= \sec^2{\left( x \right)} \\
+	1 + \cot^2{\left( x \right)} &= \csc^2{\left( x \right)}
+\end{align*}
+\subsubsection{Double-Angle Identities}
+\begin{align*}
+	\sin{\left( 2x \right)} &= 2\sin{\left( x \right)}\cos{\left( x \right)}              & \csc{\left( 2x \right)} &= \frac{\sec{\left( x \right)}\csc{\left( x \right)}}{2} \\
+	\cos{\left( 2x \right)} &= \cos^2{\left( x \right)} - \sin^2{\left( x \right)}        & \sec{\left( 2x \right)} &= \frac{\sec^2{\left( x \right)}\csc^2{\left( x \right)}}{\csc^2{\left( x \right)}-\sec^2{\left( x \right)}} \\
+	\tan{\left( 2x \right)} &= \frac{2\tan{\left( x \right)}}{1-\tan^2{\left( x \right)}} & \cot{\left( 2x \right)} &= \frac{\cot^2{\left( x \right)}-1}{2\cot{\left( x \right)}} 
+\end{align*}
+\subsubsection{Power Reducing Identities}
+\begin{align*}
+	\sin^2{\left( x \right)} &= \frac{1-\cos{\left( 2x \right)}}{2}                         & \csc^2{\left( x \right)} &= \frac{2}{1-\cos{\left( 2x \right)}} \\
+	\cos^2{\left( x \right)} &= \frac{1+\cos{\left( 2x \right)}}{2}                         & \sec^2{\left( x \right)} &= \frac{2}{1+\cos{\left( 2x \right)}} \\
+	\tan^2{\left( x \right)} &= \frac{1-\cos{\left( 2x \right)}}{1+\cos{\left( 2x \right)}} & \cot^2{\left( x \right)} &= \frac{1+\cos{\left( 2x \right)}}{1-\cos{\left( 2x \right)}}
+\end{align*}
 \subsection{Partial Fractions}
 \begin{definition}[Partial Fraction Decomposition]
     \textbf{Partial fraction decomposition} is a \linebreak method where a rational function $\displaystyle \frac{P(x)}{Q(x)}$ is rewritten as a sum of fraction.
@@ -220,8 +242,7 @@ Let $f(x)$ be a function, and $a\in\mathbb{R}$ be a constant.
     If $\displaystyle \lim_{x\to x_0}f(x)=\lim_{x\to x_0}g(x)=0$,
     or $\displaystyle \lim_{x\to x_0}f(x)=\displaystyle \lim_{x\to x_0}g(x)=\pm\infty$,
     then
-    $\lim_{x\to x_0}\frac{f(x)}{g(x)} = \lim_{x\to x_0}\frac{f'(x)}{g'(x)}$
-    (as long as the limit exists, or diverges to $\pm\infty$).
+    $\lim_{x\to x_0}\frac{f(x)}{g(x)} = \lim_{x\to x_0}\frac{f'(x)}{g'(x)}$.
 \end{theorem}
 \subsection{Continuity}
 \begin{theorem}[Continuity at a Point]
@@ -246,7 +267,7 @@ Let $f(x)$ be a function, and $a\in\mathbb{R}$ be a constant.
     \end{equation*}
     exists. When this limit exists, it defines the derivative
     \begin{equation*}
-        \dv{f}{x}\vert_{x=x_0} = \lim_{h\to 0} \frac{f(x_0+h)-f(x_0)}{h}
+        \left.\dv{f}{x}\right|_{x=x_0} = \lim_{h\to 0} \frac{f(x_0+h)-f(x_0)}{h}
     \end{equation*}
 \end{theorem}
 \begin{theorem}
@@ -258,7 +279,7 @@ Let $f(x)$ be a function, and $a\in\mathbb{R}$ be a constant.
 \begin{theorem}[Mean Value Theorem]
     If $f(x)$ is continuous on $I:\left[ a,\:b \right]$ and differentiable on $I$, then there exists a point $c\in I$ such that
     \begin{equation*}
-        \dv{f}{x}\vert_{x=c}=\frac{f(b)-f(a)}{b-a}
+        \left.\dv{f}{x}\right|_{x=c}=\frac{f(b)-f(a)}{b-a}
     \end{equation*}
 \end{theorem}
 \newpage
@@ -313,7 +334,7 @@ The fundamental theorem of calculus provides a logical connection between infini
     \end{equation*}
     is an antiderivative of $f(x)$. That is,
     \begin{equation*}
-        \dv{x}F(x) = f(x) \iff \dv{}{x}(\int_a^x f(t) \dd{t}) = f(x)
+        \dv{x}F(x) = f(x) \equiv \dv{x}\int_a^x f(t) \dd{t} = f(x)
     \end{equation*}
 \end{theorem}
 \begin{theorem}
@@ -356,7 +377,7 @@ The fundamental theorem of calculus provides a logical connection between infini
     \end{equation*}
 \end{definition}
 \begin{definition}[Power Series]
-    Both Taylor and Maclaurin series are examples of \textbf{power series} defined as follows
+    Both Taylor and Maclaurin series are examples of \textbf{power series}, which are defined as follows
     \begin{equation*}
         \sum_{n=0}^{\infty} c_n\left( x-x_0 \right)^n
     \end{equation*}
@@ -374,10 +395,23 @@ The fundamental theorem of calculus provides a logical connection between infini
     \end{align*}
 \end{theorem}
 \begin{definition}[Interval of Convergence]
-    The interval of convergence of a power series, is the set of $x$ values for which that series converges. 
+    The interval of convergence for a power series is the set of $x$ values for which that series converges. 
+\end{definition}
+\begin{definition}[Radius of Convergence]
+    The radius of convergence $R$ is a nonnegative real number or $\infty$ such that 
+    a power series converges if
+    \begin{equation*}
+        \abs{x - a} < R
+    \end{equation*}
+    and diverges if
+    \begin{equation*}
+        \abs{x - a} > R
+    \end{equation*}
+    The behaviour of the power series on the boundary, that is, where $\abs{x - a} = R$, can be determined by substituting
+    $x = R + a$ for the upper boundary, and $x = -R + a$ for the lower boundary.
 \end{definition}
 \subsection{Convergence Tests}
-For any infinite series of the form $\displaystyle\sum_{i=i_0}^\infty a_i$.
+For any power series of the form $\displaystyle\sum_{i=i_0}^\infty a_i$.
 \begin{mdframed}[style=exampledefaultcols,frametitle={Alternating Series}]
     \textbf{Conditions} $a_i = \left( -1 \right)^i b_i$ or $a_i = \left( -1 \right)^{i+1} b_i$. $b_i>0$.
     \begin{equation*}
@@ -389,21 +423,14 @@ For any infinite series of the form $\displaystyle\sum_{i=i_0}^\infty a_i$.
     \end{equation*}
 \end{mdframed}
 \begin{mdframed}[style=exampledefaultcols,frametitle={Ratio Test}]
-    \textbf{Conditions} $\forall i:a_i>0$ and $\displaystyle \lim_{i\to\infty}\frac{a_{i+1}}{a_i}\neq 1$.
     \begin{equation*}
-        \text{Is $\lim_{i\to\infty}\frac{a_{i+1}}{a_i} < 1$?}\:
+        \text{Is $\lim_{i\to\infty}\abs{\frac{a_{i+1}}{a_i}} < 1$?}\:
         \begin{cases}
             \text{YES} & \text{$\sum a_i$ Converges} \\
             \text{NO} & \text{$\sum a_i$ Diverges}
         \end{cases}
     \end{equation*}
-    \begin{equation*}
-        \text{Is $\lim_{i\to\infty}\abs{\frac{a_{i+1}}{a_i}} < 1$?}\:
-        \begin{cases}
-            \text{YES} & \text{$\sum a_i$ Converges Absolutely} \\
-            \text{NO} & \text{$\sum a_i$ Diverges}
-        \end{cases}
-    \end{equation*}
+    The ratio test is inconclusive if $\displaystyle \lim_{i\to\infty}\frac{a_{i+1}}{a_i} = 1$.
 \end{mdframed}
 \subsection{Table of Maclaurin Series}
 \begin{table}[H]
@@ -412,11 +439,13 @@ For any infinite series of the form $\displaystyle\sum_{i=i_0}^\infty a_i$.
         \toprule
         \textbf{Function} & \textbf{Series} & \textbf{Interval of Convergence} \\
         \midrule
-        $\e^{x}$ & $\sum_{n=0}^{\infty} \frac{x^n}{n!}$ & $-\infty < x < \infty$ \\
-        $\e^{x}$ & $\sum_{n=0}^{\infty} \frac{x^n}{n!}$ & $-\infty < x < \infty$ \\
+        $\e^{x}$ & $\displaystyle \sum_{n=0}^{\infty} \frac{x^n}{n!}$ & $-\infty < x < \infty$ \\
+        $\sin{\left( x \right)}$ & $\sum_{n=0}^{\infty} \frac{\left( -1 \right)^n}{\left( 2n+1 \right)!} x^{2n+1}$ & $-\infty < x < \infty$ \\
+        $\cos{\left( x \right)}$ & $\sum_{n=0}^{\infty} \frac{\left( -1 \right)^n}{\left( 2n \right)!} x^{2n}$ & $-\infty < x < \infty$ \\
+        $\frac{1}{1-x}$ & $\sum_{n=0}^{\infty} x^n$ & $-1 < x < 1$ \\
         \bottomrule
     \end{tabular}
-    % \caption{}
+    \caption{Maclaurin Series of Common Functions}
     % \label{}
 \end{table}
 \newpage
@@ -439,7 +468,7 @@ The level curves of a function can be determined by substituting $z=c$, and solv
 \subsection{Limits and Continuity}
 \begin{definition}[Finite Limit of Multivariable Functions using the $\varepsilon$-$\delta$ Definition]
     \begin{align*}
-		&\lim_{(x,\: \ldots,\: x_n)\to (c_1,\: \ldots,\: c_n)} f(x_1,\: \ldots,\: x_n) = L \\ 
+		&\lim_{(x_1,\: \ldots,\: x_n)\to (c_1,\: \ldots,\: c_n)} f(x_1,\: \ldots,\: x_n) = L \\ 
         &\iff\forall\varepsilon>0: \exists\delta>0: \forall (x_1,\: \ldots,\: x_n) \in I: \\
         &0<\abs{x_1-c_1,\: \ldots,\: x_n-c_n}<\delta \implies \abs{f(x_1,\: \ldots,\: x_n)-L}<\varepsilon
 	\end{align*}
@@ -448,12 +477,12 @@ The level curves of a function can be determined by substituting $z=c$, and solv
     If $f(x,\: y) \to L$ as $(x,\: y) \to (x_0,\: y_0)$, then $\displaystyle \lim_{(x,\: y) \to (x_0,\: y_0)} = L$ along any smooth curve.
 \end{theorem}
 \begin{theorem}[Existence of a Limit]
-    If the limit of $f(x,\: y)$ fails to exist as $(x,\: y) \to (x_0,\: y_0)$ along some smooth curve, or if $f(x,\: y)$ has different limits as $(x,\: y) \to (x_0,\: y_0)$, then $\displaystyle \lim_{(x,\: y) \to (x_0,\: y_0)}$ does not exist.
+    If the limit of $f(x,\: y)$ changes along different smooth curves, then $\displaystyle \lim_{(x,\: y) \to (x_0,\: y_0)}$ does not exist.
 \end{theorem}
 \begin{theorem}[Continuity of Multivariable Functions]
     A function $f(x_1,\: \ldots,\: x_n)$ is continuous at $(c_1,\: \ldots,\: c_n)$ iff
     \begin{equation*}
-        \lim_{(x,\: \ldots,\: x_n)\to (c_1,\: \ldots,\: c_n)} f(x_1,\: \ldots,\: x_n) = f(c_1,\: \ldots,\: c_n)
+        \lim_{(x_1,\: \ldots,\: x_n)\to (c_1,\: \ldots,\: c_n)} f(x_1,\: \ldots,\: x_n) = f(c_1,\: \ldots,\: c_n)
     \end{equation*}
 \end{theorem}
 Recognising continuous functions:
@@ -466,7 +495,14 @@ Recognising continuous functions:
 \begin{definition}[Partial Differentiation]
     The partial derivative of a multivariable function is its derivative with respect to one of those variables, while the others are held constant.
     \begin{equation*}
-        \pdv{f}{x_i}\vert_{(c_1,\: \ldots,\: c_n)} = \lim_{h \to 0} \frac{f(x_1,\: \ldots,\: x_{i-1},\: x_i+h,\: x_{i+1},\: \ldots,\: x_n) - f(x_1,\: \ldots,\: x_i,\: \dots,\: x_n)}{h}
+        \pdv{f}{x_i} = \lim_{h \to 0} \frac{f(x_1,\: \ldots,\: x_{i-1},\: x_i+h,\: x_{i+1},\: \ldots,\: x_n) - f(x_1,\: \ldots,\: x_n)}{h}
+    \end{equation*}
+\end{definition}
+\subsection{The Gradient Vector}
+\begin{definition}
+    Let $\grad$, pronounced ``del'', denote the vector differential operator defined as follows
+    \begin{equation*}
+        \grad = \mqty[\partial_{x_1} \\ \partial_{x_2} \\ \vdots \\ \partial_{x_n}]
     \end{equation*}
 \end{definition}
 \subsection{Multivariable Chain Rule}
