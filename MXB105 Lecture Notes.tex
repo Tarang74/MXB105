@@ -540,6 +540,61 @@ Recognising continuous functions:
 \end{theorem}
 \newpage
 \section{Double and Triple Integrals}
+\subsection{Double Integrals}
+\begin{theorem}
+    Divide the rectangular reigon of $R$ into $n$ rectangles with sides parallel to the coordinate axes.
+    Discard rectangles which contain any points outside of $R$.
+    Choose an arbitrary point in each remaining rectangle.
+    The area of the $k$th remaining rectangle is $\Delta A_k$.
+    The arbitrary point in the $k$th remaining rectangle is $({x_k}^\ast, {y_k}^\ast)$.
+    The Riemann sum is
+    \begin{equation*}
+        \iint\limits_{R} f(x, y)  \dd{A} = \sum_{k=1}^{\infty} f({x_k}^\ast, {y_k}^\ast) \Delta{}A_k
+    \end{equation*}
+\end{theorem}
+\begin{figure}[H]
+	\begin{mdframed}[style=exampledefault,frametitle={Properties of Double Integrals}]
+		\begin{theorem}
+            Suppose that $f(x, y) $ and $g(x, y)$ are continuous on $R$
+            and $R$ can be subdivided into $R_1$ and $R_2$then
+			\begin{enumerate}[label=\normalfont\alph*)]
+				\item $\displaystyle\iint\limits_R kf(x, y) \dd{A} = k\iint\limits_R f(x, y) \dd{A}$.
+				\item $\displaystyle\iint\limits_R \bigl(f(x, y) \pm g(x, y)\bigr) \dd{A} = \iint\limits_R f(x, y) \dd{A} \pm \iint\limits_R g(x, y) \dd{A}$.
+                \item $\displaystyle\iint\limits_R f(x, y) \dd{A} = \iint\limits_{R_1} f(x, y) \dd{A} + \iint\limits_{R_2} f(x, y) \dd{A}$.
+			\end{enumerate}
+		\end{theorem}
+	\end{mdframed}
+\end{figure}
+\subsection{Properties of Triple Integrals}
+\subsection{Triple Integrals}
+\begin{definition}
+    A triple integral is of a function is the net signed volume
+    defined over a finite closed solid reigon $G$ in an $xyz$ coordinate system.
+\end{definition}
+\begin{theorem}
+    Divide the bounding box of $G$ into $n$ boxes with sides parallel to the coordinate planes.
+    Discard boxes which contain any points outside of $G$.
+    Choose an arbitrary point in each remaining box.
+    The volume of the $k$th remaining box is $\Delta V_k$.
+    The arbitrary point in the $k$th remaining box is $({x_k}^\ast, {y_k}^\ast, {z_k}^\ast)$.
+    The Riemann sum is
+    \begin{equation*}
+        \iiint\limits_{G} f(x, y, z)  \dd{V} = \sum_{k=1}^{\infty} f({x_k}^\ast, {y_k}^\ast, {z_k}^\ast) \Delta{}V_k
+    \end{equation*}
+\end{theorem}
+\begin{figure}[H]
+	\begin{mdframed}[style=exampledefault,frametitle={Properties of Triple Integrals}]
+		\begin{theorem}
+            Suppose that $f(x, y, z) $ and $g(x, y, z)$ are continuous on $G$
+            and $G$ can be subdivided into $G_1$ and $G_2$then
+			\begin{enumerate}[label=\normalfont\alph*)]
+				\item $\displaystyle\iiint\limits_G kf(x, y, z) \dd{V} = k\iiint\limits_G f(x, y, z) \dd{V}$.
+				\item $\displaystyle\iiint\limits_G \bigl(f(x, y, z) \pm g(x, y, z)\bigr) \dd{V} = \iiint\limits_G f(x, y, z) \dd{V} \pm \iiint\limits_G g(x, y, z) \dd{V}$.
+                \item $\displaystyle\iiint\limits_G f(x, y, z) \dd{V} = \iiint\limits_{G_1} f(x, y, z) \dd{V} + \iiint\limits_{G_2} f(x, y, z) \dd{V}$.
+			\end{enumerate}
+		\end{theorem}
+	\end{mdframed}
+\end{figure}
 \newpage
 \section{Vector-Valued Functions}
 \newpage
