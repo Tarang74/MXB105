@@ -277,13 +277,18 @@ Dividing by either the sine or cosine function gives:
 \begin{theorem}[Continuity over an Interval]
     $f(x)$ is continuous on $I$ if $f(x)$ is continuous for all $x\in I$.
 \begin{itemize}
-    \item $f(x)$ is continuous on $I:\left( a,\:b \right)$ if it is continuous for all $x\in I$.
-    \item $f(x)$ is continuous on $I:\left[ a,\:b \right]$ if it is continuous for all $x\in I$, but only right continuous at $a$ and left continuous at $b$.
+    \item $f(x)$ is continuous on $I:\left( a,\:b \right)$ if it is continuous 
+        for all $x\in I$.
+    \item $f(x)$ is continuous on $I:\left[ a,\:b \right]$ if it is continuous 
+        for all $x\in I$, but only right continuous at $a$ and left continuous at $b$.
 \end{itemize}
-    If $f(x)$  is continuous on $\left(-\infty,\:\infty\right)$, $f(x)$ is continuous everywhere.
+    If $f(x)$  is continuous on $\left(-\infty,\:\infty\right)$, $f(x)$ is 
+    continuous everywhere.
 \end{theorem}
 \begin{theorem}[Intermediate Value Theorem]
-    If $f(x)$ is continuous on $I:\left[ a, \: b \right]$ and $c$ is any number between $f(a)$ and $f(b)$, inclusive, then there exists an $x\in I$ such that $f(x)=c$.
+    If $f(x)$ is continuous on $I:\left[ a, \: b \right]$ and $c$ is any number
+    between $f(a)$ and $f(b)$, inclusive, then there exists an $x\in I$ such 
+    that $f(x)=c$.
 \end{theorem}
 \subsection{Differentiability}
 \begin{theorem}[Differentiability]
@@ -297,13 +302,15 @@ Dividing by either the sine or cosine function gives:
     \end{equation*}
 \end{theorem}
 \begin{theorem}
-    $f(x)$ is differentiable on $I$ if $f(x)$ is differentiable for all $x_0\in I$.
+    $f(x)$ is differentiable on $I$ if $f(x)$ is differentiable for all 
+    $x_0\in I$.
 \end{theorem}
 \begin{theorem}
     Differentiability implies continuity.
 \end{theorem}
 \begin{theorem}[Mean Value Theorem]
-    If $f(x)$ is continuous on $I:\left[ a,\:b \right]$ and differentiable on $I$, then there exists a point $c\in I$ such that
+    If $f(x)$ is continuous on $I:\left[ a,\:b \right]$ and differentiable on 
+    $I$, then there exists a point $c\in I$ such that
     \begin{equation*}
         \left.\dv{f}{x}\right|_{x=c}=\frac{f(b)-f(a)}{b-a}
     \end{equation*}
@@ -311,7 +318,8 @@ Dividing by either the sine or cosine function gives:
 \newpage
 \section{Definite Integrals}
 \begin{theorem}
-    If $f(x)$ is continuous on an interval $I:\left[ a,\:b \right]$, then the net signed area $A$ between the graph of $f(x)$ and the interval $I$ is
+    If $f(x)$ is continuous on an interval $I:\left[ a,\:b \right]$, then the 
+    net signed area $A$ between the graph of $f(x)$ and the interval $I$ is
     \begin{equation*}
         A = \int_a^b f(x) \dd{x}
     \end{equation*}
@@ -319,7 +327,8 @@ Dividing by either the sine or cosine function gives:
 \begin{figure}[H]
 	\begin{mdframed}[style=exampledefault,frametitle={Properties of Definite Integrals}]
 		\begin{theorem}
-			Suppose that $f(x)$ and $g(x)$ are continuous on the interval $I$, with $a,\:b,\:c\in I$ and $k\in\mathbb{R}$ then
+			Suppose that $f(x)$ and $g(x)$ are continuous on the interval $I$, 
+            with $a,\:b,\:c\in I$ and $k\in\mathbb{R}$ then
 			\begin{enumerate}[label=\normalfont\alph*)]
 				\item $\displaystyle\int_a^a f(x) \dd{x} = 0$.
 				\item $\displaystyle\int_a^b f(x) \dd{x} = -\int_b^a f(x) \dd{x}$.
@@ -332,19 +341,25 @@ Dividing by either the sine or cosine function gives:
 \end{figure}
 \subsection{Riemann Sums}
 \begin{theorem}
-    Let $A$ be the area under $f(x)$ on the interval $\left[ a,\:b \right]$, then
+    Let $A$ be the area under $f(x)$ on the interval $\left[ a,\:b \right]$, 
+    then
     \begin{equation*}
         \int_a^b f(x) \dd{x} = \lim_{\max{\Delta x_k}\to 0} \sum_{k=1}^n f(x_k) \Delta x_k
     \end{equation*}
-    where $n$ is the number of rectangles, $x_k$ is the centre of the rectangle $k$, and $\Delta x_k$ is the width of the rectangle $k$. If every rectangle has the same width, then
+    where $n$ is the number of rectangles, $x_k$ is the centre of the rectangle 
+    $k$, and $\Delta x_k$ is the width of the rectangle $k$. If every rectangle 
+    has the same width, then
     \begin{equation*}
         \forall k:\Delta x_k = \frac{b-a}{n}
     \end{equation*}
 \end{theorem}
 \subsection{Fundamental Theorem of Calculus}
-The fundamental theorem of calculus provides a logical connection between infinite series (definite integrals) and antiderivatives (indefinite integrals).
+The fundamental theorem of calculus provides a logical connection between 
+infinite series (definite integrals) and antiderivatives 
+(indefinite integrals).
 \begin{theorem}[The Fundamental Theorem of Calculus: Part 1]
-    If $f(x)$ is continuous on $\left[ a,\:b \right]$ and $F$ is any antiderivative of $f$ on $\left[ a,\:b \right]$ then
+    If $f(x)$ is continuous on $\left[ a,\:b \right]$ and $F$ is any 
+    antiderivative of $f$ on $\left[ a,\:b \right]$ then
     \begin{equation*}
         \int_a^b f(x)\dd{x} = F(b) - F(a)
     \end{equation*}
@@ -354,7 +369,8 @@ The fundamental theorem of calculus provides a logical connection between infini
     \end{equation*}
 \end{theorem}
 \begin{theorem}[The Fundamental Theorem of Calculus: Part 2]
-    If $f(x)$ is continuous on $I$ then it has an antiderivative on $I$. In particular, if $a\in I$, then the function $F$ defined by
+    If $f(x)$ is continuous on $I$ then it has an antiderivative on $I$. In 
+    particular, if $a\in I$, then the function $F$ defined by
     \begin{equation*}
         F(x) = \int_a^x f(t)\dd{t}
     \end{equation*}
@@ -369,19 +385,22 @@ The fundamental theorem of calculus provides a logical connection between infini
 \newpage
 \subsection{Taylor and Maclaurin Polynomials}
 \begin{theorem}[Taylor Polynomials]
-    If $f(x)$ is a $n$ differentiable function at $x_0$, then the $n$th degree Taylor polynomial for $f(x)$ near $x_0$, is given by
+    If $f(x)$ is a $n$ differentiable function at $x_0$, then the $n$th degree 
+    Taylor polynomial for $f(x)$ near $x_0$, is given by
     \begin{equation*}
         f(x) \approx p_n(x) = \sum_{k=0}^n \frac{f^{\left( k \right)}(x_0)}{k!} \left( x-x_0 \right)^k
     \end{equation*}
 \end{theorem}
 \begin{theorem}[Maclaurin Polynomials]
-    Evaluating a Taylor polynomial near $0$, gives the $n$th degree Maclaurin polynomial for $f(x)$
+    Evaluating a Taylor polynomial near $0$, gives the $n$th degree Maclaurin 
+    polynomial for $f(x)$
     \begin{equation*}
         f(x) \approx p_n(x) = \sum_{k=0}^n \frac{f^{\left( k \right)}(0)}{k!} x^k
     \end{equation*}
 \end{theorem}
 \begin{theorem}[Error in Approximation]
-    Let $R_n(x)$ denote the difference between $f(x)$ and its $n$th Taylor polynomial, that is
+    Let $R_n(x)$ denote the difference between $f(x)$ and its $n$th Taylor 
+    polynomial, that is
     \begin{equation*}
         R_n(x) = f(x) - p_n(x) = f(x) - \sum_{k=0}^n \frac{f^{\left( k \right)}(x_0)}{k!} \left( x-x_0 \right)^k = \frac{f^{\left( n+1 \right)}(s)}{\left( n+1 \right)!} \left( x-x_0 \right)^{n+1}
     \end{equation*}
@@ -391,19 +410,22 @@ The fundamental theorem of calculus provides a logical connection between infini
 \section{Taylor and Maclaurin Series}
 \subsection{Infinite Series}
 \begin{definition}[Taylor Series]
-    If $f(x)$  has derivatives of all orders at $x_0$, then the Taylor series for $f(x)$ about $x=x_0$ is given by
+    If $f(x)$  has derivatives of all orders at $x_0$, then the Taylor series 
+    for $f(x)$ about $x=x_0$ is given by
     \begin{equation*}
         f(x) = \sum_{n=0}^{\infty} \frac{f^{\left( n \right)}(x_0)}{n!}\left( x-x_0 \right)^n
     \end{equation*}
 \end{definition}
 \begin{definition}[Maclaurin Series]
-    If a Taylor series is centred on $x_0=0$, it is called a Maclaurin series, defined by
+    If a Taylor series is centred on $x_0=0$, it is called a Maclaurin series, 
+    defined by
     \begin{equation*}
         f(x) = \sum_{n=0}^{\infty} \frac{f^{\left( n \right)}(0)}{n!} x^n
     \end{equation*}
 \end{definition}
 \begin{definition}[Power Series]
-    Both Taylor and Maclaurin series are examples of \textbf{power series}, which are defined as follows
+    Both Taylor and Maclaurin series are examples of \textbf{power series}, 
+    which are defined as follows
     \begin{equation*}
         \sum_{n=0}^{\infty} c_n\left( x-x_0 \right)^n
     \end{equation*}
@@ -421,10 +443,12 @@ The fundamental theorem of calculus provides a logical connection between infini
     \end{align*}
 \end{theorem}
 \begin{definition}[Interval of Convergence]
-    The interval of convergence for a power series is the set of $x$ values for which that series converges.
+    The interval of convergence for a power series is the set of $x$ values for 
+    which that series converges.
 \end{definition}
 \begin{definition}[Radius of Convergence]
-    The radius of convergence $R$ is a nonnegative real number or $\infty$ such that
+    The radius of convergence $R$ is a nonnegative real number or $\infty$ such 
+    that
     a power series converges if
     \begin{equation*}
         \abs{x - a} < R
@@ -433,13 +457,15 @@ The fundamental theorem of calculus provides a logical connection between infini
     \begin{equation*}
         \abs{x - a} > R
     \end{equation*}
-    The behaviour of the power series on the boundary, that is, where $\abs{x - a} = R$, can be determined by substituting
-    $x = R + a$ for the upper boundary, and $x = -R + a$ for the lower boundary.
+    The behaviour of the power series on the boundary, that is, where 
+    $\abs{x - a} = R$, can be determined by substituting $x = R + a$ for the 
+    upper boundary, and $x = -R + a$ for the lower boundary.
 \end{definition}
 \subsection{Convergence Tests}
 For any power series of the form $\displaystyle\sum_{i=i_0}^\infty a_i$.
 \begin{mdframed}[style=exampledefaultcols,frametitle={Alternating Series}]
-    \textbf{Conditions} $a_i = \left( -1 \right)^i b_i$ or $a_i = \left( -1 \right)^{i+1} b_i$. $b_i>0$.
+    \textbf{Conditions} $a_i = \left( -1 \right)^i b_i$ or 
+    $a_i = \left( -1 \right)^{i+1} b_i$. $b_i>0$.
     \begin{equation*}
         \text{Is $b_{i+1}\leqslant b_i$ \& $\lim_{i\to\infty}b_i=0$?}\:
         \begin{cases}
@@ -456,7 +482,8 @@ For any power series of the form $\displaystyle\sum_{i=i_0}^\infty a_i$.
             \text{NO} & \text{$\sum a_i$ Diverges}
         \end{cases}
     \end{equation*}
-    The ratio test is inconclusive if $\displaystyle \lim_{i\to\infty}\frac{a_{i+1}}{a_i} = 1$.
+    The ratio test is inconclusive if 
+    $\displaystyle \lim_{i\to\infty}\frac{a_{i+1}}{a_i} = 1$.
 \end{mdframed}
 \subsection{Table of Maclaurin Series}
 \begin{table}[H]
@@ -478,21 +505,25 @@ For any power series of the form $\displaystyle\sum_{i=i_0}^\infty a_i$.
 \section{Multivariable Calculus}
 \subsection{Multivariable Functions}
 \begin{definition}
-    A function is multivariable if its domain consists of several variables. In the reals, these functions are defined
+    A function is multivariable if its domain consists of several variables. In 
+    the reals, these functions are defined
     \begin{equation*}
         f:\mathbb{R}^n\to\mathbb{R}
     \end{equation*}
 \end{definition}
 \subsection{Level Curves}
 \begin{definition}
-    Level curves or \textit{contour curves} of a function of two variables is a curve along which the function has constant value.
+    Level curves or \textit{contour curves} of a function of two variables is a 
+    curve along which the function has constant value.
     \begin{equation*}
         L_c\left( f \right) = \left\{ \left( x,\: y \right) : f\left(x,\: y\right) = c\right\}
     \end{equation*}
 \end{definition}
-The level curves of a function can be determined by substituting $z=c$, and solving for $y$.
+The level curves of a function can be determined by substituting $z=c$, and 
+solving for $y$.
 \subsection{Limits and Continuity}
-\begin{definition}[Finite Limit of Multivariable Functions using the $\varepsilon$-$\delta$ Definition]
+\begin{definition}[Finite Limit of Multivariable Functions using the 
+    $\varepsilon$-$\delta$ Definition]
     \begin{align*}
 		&\lim_{(x_1,\: \ldots,\: x_n)\to (c_1,\: \ldots,\: c_n)} f(x_1,\: \ldots,\: x_n) = L \\
         &\iff\forall\varepsilon>0: \exists\delta>0: \forall (x_1,\: \ldots,\: x_n) \in I: \\
@@ -500,49 +531,158 @@ The level curves of a function can be determined by substituting $z=c$, and solv
 	\end{align*}
 \end{definition}
 \begin{theorem}[Limits along Smooth Curves]
-    If $f(x,\: y) \to L$ as $(x,\: y) \to (x_0,\: y_0)$, then $\displaystyle \lim_{(x,\: y) \to (x_0,\: y_0)} = L$ along any smooth curve.
+    If $f(x,\: y) \to L$ as $(x,\: y) \to (x_0,\: y_0)$, then 
+    $\displaystyle \lim_{(x,\: y) \to (x_0,\: y_0)} = L$ along any smooth 
+    curve.
 \end{theorem}
 \begin{theorem}[Existence of a Limit]
-    If the limit of $f(x,\: y)$ changes along different smooth curves, then $\displaystyle \lim_{(x,\: y) \to (x_0,\: y_0)}$ does not exist.
+    If the limit of $f(x,\: y)$ changes along different smooth curves, then 
+    $\displaystyle \lim_{(x,\: y) \to (x_0,\: y_0)}$ does not exist.
 \end{theorem}
 \begin{theorem}[Continuity of Multivariable Functions]
-    A function $f(x_1,\: \ldots,\: x_n)$ is continuous at $(c_1,\: \ldots,\: c_n)$ iff
+    A function $f(x_1,\: \ldots,\: x_n)$ is continuous at 
+    $(c_1,\: \ldots,\: c_n)$ iff
     \begin{equation*}
         \lim_{(x_1,\: \ldots,\: x_n)\to (c_1,\: \ldots,\: c_n)} f(x_1,\: \ldots,\: x_n) = f(c_1,\: \ldots,\: c_n)
     \end{equation*}
 \end{theorem}
 Recognising continuous functions:
 \begin{itemize}
-    \item A sum, difference or product of continuous functions is continuos.
-    \item A quotient of continuous functions is continuos expect where the denominator is zero.
-    \item A composition of continuous functions is continuos.
+    \item A sum, difference or product of continuous functions is continuous.
+    \item A quotient of continuous functions is continuous expect where the 
+        denominator is zero.
+    \item A composition of continuous functions is continuous.
 \end{itemize}
 \subsection{Partial Derivatives}
 \begin{definition}[Partial Differentiation]
-    The partial derivative of a multivariable function is its derivative with respect to one of those variables, while the others are held constant.
+    The partial derivative of a multivariable function is its derivative with 
+    respect to one of those variables, while the others are held constant.
     \begin{equation*}
         \pdv{f}{x_i} = \lim_{h \to 0} \frac{f(x_1,\: \ldots,\: x_{i-1},\: x_i+h,\: x_{i+1},\: \ldots,\: x_n) - f(x_1,\: \ldots,\: x_n)}{h}
     \end{equation*}
 \end{definition}
 \subsection{The Gradient Vector}
 \begin{definition}
-    Let $\grad$, pronounced ``del'', denote the vector differential operator defined as follows
+    Let $\symbf{\nabla}$, pronounced ``del'', denote the vector differential 
+    operator defined as follows
     \begin{equation*}
-        \grad = \mqty[\partial_{x_1} \\ \partial_{x_2} \\ \vdots \\ \partial_{x_n}]
+        \symbf{\nabla} = \mqty[\partial_{x_1} \\ \partial_{x_2} \\ \vdots \\ \partial_{x_n}]
     \end{equation*}
 \end{definition}
 \subsection{Multivariable Chain Rule}
-\begin{theorem}[Multivariable Chain Rule]
-    Let $f=f(\symbfit{x}(t_1,\: \ldots,\: t_n))$ be the composition of $f$ with $\symbfit{x}=\mqty[x_1 & \cdots & x_m]$, then the partial derivative of $f$ with respect to $t_i$ is given by
+\begin{definition}
+    Let $f=f(\symbfit{x}(t_1,\: \ldots,\: t_n))$ be the composition of $f$ with 
+    $\symbfit{x}=\mqty[x_1 & \cdots & x_m]$, then the partial derivative of $f$ 
+    with respect to $t_i$ is given by
     \begin{equation*}
-        \pdv{f}{t_i} = \grad{f} \vdot \partial_{t_i}\symbfit{x}
+        \pdv{f}{t_i} = \symbf{\nabla}f \vdot \partial_{t_i}\symbfit{x}
     \end{equation*}
+\end{definition}
+\subsection{Directional Derivatives}
+\begin{definition}
+    The directional derivative $\symbf{\nabla}_{\symbfit{u}}f$ is the rate at 
+    which the function $f$ changes in the direction $\symbfit{u}$.
+    \begin{align*}
+        \symbf{\nabla}_{\symbfit{u}}f &= \lim_{h \to 0} \frac{f(\symbfit{x} + h\symbfit{u}) - f(\symbfit{x})}{h} \\
+        &= \symbf{\nabla}f \vdot \symbfit{u}
+    \end{align*}
+    where the slope is given by $\norm{\symbf{\nabla}_{\symbfit{u}}f}$.
+\end{definition}
+\begin{remark}
+    The directional derivative of $f$ can be denoted in several ways:
+    \begin{equation*}
+        \symbf{\nabla}_{\symbfit{u}}f = D_{\symbfit{u}} f = \partial_{\symbfit{u}} f = \pdv{f}{\symbfit{u}}
+    \end{equation*}
+\end{remark}
+\begin{theorem}[Direction of Greatest Ascent]
+    The direction of greatest ascent is given by
+    \begin{equation*}
+        \max_{\norm{\symbfit{u}} = 1} \symbf{\nabla}_{\symbfit{u}}f = \symbf{\nabla}f
+    \end{equation*}
+    where the slope is given by $\norm{\symbf{\nabla}f}$.
 \end{theorem}
+\begin{theorem}[Direction of Greatest Descent]
+    The direction of greatest descent is given by
+    \begin{equation*}
+        \min_{\norm{\symbfit{u}} = 1} \symbf{\nabla}_{\symbfit{u}}f = -\symbf{\nabla}f
+    \end{equation*}
+    where the slope is given by $-\norm{\symbf{\nabla}f}$.
+\end{theorem}
+\begin{proof}
+    Given that $\symbfit{u}$ is a unit vector, the dot product definition
+    gives
+    \begin{align}
+        \symbf{\nabla}_{\symbfit{u}}f &= \symbf{\nabla}f \vdot \symbfit{u} \nonumber \\
+        &= \norm{\symbf{\nabla}f} \norm{\symbfit{u}} \cos{\left( \theta \right)} \nonumber \\
+        &= \norm{\symbf{\nabla}f} \cos{\left( \theta \right)} \label{directional_derivative}
+    \end{align}
+    \hyperref[directional_derivative]{Equation \ref{directional_derivative}} is 
+    maximised when $\cos{\left( \theta \right)}$ is maximised. Thus the 
+    maximum slope is given by
+    \begin{equation*}
+        \max \symbf{\nabla}_{\symbfit{u}}f = \norm{\symbf{\nabla}f}
+    \end{equation*}
+    and the direction of greatest ascent is given by
+    \begin{equation*}
+        \symbfit{u} = \symbf{\nabla}f
+    \end{equation*}
+\end{proof}
+\begin{theorem}[The Gradient is Normal to the Level Curves of $f$]
+    If $\symbf{\nabla}f = 0$, then $\symbf{\nabla}f$ is normal to the level 
+    curves of $f$ at any point $(c_1,\: \ldots,\: c_n)$.
+\end{theorem}
+\subsection{Higher-Order Partial Derivatives}
+\begin{definition}
+    Higher-order partial derivatives can be denoted using three different 
+    notation. The following table shows the mixed partial derivative of 
+    $f(x,\: y)$ w.r.t. $x$ then $y$. 
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{c c c}
+            \toprule
+            \textbf{Leibniz} & \textbf{Euler} & \textbf{Legendre} \\
+            \midrule
+            $\displaystyle\pdv{f}{y}{x}$ & $\partial_{x y}{f}$ & $f_{x y}$ \\
+            \bottomrule
+        \end{tabular}
+        \caption{Mixed Partial Derivative Notation}
+        % \label{}
+    \end{table}
+    For partial derivatives w.r.t. the same variable, a superscript can be used 
+    in Euler notation. 
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{c c c}
+            \toprule
+            \textbf{Leibniz} & \textbf{Euler} & \textbf{Legendre} \\
+            \midrule
+            $\displaystyle\pdv[2]{f}{x}$ & $\partial^2_{x}{f}$ & $f_{x x}$ \\
+            \bottomrule
+        \end{tabular}
+        \caption{Second-Order Partial Derivative Notation}
+        % \label{}
+    \end{table}
+\end{definition}
+\subsection{Hessian Matrix}
+\begin{definition}
+    Let the Hessian matrix $\symbf{H}$ be the matrix of second-order partial 
+    derivative operators defined as shown below
+    \begin{equation*}
+        \symbf{H} = 
+        \mqty[
+            \partial^2_{x_1} & \cdots & \partial_{x_nx_1} \\ 
+            \vdots & \ddots & \vdots \\ 
+            \partial_{x_1x_n} & \cdots & \partial^2_{x_n}
+        ]
+    \end{equation*}
+\end{definition}
+\subsection{Critical Points}
 \newpage
 \section{Double and Triple Integrals}
 \subsection{Double Integrals}
 \begin{theorem}
-    Divide the rectangular reigon of $R$ into $n$ rectangles with sides parallel to the coordinate axes.
+    Divide the rectangular region of $R$ into $n$ rectangles with sides 
+    parallel to the coordinate axes.
     Discard rectangles which contain any points outside of $R$.
     Choose an arbitrary point in each remaining rectangle.
     The area of the $k$th remaining rectangle is $\Delta A_k$.
@@ -569,7 +709,7 @@ Recognising continuous functions:
 \subsection{Triple Integrals}
 \begin{definition}
     A triple integral is of a function is the net signed volume
-    defined over a finite closed solid reigon $G$ in an $xyz$ coordinate system.
+    defined over a finite closed solid region $G$ in an $xyz$ coordinate system.
 \end{definition}
 \begin{theorem}
     Divide the bounding box of $G$ into $n$ boxes with sides parallel to the coordinate planes.
