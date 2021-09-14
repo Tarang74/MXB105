@@ -746,6 +746,55 @@ Recognising continuous functions:
 \end{figure}
 \newpage
 \section{Vector-Valued Functions}
+% Conventions:
+% Component-form vectors shall be written like $\avec{x(t),\:y(t),\:(z(t)}$
+\begin{definition}
+    A Vector-Valued Function or VVF is some function
+    with domain $\mathbb{R}$ and codomain $\mathbb{R}^n$.
+    For example, $\symbf{r}:\mathbb{R}\to\mathbb{R}^3$
+    is a VVF with $\symbf{r}(t)=\avec{x(t),\:y(t),\:(z(t)}$ where
+    $x,\:y,\:z: \mathbb{R}\to\mathbb{R}$.
+\end{definition}
+\begin{theorem}
+    The domain of $\symbf{r}(t)$ is the intersection of the domains
+    of its components.
+\end{theorem}
+\begin{definition}[Orientation]
+    The orientation of $\symbf{r}(t)$ is the direction of increasing parameter ($t$).
+\end{definition}
+\begin{theorem}[Limits of VVFs]
+    The limit of a VFF is the vector of the limits of its components.
+    E.g. $\lim_{x\to{}a} \symbf{r}(t)
+    = \avec{\lim_{x\to{}a}x(t),\:\lim_{x\to{}a}y(t),\:\lim_{x\to{}a}z(t)}$
+\end{theorem}
+\begin{theorem}[Derivatives of VVFs]
+    The derivative of a VFF is the vector of the derivatives of its components.
+    For example, $\symbf{r'}(t) = \avec{x'(t),\:y'(t),\:z'(t)}$
+\end{theorem}
+\begin{theorem}[Integration of VVFs]
+    The integral of a VFF is the vector of the integrals of its components.
+    E.g. $\int\symbf{r}(t)\dd{t}
+    = \avec{\int x(t) \dd{t},\:\int y(t) \dd{t},\:\int z(t) \dd{t}}$
+\end{theorem}
+\begin{remark}
+    When integrating a VVF, each component has its own constant of integration.
+\end{remark}
+\begin{definition}[VVF of a Line]
+    A line can be determined by a point which it passes through, $\symbfit{P_0}$
+    and a vector the line is parallel to, $\symbfit{v}$.
+    The VVF of a line can be written as $\symbf{r}(t)=\symbfit{P_0}+t\symbfit{v}$.
+\end{definition}
+\begin{definition}[Tangent Line of a VVF]
+    When some VVF $\symbf{r}(t)$ is differentiable at
+    $t_0$ and $\symbf{r'}(t_0)\ne\symbfit{0}$, the tangent line of $\symbf{r}(t)$
+    is $\symbf{l}(t) = \symbf{r}(t_0)+t\symbf{r'}(t_0)$.
+\end{definition}
+\begin{definition}[Arc Length of a VVF]
+    The arc length $S$ of some VVF $\symbf{r}(t)$ is the distance along $\symbf{r}(t)$
+    between two points where $t=a$ and $t=b$ and the curve is smooth (defined and nonzero).
+    The arc length is given by
+    \[ S = \int_a^b||\:\symbf{r'}(t)\:||\dd{t} \]
+\end{definition}
 \newpage
 \section{First-Order Differential Equations}
 \newpage
