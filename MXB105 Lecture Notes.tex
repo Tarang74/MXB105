@@ -1,4 +1,4 @@
-%!TEX program = xelatex
+
 \documentclass{article}
 \usepackage{template}
 
@@ -340,7 +340,7 @@ Dividing by either the sine or cosine function gives:
 	\end{mdframed}
 \end{figure}
 \subsection{Riemann Sums}
-\begin{theorem}
+\begin{theorem}\label{theorem:1d_riemann_sums}
     Let $A$ be the area under $f(x)$ on the interval $\left[ a,\:b \right]$,
     then
     \begin{equation*}
@@ -525,9 +525,9 @@ solving for $y$.
 \begin{definition}[Finite Limit of Multivariable Functions using the
     $\varepsilon$-$\delta$ Definition]
     \begin{align*}
-		&\lim_{(x_1,\: \ldots,\: x_n)\to (c_1,\: \ldots,\: c_n)} f(x_1,\: \ldots,\: x_n) = L \\
+		\lim_{(x_1,\: \ldots,\: x_n)\to (c_1,\: \ldots,\: c_n)} f(x_1,\: \ldots,\: x_n) = L
         &\iff\forall\varepsilon>0: \exists\delta>0: \forall (x_1,\: \ldots,\: x_n) \in I: \\
-        &0<\abs{x_1-c_1,\: \ldots,\: x_n-c_n}<\delta \implies \abs{f(x_1,\: \ldots,\: x_n)-L}<\varepsilon
+        0<\abs{x_1-c_1,\: \ldots,\: x_n-c_n}<\delta &\implies \abs{f(x_1,\: \ldots,\: x_n)-L}<\varepsilon
 	\end{align*}
 \end{definition}
 \begin{theorem}[Limits along Smooth Curves]
@@ -571,7 +571,7 @@ Recognising continuous functions:
 \end{definition}
 \subsection{Multivariable Chain Rule}
 \begin{definition}
-    Let $f=f(\symbfit{x}(t_1,\: \ldots,\: t_n))$ be the composition of $f$ with
+    Let $f=f\bigl(\symbfit{x}(t_1,\: \ldots,\: t_n)\bigr)$ be the composition of $f$ with
     $\symbfit{x}=\mqty[x_1 & \cdots & x_m]$, then the partial derivative of $f$
     with respect to $t_i$ is given by
     \begin{equation*}
@@ -627,7 +627,7 @@ Recognising continuous functions:
         \symbfit{u} = \symbf{\nabla}f
     \end{equation*}
 \end{proof}
-\begin{theorem}[The Gradient is Normal to the Level Curves of $f$]
+\begin{theorem}
     If $\symbf{\nabla}f = 0$, then $\symbf{\nabla}f$ is normal to the level
     curves of $f$ at any point $(c_1,\: \ldots,\: c_n)$.
 \end{theorem}
@@ -679,33 +679,47 @@ Recognising continuous functions:
 \subsection{Critical Points}
 \newpage
 \section{Double and Triple Integrals}
-\subsection{Double Integrals}
-\begin{theorem}
-    Divide the rectangular region of $R$ into $n$ rectangles with sides
-    parallel to the coordinate axes.
-    Discard rectangles which contain any points outside of $R$.
-    Choose an arbitrary point in each remaining rectangle.
-    The area of the $k$th remaining rectangle is $\Delta A_k$.
-    The arbitrary point in the $k$th remaining rectangle is
-    $({x_k}^\ast,\: {y_k}^\ast)$.
-    The Riemann sum is
+\subsection{Volume under a Two Variable Function}
+\begin{definition}
+    If $f$ is a function of two variables that is continuous and nonnegative 
+    on a region $\Omega$ in the $xy$-plane, then the volume of the solid 
+    enclosed between the surface $z=f(x,\: y)$ and the region $\Omega$ is 
+    defined by
+    \begin{equation}\label{eq:volume_under_2d_function}
+        V = \lim_{n \to \infty} \sum_{k = 1}^n f({x_k}^\ast,\: {y_k}^\ast) \Delta A_k
+    \end{equation}
+\end{definition}
+\begin{proof}
+    Using lines parallel to the coordinate axes, the region $\Omega$ can be divided 
+    into $n$ rectangles, where any rectangles outside $\Omega$ are discarded.
+    The area of the $k$th remaining rectangle at the arbitrary point $({x_k}^\ast,\: {y_k}^\ast)$ 
+    is given by $\Delta A_k$. Thus the product $f({x_k}^\ast,\: {y_k}^\ast)\Delta A_k$ is the
+    volume of the $k$th rectangular parallelepiped, and the sum of all $n$ volumes over
+    the region $\Omega$ approximate the volume $V$ of the entire solid.
+\end{proof}
+\subsection{Double Integral}
+\begin{definition}
+    By extension of the definite integral of a one variable function expressed in 
+    \hyperref[theorem:1d_riemann_sums]{Theorem \ref{theorem:1d_riemann_sums}}, the sums in 
+    \hyperref[eq:volume_under_2d_function]{Equation \ref{eq:volume_under_2d_function}} 
+    are also called Riemann sums, and the limit is denoted as
     \begin{equation*}
-        \iint\limits_{R} f(x,\: y)  \dd{A}
-        = \sum_{k=1}^{\infty} f({x_k}^\ast,\: {y_k}^\ast) \Delta{}A_k
+        \iint\limits_{\Omega} f(x,\: y)  \dd{A}
+        = \sum_{k=1}^{\infty} f({x_k}^\ast,\: {y_k}^\ast) \Delta A_k
     \end{equation*}
-\end{theorem}
+\end{definition}
 \begin{figure}[H]
 	\begin{mdframed}[style=exampledefault,frametitle={Properties of Double Integrals}]
 		\begin{theorem}
-            Suppose that $f(x,\: y) $ and $g(x,\: y)$ are continuous on $R$
-            and $R$ can be subdivided into $R_1$ and $R_2$then
+            Suppose that $f(x,\: y) $ and $g(x,\: y)$ are continuous on $\Omega$,
+            and $\Omega$ can be subdivided into $\Omega_1$ and $\Omega_2$, then
 			\begin{enumerate}[label=\normalfont\alph*)]
-				\item $\displaystyle\iint\limits_R kf(x,\: y) \dd{A}
-                    = k\iint\limits_R f(x,\: y) \dd{A}$.
-				\item $\displaystyle\iint\limits_R \bigl(f(x,\: y) + g(x,\: y)\bigr) \dd{A}
-                    = \iint\limits_R f(x,\: y) \dd{A} + \iint\limits_R g(x,\: y) \dd{A}$.
-                \item $\displaystyle\iint\limits_R f(x,\: y) \dd{A}
-                    = \iint\limits_{R_1} f(x,\: y) \dd{A} + \iint\limits_{R_2} f(x,\: y) \dd{A}$.
+				\item $\displaystyle\iint\limits_\Omega kf(x,\: y) \dd{A}
+                    = k\iint\limits_\Omega f(x,\: y) \dd{A}$.
+				\item $\displaystyle\iint\limits_\Omega \bigl(f(x,\: y) + g(x,\: y)\bigr) \dd{A}
+                    = \iint\limits_\Omega f(x,\: y) \dd{A} + \iint\limits_\Omega g(x,\: y) \dd{A}$.
+                \item $\displaystyle\iint\limits_\Omega f(x,\: y) \dd{A}
+                    = \iint\limits_{\Omega_1} f(x,\: y) \dd{A} + \iint\limits_{\Omega_2} f(x,\: y) \dd{A}$.
 			\end{enumerate}
 		\end{theorem}
 	\end{mdframed}
@@ -749,56 +763,105 @@ Recognising continuous functions:
 % Conventions:
 % Component-form vectors shall be written like $\avec{x(t),\:y(t),\:(z(t)}$
 \begin{definition}
-    A Vector-Valued Function or VVF is some function
+    A vector-valued function (VVF) is some function
     with domain $\mathbb{R}$ and codomain $\mathbb{R}^n$.
-    For example, $\symbf{r}:\mathbb{R}\to\mathbb{R}^3$
-    is a VVF with $\symbf{r}(t)=\avec{x(t),\:y(t),\:(z(t)}$ where
-    $x,\:y,\:z: \mathbb{R}\to\mathbb{R}$.
+    For example, 
+    \begin{equation*}
+        \symbf{r}:\mathbb{R}\to\mathbb{R}^3
+        :\symbf{r}(t)=\avec[\big]{x(t),\: y(t),\: z(t)}
+    \end{equation*}
+    is a vector-valued function where $x,\:y,\:z: \mathbb{R}\to\mathbb{R}$.
 \end{definition}
 \begin{theorem}
     The domain of $\symbf{r}(t)$ is the intersection of the domains
     of its components.
 \end{theorem}
 \begin{definition}[Orientation]
-    The orientation of $\symbf{r}(t)$ is the direction of increasing parameter ($t$).
+    The orientation of $\symbf{r}(t)$ is the direction of motion along the 
+    curve as the value of the parameter increases.
 \end{definition}
+\subsection{Limits and Continuity}
 \begin{theorem}[Limits of VVFs]
     The limit of a VFF is the vector of the limits of its components.
-    E.g. $\lim_{x\to{}a} \symbf{r}(t)
-    = \avec{\lim_{x\to{}a}x(t),\:\lim_{x\to{}a}y(t),\:\lim_{x\to{}a}z(t)}$
+    \begin{equation*}
+        \lim_{t\to a} \symbf{r}(t)
+        = \avec[\big]{\lim_{t\to a} x(t),\: \lim_{t\to a} y(t),\: \lim_{t\to a} z(t)}
+    \end{equation*}
 \end{theorem}
+\begin{theorem}[Continuity of VVFs]
+    The VVF $\symbf{r}(t)$ is continuous at $t=a$ iff 
+    \begin{equation*}
+        \lim_{t\to a} \symbf{r}(t) = \symbf{r}(a).
+    \end{equation*}
+    This follows that a VVF is continuous if each of its components are also continuous. 
+\end{theorem}
+\subsection{Calculus with VVFs}
 \begin{theorem}[Derivatives of VVFs]
     The derivative of a VFF is the vector of the derivatives of its components.
-    For example, $\symbf{r'}(t) = \avec{x'(t),\:y'(t),\:z'(t)}$
+    \begin{equation*}
+        \dv{t}\symbf{r}(t) = \avec[\Big]{\dv{t}x(t),\: \dv{t}y(t),\: \dv{t}z(t)}
+    \end{equation*}
 \end{theorem}
 \begin{theorem}[Integration of VVFs]
     The integral of a VFF is the vector of the integrals of its components.
-    E.g. $\int\symbf{r}(t)\dd{t}
-    = \avec{\int x(t) \dd{t},\:\int y(t) \dd{t},\:\int z(t) \dd{t}}$
+    \begin{equation*}
+        \int\symbf{r}(t)\dd{t}
+        = \avec[\Bigg]{\int x(t) \dd{t},\: \int y(t) \dd{t},\: \int z(t) \dd{t}}
+    \end{equation*}
 \end{theorem}
 \begin{remark}
     When integrating a VVF, each component has its own constant of integration.
 \end{remark}
-\begin{definition}[VVF of a Line]
-    A line can be determined by a point which it passes through, $\symbfit{P_0}$
-    and a vector the line is parallel to, $\symbfit{v}$.
-    The VVF of a line can be written as $\symbf{r}(t)=\symbfit{P_0}+t\symbfit{v}$.
+\subsection{Parametrising Lines with VVFs}
+\begin{definition}[Equation for a Line]
+    A line can be expressed as
+    \begin{equation*}
+        \symbf{l}(t) = \symbfit{P}_0 + t\symbfit{v}
+    \end{equation*}
+    where the line $\symbf{l}(t)$ passes through the point $\symbfit{P}_0$, and is parallel to the vector $\symbfit{v}$.
 \end{definition}
-\begin{definition}[Tangent Line of a VVF]
-    When some VVF $\symbf{r}(t)$ is differentiable at
-    $t_0$ and $\symbf{r'}(t_0)\ne\symbfit{0}$, the tangent line of $\symbf{r}(t)$
-    is $\symbf{l}(t) = \symbf{r}(t_0)+t\symbf{r'}(t_0)$.
+\begin{definition}[Tangent Lines]
+    If a VVF $\symbf{r}(t)$ is differentiable at
+    $t_0$ and $\symbf{r'}(t_0)\ne\symbf{0}$, the tangent line at 
+    $t=t_0$ is given by
+    \begin{equation*}
+        \symbf{l}(t) = \symbf{r}(t_0)+t\symbf{r'}(t_0).
+    \end{equation*}
 \end{definition}
-\begin{definition}[Arc Length of a VVF]
-    The arc length $S$ of some VVF $\symbf{r}(t)$ is the distance along $\symbf{r}(t)$
-    between two points where $t=a$ and $t=b$ and the curve is smooth (defined and nonzero).
-    The arc length is given by
-    \[ S = \int_a^b||\:\symbf{r'}(t)\:||\dd{t} \]
+\begin{remark}
+    Higher-order approximations can be determined using Taylor's formula.
+\end{remark}
+\subsection{Applications of VVFs}
+\begin{theorem}[Curve of Intersection]
+    A VVF can be used to determine the curve of intersection between two 
+    surfaces. The method is to choose one of the variables (commonly the first)
+    as the parameter, and express the remaining variables in terms of that parameter. 
+
+    If the intersection is bounded between two points, the domain can be
+    calculated using the component which was parametrised.
+
+    For example, the curve of intersection between 
+    \begin{align*}
+        y = 2x - 4 \quad \text{and} \quad z = 3x - 1
+    \end{align*}
+    between the points 
+    \begin{align*}
+        \symbfit{P}_1 = (2,\: 0,\: 7) \quad \text{and} \quad \symbfit{P}_2 = (3,\: 2,\: 10)
+    \end{align*}
+    is given by 
+    \begin{equation*}
+        \symbf{r}(t) = \avec[\big]{t,\: 2t - 4,\: 3t - 1} : 2 \leq t \leq 3.
+    \end{equation*}
+\end{theorem}
+\begin{definition}[Arc Length]
+    The arc length $S$ of a smooth continuous VVF $\symbf{r}(t)$, is the distance along $\symbf{r}(t)$
+    between $t=a$ and $t=b$, defined by
+    \begin{equation*}
+        S = \int_a^b \norm{\dv{t}\symbf{r}(t)} \dd{t}
+    \end{equation*}
 \end{definition}
 \newpage
 \section{First-Order Differential Equations}
 \newpage
 \section{Second-Order Differential Equations}
-\newpage
-
 \end{document}
