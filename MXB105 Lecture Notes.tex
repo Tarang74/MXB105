@@ -570,7 +570,7 @@ Recognising continuous functions:
     $\symbfit{x}=\mqty[x_1 & \cdots & x_m]$, then the partial derivative of $f$
     with respect to $t_i$ is given by
     \begin{equation*}
-        \pdv{f}{t_i} = \symbf{\nabla}f \vdot \partial_{t_i}\symbfit{x}
+        \pdv{f}{t_i} = \symbf{\nabla}f \cdot \partial_{t_i}\symbfit{x}
     \end{equation*}
 \end{definition}
 \subsection{Directional Derivatives}
@@ -579,7 +579,7 @@ Recognising continuous functions:
     which the function $f$ changes in the direction $\symbfit{u}$.
     \begin{align*}
         \symbf{\nabla}_{\symbfit{u}}f &= \lim_{h \to 0} \frac{f(\symbfit{x} + h\symbfit{u}) - f(\symbfit{x})}{h} \\
-        &= \symbf{\nabla}f \vdot \symbfit{u}
+        &= \symbf{\nabla}f \cdot \symbfit{u}
     \end{align*}
     where the slope is given by $\norm{\symbf{\nabla}_{\symbfit{u}}f}$.
 \end{definition}
@@ -607,7 +607,7 @@ Recognising continuous functions:
     Given that $\symbfit{u}$ is a unit vector, the dot product definition
     gives
     \begin{align}
-        \symbf{\nabla}_{\symbfit{u}}f &= \symbf{\nabla}f \vdot \symbfit{u} \nonumber \\
+        \symbf{\nabla}_{\symbfit{u}}f &= \symbf{\nabla}f \cdot \symbfit{u} \nonumber \\
         &= \norm{\symbf{\nabla}f} \norm{\symbfit{u}} \cos{\left( \theta \right)} \nonumber \\
         &= \norm{\symbf{\nabla}f} \cos{\left( \theta \right)} \label{directional_derivative}
     \end{align}
@@ -670,8 +670,32 @@ Recognising continuous functions:
             \partial_{x_1x_n} & \cdots & \partial^2_{x_n}
         ]
     \end{equation*}
+    Operating on the function $f(x,\: y)$ gives
+    \begin{equation*}
+        \symbf{H}_f =
+        \mqty[
+            \partial^2_{x_1}f & \cdots & \partial_{x_nx_1}f \\
+            \vdots & \ddots & \vdots \\
+            \partial_{x_1x_n}f & \cdots & \partial^2_{x_n}f
+        ]
+    \end{equation*}
 \end{definition}
 \subsection{Critical Points}
+For the function $f(x,\: y)$, the point $(x_0,\: y_0)$ is a critical point if
+\begin{equation*}
+    f_x(x_0,\: y_0) \quad \text{and} \quad f_y(x_0,\: y_0).
+\end{equation*}
+\subsection{Classification of Critical Points}
+The nature of a critical point can be classified using the second derivative test:
+\begin{itemize}
+    \item if $\left.\det{\left(\mathbf{H}_f\right)}\right|_{(x_0,\: y_0)} > 0$, then the point is a local minima or maxima 
+    \begin{itemize}
+        \item if $f_{xx}(x_0, \: y_0) < 0$, then the point is a local maxima
+        \item if $f_{xx}(x_0, \: y_0) > 0$, then the point is a local minima\footnote[1]{For the local minima/maxima, the second derivative can also be taken w.r.t. $y$.}
+    \end{itemize}
+    \item if $\left.\det{\left(\mathbf{H}_f\right)}\right|_{(x_0,\: y_0)} < 0$, then the point is a saddle point
+    \item if $\left.\det{\left(\mathbf{H}_f\right)}\right|_{(x_0,\: y_0)} = 0$, then the test is inconclusive.
+\end{itemize}
 \newpage
 \section{Double and Triple Integrals}
 \subsection{Volume under a Two Variable Function}
@@ -681,14 +705,14 @@ Recognising continuous functions:
     enclosed between the surface $z=f(x,\: y)$ and the region $\Omega$ is 
     defined by
     \begin{equation}\label{eq:volume_under_2d_function}
-        V = \lim_{n \to \infty} \sum_{k = 1}^n f({x_k}^\ast,\: {y_k}^\ast) \Delta A_k
+        V = \lim_{n \to \infty} \sum_{k = 1}^n f(x_k^\ast,\: y_k^\ast) \Delta A_k
     \end{equation}
 \end{definition}
 \begin{proof}
     Using lines parallel to the coordinate axes, the region $\Omega$ can be divided 
     into $n$ rectangles, where any rectangles outside $\Omega$ are discarded.
-    The area of the $k$th remaining rectangle at the arbitrary point $({x_k}^\ast,\: {y_k}^\ast)$ 
-    is given by $\Delta A_k$. Thus the product $f({x_k}^\ast,\: {y_k}^\ast)\Delta A_k$ is the
+    The area of the $k$th remaining rectangle at the arbitrary point $(x_k^\ast,\: y_k^\ast)$ 
+    is given by $\Delta A_k$. Thus the product $f(x_k^\ast,\: y_k^\ast)\Delta A_k$ is the
     volume of the $k$th rectangular parallelepiped, and the sum of all $n$ volumes over
     the region $\Omega$ approximate the volume $V$ of the entire solid.
 \end{proof}
@@ -700,7 +724,7 @@ Recognising continuous functions:
     are also called Riemann sums, and the limit is denoted as
     \begin{equation*}
         \iint\limits_{\Omega} f(x,\: y)  \dd{A}
-        = \sum_{k=1}^{\infty} f({x_k}^\ast,\: {y_k}^\ast) \Delta A_k
+        = \sum_{k=1}^{\infty} f(x_k^\ast,\: y_k^\ast) \Delta A_k
     \end{equation*}
 \end{definition}
 \begin{figure}[H]
@@ -711,7 +735,7 @@ Recognising continuous functions:
 			\begin{enumerate}[label=\normalfont\alph*)]
 				\item $\displaystyle\iint\limits_\Omega kf(x,\: y) \dd{A}
                     = k\iint\limits_\Omega f(x,\: y) \dd{A}$.
-				\item $\displaystyle\iint\limits_\Omega \bigl(f(x,\: y) + g(x,\: y)\bigr) \dd{A}
+				\item $\displaystyle\iint\limits_\Omega f(x,\: y) + g(x,\: y) \dd{A}
                     = \iint\limits_\Omega f(x,\: y) \dd{A} + \iint\limits_\Omega g(x,\: y) \dd{A}$.
                 \item $\displaystyle\iint\limits_\Omega f(x,\: y) \dd{A}
                     = \iint\limits_{\Omega_1} f(x,\: y) \dd{A} + \iint\limits_{\Omega_2} f(x,\: y) \dd{A}$.
@@ -719,6 +743,9 @@ Recognising continuous functions:
 		\end{theorem}
 	\end{mdframed}
 \end{figure}
+\subsection{Regions}
+\subsubsection{Type I Regions} 
+\subsubsection{Type II Regions} 
 \subsection{Triple Integrals}
 \begin{definition}
     A triple integral is of a function is the net signed volume
@@ -734,21 +761,21 @@ Recognising continuous functions:
     The Riemann sum is
     \begin{equation*}
         \iiint\limits_{G} f(x,\: y,\: z)  \dd{V}
-        = \sum_{k=1}^{\infty} f({x_k}^\ast,\: {y_k}^\ast,\: {z_k}^\ast) \Delta{}V_k
+        = \sum_{k=1}^{\infty} f(x_k^\ast,\: y_k^\ast,\: z_k^\ast) \Delta V_k
     \end{equation*}
 \end{theorem}
 \begin{figure}[H]
 	\begin{mdframed}[style=exampledefault,frametitle={Properties of Triple Integrals}]
 		\begin{theorem}
-            Suppose that $f(x,\: y,\: z) $ and $g(x,\: y,\: z)$ are continuous on $G$
-            and $G$ can be subdivided into $G_1$ and $G_2$then
+            Suppose that $f(x,\: y,\: z) $ and $g(x,\: y,\: z)$ are continuous on $\Omega$
+            and $\Omega$ can be subdivided into $\Omega_1$ and $\Omega_2$ then
 			\begin{enumerate}[label=\normalfont\alph*)]
-				\item $\displaystyle\iiint\limits_G kf(x,\: y,\: z) \dd{V}
-                    = k\iiint\limits_G f(x,\: y,\: z) \dd{V}$.
+				\item $\displaystyle\iiint\limits_\Omega kf(x,\: y,\: z) \dd{V}
+                    = k\iiint\limits_\Omega f(x,\: y,\: z) \dd{V}$.
 				\item $\displaystyle\iiint\limits_G \bigl(f(x,\: y,\: z) + g(x,\: y,\: z)\bigr) \dd{V}
-                    = \iiint\limits_G f(x,\: y,\: z) \dd{V} + \iiint\limits_G g(x,\: y,\: z) \dd{V}$.
+                    = \iiint\limits_\Omega f(x,\: y,\: z) \dd{V} + \iiint\limits_G g(x,\: y,\: z) \dd{V}$.
                 \item $\displaystyle\iiint\limits_G f(x,\: y,\: z) \dd{V}
-                    = \iiint\limits_{G_1} f(x,\: y,\: z) \dd{V} + \iiint\limits_{G_2} f(x,\: y,\: z) \dd{V}$.
+                    = \iiint\limits_{\Omega_1} f(x,\: y,\: z) \dd{V} + \iiint\limits_{\Omega_2} f(x,\: y,\: z) \dd{V}$.
 			\end{enumerate}
 		\end{theorem}
 	\end{mdframed}
@@ -886,7 +913,7 @@ Recognising continuous functions:
 \end{definition}
 \subsection{Qualitative Analysis}
 With qualitative analysis we aim to understand the behaviour of solutions to the ODE.
-By computing fixed points, we can draw a phase line diagram, and sketch solution curves.
+By \linebreak computing fixed points, we can draw a phase line diagram, and sketch solution curves.
 
 For the autonomous differential equation
 \begin{equation*}
@@ -909,8 +936,6 @@ For the autonomous differential equation
             One toward and one away from fixed point & semi-stable \\
             \bottomrule
         \end{tabular}
-        % \caption{}
-        % \label{}
     \end{table}
 \end{definition}
 \begin{definition}[Phase Plane]
@@ -978,6 +1003,7 @@ The general solution to an exact ODE is then
 \begin{equation*}
     \psi(x,\: y) = c
 \end{equation*}
+\newpage
 \section{Second-Order Differential Equations}
 A linear second-order differential equation is of the form 
 \begin{equation*}
@@ -1012,7 +1038,7 @@ A linear second-order differential equation is of the form
     is also a solution.
 \end{theorem}
 \begin{theorem}[Fundamental Set of Solutions]
-    The $n$th order homogeneous ODE with continuous coefficients on an open interval $I$,
+    The $n$th order homogeneous ODE with \linebreak continuous coefficients on an open interval $I$,
     has $n$ non-trivial linearly independent solutions that form
     a fundamental set of solutions on $I$. 
 \end{theorem}
