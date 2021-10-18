@@ -33,13 +33,9 @@
 \rhead{\leftmark}
 \cfoot{\thepage}
 
-\newcommand{\uniTitle}{Queensland University of Technology}
 \newcommand{\className}{Calculus and Differential Equations}
-\newcommand{\classTime}{2021, Semester 2}
+\newcommand{\classTime}{Semester 2, 2021}
 \newcommand{\classInstructorName}{Dr Vivien Challis}
-\newcommand{\authorName}{Tarang Janawalkar}
-\newcommand{\authorStudentNumber}{n11032201}
-\newcommand{\classCode}{MXB105}
 
 \usepackage[
     type={CC},
@@ -56,19 +52,18 @@
 \begin{titlepage}
     \vspace*{\fill}
     \begin{center}
-        \LARGE
-        \textbf{\className}
+        \LARGE{\textbf{\className}}
         \texorpdfstring{\\}{ }
-        \uniTitle
+        \texorpdfstring{\vspace{0.1in}}{ }
+        \normalsize{\classTime}
         \texorpdfstring{\\}{ }
-        \texorpdfstring{\vspace{0.3in}}{ }
+        \texorpdfstring{\vspace{0.2in}}{ }
         \normalsize\textit{\classInstructorName}
         \texorpdfstring{\\}{ }
-        \classTime
     \end{center}
     \begin{center}
-        \textbf{\authorName}
-    \end{center}
+        \textsc{Rohan Boas \quad\quad Tarang Janawalkar}
+\end{center}
     \vspace*{\fill}
     \doclicenseThis
     \thispagestyle{empty}
@@ -861,7 +856,209 @@ Recognising continuous functions:
     \end{equation*}
 \end{definition}
 \newpage
-\section{First-Order Differential Equations}
+\section{Differential Equations}
+\begin{definition}[Differential Equations]
+    A differential equation (DE) is an equation which involves the derivatives of 
+    one of more unknown functions (called dependent variables), that are with respect
+    to one or more independent variables.
+\end{definition}
+\begin{definition}[Ordinary Differential Equations]
+    An ordinary differential equation (ODE) is a differential equation with 
+    derivatives with respect to a single variable.
+\end{definition}
+\begin{definition}[Partial Differential Equations]
+    A partial differential equation (PDE) is a differential equation with 
+    derivatives with respect to multiple variables.
+\end{definition}
+\begin{definition}[Order of Differential Equations]
+    The order of a differential equation is the highest derivative in the equation.
+\end{definition}
+\begin{definition}[Autonomous Differential Equations]
+    An autonomous differential equation does not depend explicitly on the independent variable.
+\end{definition}
+\begin{definition}[Linear Differential Equations]
+    A linear differential equation does not have any products of the dependent variable with itself
+    or derivatives. The general form of a linear ODE or order $n$ is
+    \begin{equation*}
+        a_n(x)\dv[n]{y}{x} + a_{n-1}(x)\dv[n-1]{y}{x} + \cdots + a_1(x)\dv{y}{x} + a_0(x)y = f(x).
+    \end{equation*}
+    The dependent variable cannot be composed in another function.
+\end{definition}
+\subsection{Qualitative Analysis}
+With qualitative analysis we aim to understand the behaviour of solutions to the ODE.
+By computing fixed points, we can draw a phase line diagram, and sketch solution curves.
+
+For the autonomous differential equation
+\begin{equation*}
+    \dv{y}{t} = f(y)
+\end{equation*}
+\begin{definition}[Fixed Point]
+    A fixed point is the value of $y$ for which $f(y) = 0$.
+\end{definition}
+\begin{definition}[Stability]
+    By analysing the perturbation of the $f(y)$ near fixed points, we can determine the
+    stability of those fixed points.
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{c | c}
+            \toprule
+            \textbf{Behaviour in Positive/Negative Directions} & \textbf{Stability} \\
+            \midrule
+            Both toward fixed point & stable \\
+            Both away from fixed point & unstable \\
+            One toward and one away from fixed point & semi-stable \\
+            \bottomrule
+        \end{tabular}
+        % \caption{}
+        % \label{}
+    \end{table}
+\end{definition}
+\begin{definition}[Phase Plane]
+    Using the information about the behaviour of $f(y)$ around fixed points, $f(y)$ can be plotted against $y$
+    to construct a phase plane diagram.
+\end{definition}
+\begin{definition}[Phase Line]
+    A phase line is the one-dimensional form of a phase plane, 
+    that shows the limiting behaviour of $y$ as $t \to \infty$.
+\end{definition}
+\begin{definition}[Sample Solutions]
+    Using a phase line, we sketch the behaviour of sample solutions of $f(y)$.
+    where the curves asymptote toward stable 
+    (also semi-stable) fixed points, and diverge from unstable (also semi-stable) fixed points.
+\end{definition}
 \newpage
+\section{First-Order Differential Equations}
+\subsection{Directly Integrable ODEs}
+For a differential equation of the form
+\begin{equation*}
+    \dv{y}{x} = g(x)
+\end{equation*}
+\begin{equation*}
+    y(x) = \int g(x) \dd{x}.
+\end{equation*}
+\subsection{Separable ODEs}
+For a differential equation of the form
+\begin{equation*}
+    \dv{y}{x} = p(x) q(y)
+\end{equation*}
+a separation of variables followed by an integration w.r.t. $x$ yields an implicit solution.
+\begin{equation*}
+    \int \frac{1}{q(y)} \dv{y}{x} \dd{x} = \int p(x) \dd{x}.
+\end{equation*}
+\subsection{Linear ODEs}
+For a differential equation of the form
+\begin{equation*}
+    \dv{y}{x} + p(x)y = q(x)
+\end{equation*}
+we can use the integrating factor
+\begin{equation*}
+    I(x) = \e^{\int p(x) \dd{x}}
+\end{equation*}
+to solve the differential equation
+\begin{equation*}
+    y(x) = \frac{1}{I(x)} \int I(x) q(x) \dd{x}
+\end{equation*}
+\subsection{Homogeneous ODEs}
+\subsection{Exact ODEs}
+A differential equation of the form
+\begin{equation*}
+    P(x,\: y) + Q(x,\: y)\dv{y}{x} = 0
+\end{equation*}
+is exact if 
+\begin{equation*}
+    P_y = Q_x.
+\end{equation*}
+We find $\psi(x,\: y)$ using
+\begin{gather*}
+    \psi(x,\: y) = \int P(x,\: y) \dd{x} + f(y) \\
+    \psi(x,\: y) = \int Q(x,\: y) \dd{y} + g(x) 
+\end{gather*}
+$f(y)$ and $g(x)$ can be determined by matching these two equations.
+The general solution to an exact ODE is then
+\begin{equation*}
+    \psi(x,\: y) = c
+\end{equation*}
 \section{Second-Order Differential Equations}
+A linear second-order differential equation is of the form 
+\begin{equation*}
+    a_2(x)\dv[2]{y}{x}+ a_1(x)\dv{y}{x} + a_0(x)y = F(x). 
+\end{equation*}
+\begin{description}
+    \item If $F(x) = 0$, then the equation is homogeneous.
+    \item If $F(x) \neq 0$, then the equation is nonhomogeneous.
+\end{description}
+\begin{definition}[Initial Value Problem]
+    An initial value problem specifies the value for $y$ and its derivative at a single value of the independent variable:
+    \begin{align*}
+        y(x_0) = y_0, \quad y'(x_0) = y_1.
+    \end{align*}
+\end{definition}
+\begin{definition}[Boundary Value Problem]
+    A boundary value problem specifies the value for $y$ at two different values of the independent variable:
+    \begin{align*}
+        y(x_0) = y_0, \quad y(x_1) = y_1.
+    \end{align*}
+\end{definition}
+\begin{theorem}[Superposition Principle]
+    Consider a homogeneous ODE
+    \begin{equation*}
+        a_n(x)\dv[n]{y}{x} + a_{n-1}(x)\dv[n-1]{y}{x} + \cdots + a_1(t)\dv{y}{x} + a_0(x)y = 0.
+    \end{equation*}
+    If $y_1(x),\: y_2(x),\: \dots ,\: y_n(x)$ are solutions of the differential equation, then 
+    the linear combination of these solutions
+    \begin{equation*}
+        y(x) = c_1 y_1(x) + c_2 y_2(x) + \cdots + c_n y_n(x).
+    \end{equation*}
+    is also a solution.
+\end{theorem}
+\begin{theorem}[Fundamental Set of Solutions]
+    The $n$th order homogeneous ODE with continuous coefficients on an open interval $I$,
+    has $n$ non-trivial linearly independent solutions that form
+    a fundamental set of solutions on $I$. 
+\end{theorem}
+\subsection{Reduction of Order}
+Reduction of order is a method for finding a second solution 
+to an ODE, given a known solution.
+The second solution is of the form
+\begin{equation*}
+    y_2(x) = v(x) y_1(x).
+\end{equation*} 
+By substituting this form into the differential equation, we will find an ODE for
+$v(x)$ that we can solve to find the solution $y_2(x)$.
+\subsection{Homogeneous ODEs}
+A second-order constant-coefficient homogeneous ODE 
+\begin{equation*}
+    a_2\dv[2]{y}{x} + a_1\dv{y}{x} + a_0y = 0
+\end{equation*}
+has solutions of the form
+\begin{equation*}
+    y(x) = \e^{\lambda x}.
+\end{equation*}
+\subsection{Characteristic Equation}
+Substituting this form into the ODE gives the characteristic equation
+\begin{equation*}
+    a_2\lambda^2 + a_1\lambda + a_0 = 0.
+\end{equation*}
+This equation has three distinct cases.
+\begin{description}
+    \item[Real Distinct Roots.] If $a_1^2 > 4a_0a_2$.
+    \item[Real Repeated Roots.] If $a_1^2 = 4a_0a_2$.
+    \item[Complex Conjugate Roots.] If $a_1^2 < 4a_0a_2$.
+\end{description}
+\subsubsection{Real Distinct Roots}
+For two real and distinct roots, $\lambda_1$ and $\lambda_2$, the general solution is
+\begin{equation*}
+    y(x) = c_1\e^{\lambda_1 x} + c_2\e^{\lambda_2 x} 
+\end{equation*}
+\subsubsection{Real Repeated Roots}
+For the real repeated root, $\lambda$, the general solution is
+\begin{equation*}
+    y(x) = c_1\e^{\lambda x} + c_2 t\e^{\lambda x} 
+\end{equation*}
+\subsubsection{Complex Conjugate Roots}
+For two complex conjugate roots, $\lambda = \alpha \pm \beta i$, the general solution is
+\begin{equation*}
+    y(x) = \e^{\alpha x}\bigl( c_1\cos{\left( \beta x \right)} + c_2 \sin{\left( \beta x \right)} \bigr)
+\end{equation*}
+\subsection{Nonhomogeneous ODEs}
 \end{document}
