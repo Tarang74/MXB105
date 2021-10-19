@@ -1,4 +1,4 @@
-
+%!TEX program = xelatex
 \documentclass{article}
 \usepackage{template}
 
@@ -688,7 +688,7 @@ For the function $f(x,\: y)$, the point $(x_0,\: y_0)$ is a critical point if
 \subsection{Classification of Critical Points}
 The nature of a critical point can be classified using the second derivative test:
 \begin{itemize}
-    \item if $\left.\det{\left(\mathbf{H}_f\right)}\right|_{(x_0,\: y_0)} > 0$, then the point is a local minima or maxima 
+    \item if $\left.\det{\left(\mathbf{H}_f\right)}\right|_{(x_0,\: y_0)} > 0$, then the point is a local minima or maxima
     \begin{itemize}
         \item if $f_{xx}(x_0, \: y_0) < 0$, then the point is a local maxima
         \item if $f_{xx}(x_0, \: y_0) > 0$, then the point is a local minima\footnote[1]{For the local minima/maxima, the second derivative can also be taken w.r.t. $y$.}
@@ -700,27 +700,27 @@ The nature of a critical point can be classified using the second derivative tes
 \section{Double and Triple Integrals}
 \subsection{Volume under a Two Variable Function}
 \begin{definition}
-    If $f$ is a function of two variables that is continuous and nonnegative 
-    on a region $\Omega$ in the $xy$-plane, then the volume of the solid 
-    enclosed between the surface $z=f(x,\: y)$ and the region $\Omega$ is 
+    If $f$ is a function of two variables that is continuous and nonnegative
+    on a region $\Omega$ in the $xy$-plane, then the volume of the solid
+    enclosed between the surface $z=f(x,\: y)$ and the region $\Omega$ is
     defined by
     \begin{equation}\label{eq:volume_under_2d_function}
         V = \lim_{n \to \infty} \sum_{k = 1}^n f(x_k^\ast,\: y_k^\ast) \Delta A_k
     \end{equation}
 \end{definition}
 \begin{proof}
-    Using lines parallel to the coordinate axes, the region $\Omega$ can be divided 
+    Using lines parallel to the coordinate axes, the region $\Omega$ can be divided
     into $n$ rectangles, where any rectangles outside $\Omega$ are discarded.
-    The area of the $k$th remaining rectangle at the arbitrary point $(x_k^\ast,\: y_k^\ast)$ 
+    The area of the $k$th remaining rectangle at the arbitrary point $(x_k^\ast,\: y_k^\ast)$
     is given by $\Delta A_k$. Thus the product $f(x_k^\ast,\: y_k^\ast)\Delta A_k$ is the
     volume of the $k$th rectangular parallelepiped, and the sum of all $n$ volumes over
     the region $\Omega$ approximate the volume $V$ of the entire solid.
 \end{proof}
 \subsection{Double Integral}
 \begin{definition}
-    By extension of the definite integral of a one variable function expressed in 
-    \hyperref[theorem:1d_riemann_sums]{Theorem \ref{theorem:1d_riemann_sums}}, the sums in 
-    \hyperref[eq:volume_under_2d_function]{Equation \ref{eq:volume_under_2d_function}} 
+    By extension of the definite integral of a one variable function expressed in
+    \hyperref[theorem:1d_riemann_sums]{Theorem \ref{theorem:1d_riemann_sums}}, the sums in
+    \hyperref[eq:volume_under_2d_function]{Equation \ref{eq:volume_under_2d_function}}
     are also called Riemann sums, and the limit is denoted as
     \begin{equation*}
         \iint\limits_{\Omega} f(x,\: y)  \dd{A}
@@ -744,26 +744,39 @@ The nature of a critical point can be classified using the second derivative tes
 	\end{mdframed}
 \end{figure}
 \subsection{Regions}
-\subsubsection{Type I Regions} 
-\subsubsection{Type II Regions} 
-\subsection{Triple Integrals}
+\subsubsection{Type I Regions}
+\subsubsection{Type II Regions}
+\subsection{Volume under a Three Variable Function}
 \begin{definition}
-    A triple integral is of a function is the net signed volume
-    defined over a finite closed solid region $G$ in an $xyz$ coordinate system.
+    If $f$ is a function of three variables that is continuous and nonnegative
+    on a region $Omega$ in the $xyz$-space, then the volume of $f(x,\: y, \: z)$
+    and the region $Omega$ is defined by
+    \begin{equation}\label{eq:volume_of_3d_function}
+        V = \lim_{n\to\infty} \sum_{k=1}^{n} f(x_k^\ast,\: y_k^\ast,\: z_k^\ast) \Delta V_k
+    \end{equation}
 \end{definition}
-\begin{theorem}
-    Divide the bounding box of $G$ into $n$ boxes with sides parallel to the coordinate planes.
-    Discard boxes which contain any points outside of $G$.
+\begin{proof}
+    Divide the bounding box of $\Omega$ into $n$ boxes with sides parallel to the coordinate planes.
+    Discard boxes which contain any points outside of $\Omega$.
     Choose an arbitrary point in each remaining box.
     The volume of the $k$th remaining box is $\Delta V_k$.
     The arbitrary point in the $k$th remaining box is
     $({x_k}^\ast,\: {y_k}^\ast,\: {z_k}^\ast)$.
-    The Riemann sum is
+    Thus the product $f({x_k}^\ast,\: {y_k}^\ast,\: {z_k}^\ast)\Delta V_k$
+    is the volume of the $k$th remaining box, and the sum of all $n$ volumes over
+    the reigon $\Omega$ approximate the volume $V$ of the entire solid.
+\end{proof}
+\subsection{Triple Integrals}
+\begin{definition}
+    A triple integral of a function is the net signed volume
+    defined over a finite closed solid region $\Omega$ in an $xyz$ coordinate system and the sums in
+    \hyperref[eq:volume_of_3d_function]{Equation \ref{eq:volume_of_3d_function}}
+    are also called Riemann sums, and the limit is denoted as
     \begin{equation*}
-        \iiint\limits_{G} f(x,\: y,\: z)  \dd{V}
+        \iiint\limits_{\Omega} f(x,\: y,\: z)  \dd{V}
         = \sum_{k=1}^{\infty} f(x_k^\ast,\: y_k^\ast,\: z_k^\ast) \Delta V_k
     \end{equation*}
-\end{theorem}
+\end{definition}
 \begin{figure}[H]
 	\begin{mdframed}[style=exampledefault,frametitle={Properties of Triple Integrals}]
 		\begin{theorem}
@@ -772,9 +785,9 @@ The nature of a critical point can be classified using the second derivative tes
 			\begin{enumerate}[label=\normalfont\alph*)]
 				\item $\displaystyle\iiint\limits_\Omega kf(x,\: y,\: z) \dd{V}
                     = k\iiint\limits_\Omega f(x,\: y,\: z) \dd{V}$.
-				\item $\displaystyle\iiint\limits_G \bigl(f(x,\: y,\: z) + g(x,\: y,\: z)\bigr) \dd{V}
-                    = \iiint\limits_\Omega f(x,\: y,\: z) \dd{V} + \iiint\limits_G g(x,\: y,\: z) \dd{V}$.
-                \item $\displaystyle\iiint\limits_G f(x,\: y,\: z) \dd{V}
+				\item $\displaystyle\iiint\limits_\Omega \bigl(f(x,\: y,\: z) + g(x,\: y,\: z)\bigr) \dd{V}
+                    = \iiint\limits_\Omega f(x,\: y,\: z) \dd{V} + \iiint\limits_\Omega g(x,\: y,\: z) \dd{V}$.
+                \item $\displaystyle\iiint\limits_\Omega f(x,\: y,\: z) \dd{V}
                     = \iiint\limits_{\Omega_1} f(x,\: y,\: z) \dd{V} + \iiint\limits_{\Omega_2} f(x,\: y,\: z) \dd{V}$.
 			\end{enumerate}
 		\end{theorem}
@@ -787,7 +800,7 @@ The nature of a critical point can be classified using the second derivative tes
 \begin{definition}
     A vector-valued function (VVF) is some function
     with domain $\mathbb{R}$ and codomain $\mathbb{R}^n$.
-    For example, 
+    For example,
     \begin{equation*}
         \symbf{r}:\mathbb{R}\to\mathbb{R}^3
         :\symbf{r}(t)=\avec[\big]{x(t),\: y(t),\: z(t)}
@@ -799,7 +812,7 @@ The nature of a critical point can be classified using the second derivative tes
     of its components.
 \end{theorem}
 \begin{definition}[Orientation]
-    The orientation of $\symbf{r}(t)$ is the direction of motion along the 
+    The orientation of $\symbf{r}(t)$ is the direction of motion along the
     curve as the value of the parameter increases.
 \end{definition}
 \subsection{Limits and Continuity}
@@ -811,11 +824,11 @@ The nature of a critical point can be classified using the second derivative tes
     \end{equation*}
 \end{theorem}
 \begin{theorem}[Continuity of VVFs]
-    The VVF $\symbf{r}(t)$ is continuous at $t=a$ iff 
+    The VVF $\symbf{r}(t)$ is continuous at $t=a$ iff
     \begin{equation*}
         \lim_{t\to a} \symbf{r}(t) = \symbf{r}(a).
     \end{equation*}
-    This follows that a VVF is continuous if each of its components are also continuous. 
+    This follows that a VVF is continuous if each of its components are also continuous.
 \end{theorem}
 \subsection{Calculus with VVFs}
 \begin{theorem}[Derivatives of VVFs]
@@ -844,7 +857,7 @@ The nature of a critical point can be classified using the second derivative tes
 \end{definition}
 \begin{definition}[Tangent Lines]
     If a VVF $\symbf{r}(t)$ is differentiable at
-    $t_0$ and $\symbf{r'}(t_0)\ne\symbf{0}$, the tangent line at 
+    $t_0$ and $\symbf{r'}(t_0)\ne\symbf{0}$, the tangent line at
     $t=t_0$ is given by
     \begin{equation*}
         \symbf{l}(t) = \symbf{r}(t_0)+t\symbf{r'}(t_0).
@@ -855,22 +868,22 @@ The nature of a critical point can be classified using the second derivative tes
 \end{remark}
 \subsection{Applications of VVFs}
 \begin{theorem}[Curve of Intersection]
-    A VVF can be used to determine the curve of intersection between two 
+    A VVF can be used to determine the curve of intersection between two
     surfaces. The method is to choose one of the variables (commonly the first)
-    as the parameter, and express the remaining variables in terms of that parameter. 
+    as the parameter, and express the remaining variables in terms of that parameter.
 
     If the intersection is bounded between two points, the domain can be
     calculated using the component which was parametrised.
 
-    For example, the curve of intersection between 
+    For example, the curve of intersection between
     \begin{align*}
         y = 2x - 4 \quad \text{and} \quad z = 3x - 1
     \end{align*}
-    between the points 
+    between the points
     \begin{align*}
         \symbfit{P}_1 = (2,\: 0,\: 7) \quad \text{and} \quad \symbfit{P}_2 = (3,\: 2,\: 10)
     \end{align*}
-    is given by 
+    is given by
     \begin{equation*}
         \symbf{r}(t) = \avec[\big]{t,\: 2t - 4,\: 3t - 1} : 2 \leq t \leq 3.
     \end{equation*}
@@ -885,16 +898,16 @@ The nature of a critical point can be classified using the second derivative tes
 \newpage
 \section{Differential Equations}
 \begin{definition}[Differential Equations]
-    A differential equation (DE) is an equation which involves the derivatives of 
+    A differential equation (DE) is an equation which involves the derivatives of
     one of more unknown functions (called dependent variables), that are with respect
     to one or more independent variables.
 \end{definition}
 \begin{definition}[Ordinary Differential Equations]
-    An ordinary differential equation (ODE) is a differential equation with 
+    An ordinary differential equation (ODE) is a differential equation with
     derivatives with respect to a single variable.
 \end{definition}
 \begin{definition}[Partial Differential Equations]
-    A partial differential equation (PDE) is a differential equation with 
+    A partial differential equation (PDE) is a differential equation with
     derivatives with respect to multiple variables.
 \end{definition}
 \begin{definition}[Order of Differential Equations]
@@ -943,12 +956,12 @@ For the autonomous differential equation
     to construct a phase plane diagram.
 \end{definition}
 \begin{definition}[Phase Line]
-    A phase line is the one-dimensional form of a phase plane, 
+    A phase line is the one-dimensional form of a phase plane,
     that shows the limiting behaviour of $y$ as $t \to \infty$.
 \end{definition}
 \begin{definition}[Sample Solutions]
     Using a phase line, we sketch the behaviour of sample solutions of $f(y)$.
-    where the curves asymptote toward stable 
+    where the curves asymptote toward stable
     (also semi-stable) fixed points, and diverge from unstable (also semi-stable) fixed points.
 \end{definition}
 \newpage
@@ -989,14 +1002,14 @@ A differential equation of the form
 \begin{equation*}
     P(x,\: y) + Q(x,\: y)\dv{y}{x} = 0
 \end{equation*}
-is exact if 
+is exact if
 \begin{equation*}
     P_y = Q_x.
 \end{equation*}
 We find $\psi(x,\: y)$ using
 \begin{gather*}
     \psi(x,\: y) = \int P(x,\: y) \dd{x} + f(y) \\
-    \psi(x,\: y) = \int Q(x,\: y) \dd{y} + g(x) 
+    \psi(x,\: y) = \int Q(x,\: y) \dd{y} + g(x)
 \end{gather*}
 $f(y)$ and $g(x)$ can be determined by matching these two equations.
 The general solution to an exact ODE is then
@@ -1005,9 +1018,9 @@ The general solution to an exact ODE is then
 \end{equation*}
 \newpage
 \section{Second-Order Differential Equations}
-A linear second-order differential equation is of the form 
+A linear second-order differential equation is of the form
 \begin{equation*}
-    a_2(x)\dv[2]{y}{x}+ a_1(x)\dv{y}{x} + a_0(x)y = F(x). 
+    a_2(x)\dv[2]{y}{x}+ a_1(x)\dv{y}{x} + a_0(x)y = F(x).
 \end{equation*}
 \begin{description}
     \item If $F(x) = 0$, then the equation is homogeneous.
@@ -1030,7 +1043,7 @@ A linear second-order differential equation is of the form
     \begin{equation*}
         a_n(x)\dv[n]{y}{x} + a_{n-1}(x)\dv[n-1]{y}{x} + \cdots + a_1(t)\dv{y}{x} + a_0(x)y = 0.
     \end{equation*}
-    If $y_1(x),\: y_2(x),\: \dots ,\: y_n(x)$ are solutions of the differential equation, then 
+    If $y_1(x),\: y_2(x),\: \dots ,\: y_n(x)$ are solutions of the differential equation, then
     the linear combination of these solutions
     \begin{equation*}
         y(x) = c_1 y_1(x) + c_2 y_2(x) + \cdots + c_n y_n(x).
@@ -1040,19 +1053,19 @@ A linear second-order differential equation is of the form
 \begin{theorem}[Fundamental Set of Solutions]
     The $n$th order homogeneous ODE with \linebreak continuous coefficients on an open interval $I$,
     has $n$ non-trivial linearly independent solutions that form
-    a fundamental set of solutions on $I$. 
+    a fundamental set of solutions on $I$.
 \end{theorem}
 \subsection{Reduction of Order}
-Reduction of order is a method for finding a second solution 
+Reduction of order is a method for finding a second solution
 to an ODE, given a known solution.
 The second solution is of the form
 \begin{equation*}
     y_2(x) = v(x) y_1(x).
-\end{equation*} 
+\end{equation*}
 By substituting this form into the differential equation, we will find an ODE for
 $v(x)$ that we can solve to find the solution $y_2(x)$.
 \subsection{Homogeneous ODEs}
-A second-order constant-coefficient homogeneous ODE 
+A second-order constant-coefficient homogeneous ODE
 \begin{equation*}
     a_2\dv[2]{y}{x} + a_1\dv{y}{x} + a_0y = 0
 \end{equation*}
@@ -1074,12 +1087,12 @@ This equation has three distinct cases.
 \subsubsection{Real Distinct Roots}
 For two real and distinct roots, $\lambda_1$ and $\lambda_2$, the general solution is
 \begin{equation*}
-    y(x) = c_1\e^{\lambda_1 x} + c_2\e^{\lambda_2 x} 
+    y(x) = c_1\e^{\lambda_1 x} + c_2\e^{\lambda_2 x}
 \end{equation*}
 \subsubsection{Real Repeated Roots}
 For the real repeated root, $\lambda$, the general solution is
 \begin{equation*}
-    y(x) = c_1\e^{\lambda x} + c_2 t\e^{\lambda x} 
+    y(x) = c_1\e^{\lambda x} + c_2 t\e^{\lambda x}
 \end{equation*}
 \subsubsection{Complex Conjugate Roots}
 For two complex conjugate roots, $\lambda = \alpha \pm \beta i$, the general solution is
