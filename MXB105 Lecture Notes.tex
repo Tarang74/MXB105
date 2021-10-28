@@ -718,7 +718,7 @@ The nature of a critical point can be classified using the second derivative tes
 \end{proof}
 \subsection{Double Integral}
 \begin{definition}
-    By extension of the definite integral of a one variable function expressed in
+    By extension of the definite integral of a single variable function expressed in
     \hyperref[theorem:1d_riemann_sums]{Theorem \ref{theorem:1d_riemann_sums}}, the sums in
     \hyperref[eq:volume_under_2d_function]{Equation \ref{eq:volume_under_2d_function}}
     are also called Riemann sums, and the limit is denoted as
@@ -743,28 +743,27 @@ The nature of a critical point can be classified using the second derivative tes
 		\end{theorem}
 	\end{mdframed}
 \end{figure}
-\subsection{Regions}
+\subsection{Nonrectangular Regions}
 \subsubsection{Type I Regions}
 \subsubsection{Type II Regions}
 \subsection{Volume under a Three Variable Function}
 \begin{definition}
     If $f$ is a function of three variables that is continuous and nonnegative
-    on a region $Omega$ in the $xyz$-space, then the volume of $f(x,\: y, \: z)$
-    and the region $Omega$ is defined by
+    on a region $\Omega$ in the $xyz$-space, then the volume of $f(x,\: y, \: z)$
+    and the region $\Omega$ is defined by
     \begin{equation}\label{eq:volume_of_3d_function}
         V = \lim_{n\to\infty} \sum_{k=1}^{n} f(x_k^\ast,\: y_k^\ast,\: z_k^\ast) \Delta V_k
     \end{equation}
 \end{definition}
 \begin{proof}
-    Divide the bounding box of $\Omega$ into $n$ boxes with sides parallel to the coordinate planes.
-    Discard boxes which contain any points outside of $\Omega$.
-    Choose an arbitrary point in each remaining box.
-    The volume of the $k$th remaining box is $\Delta V_k$.
-    The arbitrary point in the $k$th remaining box is
-    $({x_k}^\ast,\: {y_k}^\ast,\: {z_k}^\ast)$.
-    Thus the product $f({x_k}^\ast,\: {y_k}^\ast,\: {z_k}^\ast)\Delta V_k$
-    is the volume of the $k$th remaining box, and the sum of all $n$ volumes over
-    the reigon $\Omega$ approximate the volume $V$ of the entire solid.
+    Using planes parallel to the coordinate planes, the
+    region $\Omega$ can be divided into $n$ boxes, where
+    boxes containing points outside of $\Omega$ are discarded.
+    The volume of the $k$th remaining box at the arbitrary point 
+    $(x_k^\ast,\: y_k^\ast,\: z_k^\ast)$ is $\Delta V_k$.
+    Thus the product $f(x_k^\ast,\: y_k^\ast,\: z_k^\ast)\Delta V_k$
+    is the volume of the $k$th box, and the sum of all $n$ volumes over
+    the region $\Omega$ approximate the volume $V$ of the entire solid.
 \end{proof}
 \subsection{Triple Integrals}
 \begin{definition}
@@ -1099,5 +1098,95 @@ For two complex conjugate roots, $\lambda = \alpha \pm \beta i$, the general sol
 \begin{equation*}
     y(x) = \e^{\alpha x}\bigl( c_1\cos{\left( \beta x \right)} + c_2 \sin{\left( \beta x \right)} \bigr)
 \end{equation*}
-\subsection{Nonhomogeneous ODEs}
+\section{Nonhomogeneous ODEs}
+A second-order constant-coefficient nonhomogeneous ODE
+\begin{equation*}
+    a_2\dv[2]{y}{x} + a_1\dv{y}{x} + a_0y = F(x)
+\end{equation*}
+has a general solutions of the form
+\begin{equation*}
+    y(x) = y_H(x) + y_P(x).
+\end{equation*}
+where $y_H(x)$ satisfies
+\begin{equation*}
+    a_2\dv[2]{y_H}{x} + a_1\dv{y_H}{x} + a_0y_H = 0
+\end{equation*}
+and $y_P(x)$ satisfies
+\begin{equation*}
+    a_2\dv[2]{y_P}{x} + a_1\dv{y_P}{x} + a_0y_P = F(x)
+\end{equation*}
+\subsection{Method of Undetermined Coefficients}
+To find the particular solution $y_P$, we must choose a likely
+form that it would take. The following table summarises the appropriate
+form of $y_P$ based on $F$.
+\begin{table}[H]
+    \centering
+    \begin{tabular}{c | c}
+        \toprule
+        $F(x)$ form & $y_P(x)$ guess \\
+        \midrule
+        a constant & A \\
+        a polynomial of degree $n$ & $\displaystyle \sum_{i = 0}^n A_i x^i$ \\
+        an exponential $\e^{kx}$ & $A \e^{kx}$ \\
+        $\cos{\left( \omega x \right)}$ or $\sin{\left( \omega x \right)}$ & $A_0 \cos{\left( \omega x \right)} + A_1 \sin{\left( \omega x \right)}$ \\
+        \bottomrule
+    \end{tabular}
+    \caption{Particular solutions for undetermined coefficients.}
+    % \label{}
+\end{table}
+Once the form of the particular solution has been determined, it can be substituted into the 
+nonhomogeneous ODE, to determine the undetermined coefficients.
+\subsection{Special Forms}
+\subsubsection{Product of Forms}
+If $F(x)$ is a product of the functions shown above, then the 
+particular solutions are also multiplied together and any constants are simplified.
+\subsubsection{Sum of Forms}
+If $F(x)$ is a sum of the functions shown above, then the
+particular solutions are also added together.
+\subsubsection{Linearly Dependent Forms}
+If $F(x)$ is similar to any homogenous solution, then by \textit{definition} of
+a homogeneous solution, the solution will be $0$. Hence, $y_P$ must be multiplied by $x$
+to ensure that the particular solution is linearly independent to the homogeneous solutions,
+in order to form a \textit{fundamental set of solutions}.
+\subsection{Finding the General Solution}
+\begin{enumerate}
+    \item Solve $y_H$
+    \item Find an appropriate form for $y_P$
+    \item Ensure that $y_P$ is linearly independent to the homogeneous solutions
+    \item Substitute $y_P$ into the nonhomogeneous ODE and solve for the undetermined coefficients
+    \item Find the general solution $y = y_H + y_P$
+    \item Apply any initial or boundary conditions
+\end{enumerate}
+\subsection{Applications of Second-Order ODEs}
+\subsubsection{Spring and Mass Systems}
+\begin{equation*}
+    F = \text{spring force ($F_s$)} + \text{damping force ($F_d$)} + \text{external force ($f(t)$)}
+\end{equation*}
+\begin{description}
+    \item[Newton's Law] $F = m \dv[2]{y}{t}$
+    \item[Spring force.] $F_s = -k y$
+    \item[Damping force.] $F_s = -\gamma \dv{y}{t}$
+\end{description}
+\begin{equation*}
+    m \dv[2]{y}{t} + \gamma \dv{y}{t} + k y = f(t)
+\end{equation*}
+\subsubsection{Electrical Circuits}
+Current $i$ is defined as the rate of change of charge $q$
+\begin{equation*}
+    i = \dv{q}{t}
+\end{equation*}
+The voltage drop across various elements is given below:
+\begin{description}
+    \item[Resistor.] $iR$
+    \item[Capacitor.] $q/C$
+    \item[Inductor.] $L \dv{i}{t}$
+\end{description}
+where $R$ is the resistance in \si{\ohm}, $C$ is the capacitance in \si{\farad}, and $L$ is the inductance in \si{\henry}.
+
+Kirchhoff's Voltage law states that the sum of voltages around a loop equals 0. 
+Therefore in an RLC circuit, with a voltage source supplying $v(t)$,
+\begin{align*}
+    v(t) - iR - L \dv{i}{t} - \frac{q}{C} & = 0 \\
+    L \dv[2]{q}{t} + R\dv{q}{t} + \frac{1}{C}q & = v(t).
+\end{align*}
 \end{document}
