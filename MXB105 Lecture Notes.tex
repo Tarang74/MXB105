@@ -87,8 +87,8 @@ Let $f(x)$ be a function, and $a\in\mathbb{R}$ be a constant.
             \sqrt{x} & \displaystyle \frac{1}{2\sqrt{x}} \\
             a^x & \ln{\left( a \right)} a^x \\
             \e^x & \e^x \\
-            \log_a{x}, \: a\in \mathbb{R}\backslash\left\{ 0 \right\} & \displaystyle \frac{1}{a\ln{x}} \\[8pt]
-            \ln{x} & \displaystyle \frac{1}{x} \\[5pt]
+            \log_a{\left( x \right)}, \: a\in \mathbb{R}\backslash\left\{ 0 \right\} & \displaystyle \frac{1}{x\ln{\left( a \right)}} \\[8pt]
+            \ln{\left( x \right)} & \displaystyle \frac{1}{x} \\[5pt]
         \bottomrule
     \end{tabular}
     \begin{tabular}{>{$}c<{$} | >{$}c<{$}}
@@ -205,7 +205,7 @@ Dividing by either the sine or cosine function gives:
             $ax+b$ & $\displaystyle \frac{A}{ax+b}$ \\[10pt]
             $\left(ax+b\right)^k, \: k \in \mathbb{N}$ & $\displaystyle \frac{A_1}{ax+b} + \frac{A_2}{\left( ax+b \right)^2} + \cdots + \frac{A_k}{\left( ax+b \right)^k}$ \\[10pt]
             $ax^2+bx+c$ & $\displaystyle \frac{A}{ax^2+bx+c}$ \\[10pt]
-            $\left(ax^2+bx+c\right)^k, \: k \in \mathbb{N}$ & $\displaystyle \frac{A_1x+B_1}{ax^2+bx+c} + \frac{A_2}{\left( ax+b \right)^2} + \cdots + \frac{A_k}{\left( ax+b \right)^k}$ \\[10pt]
+            $\left(ax^2+bx+c\right)^k, \: k \in \mathbb{N}$ & $\displaystyle \frac{A_1x+B_1}{ax^2+bx+c} + \frac{A_2x+B_2}{\left( ax^2+bx+c \right)^2} + \cdots + \frac{A_kx+B_k}{\left( ax^2+bx+c \right)^k}$ \\[10pt]
         \bottomrule
     \end{tabular}
     \caption{Partial Fraction Forms}
@@ -676,8 +676,9 @@ Recognising continuous functions:
 \subsection{Critical Points}
 For the function $f(x,\: y)$, the point $(x_0,\: y_0)$ is a critical point if
 \begin{equation*}
-    f_x(x_0,\: y_0) = 0 \quad \text{and} \quad f_y(x_0,\: y_0) = 0.
+    \symbf{\nabla}f(x_0,\: y_0) = 0
 \end{equation*}
+or if $\symbf{\nabla}f(x_0,\: y_0)$ is undefined.
 \subsection{Classification of Critical Points}
 The nature of a critical point can be classified using the second derivative test:
 \begin{itemize}
@@ -736,6 +737,11 @@ The nature of a critical point can be classified using the second derivative tes
 		\end{theorem}
 	\end{mdframed}
 \end{figure}
+\subsection{Rectangular Regions}
+If $\Omega$ is a region bounded by $a \leq x \leq b$ and $c \leq y \leq d$, then
+\begin{equation*}
+    \iint\limits_{\Omega} f(x,\: y) \dd{A} = \int_c^d\int_a^b f(x,\: y) \dd{x} \dd{y} = \int_a^b\int_c^d f(x,\: y) \dd{y} \dd{x}
+\end{equation*}
 \subsection{Nonrectangular Regions}
 If the limits of integration depend on the variable $x$ or $y$, then the region 
 may be classified as Type I or Type II.
@@ -757,7 +763,7 @@ If the region is:
 \end{description}
 where $h_1(y) \leq h_2(y)$ for $c \leq y \leq d$, then
 \begin{equation*}
-    \iint\limits_{\Omega} f(x,\: y) \dd{A} = \int_c^d\int_{h_1(x)}^{h_2(x)} f(x,\: y) \dd{x} \dd{y}.
+    \iint\limits_{\Omega} f(x,\: y) \dd{A} = \int_c^d\int_{h_1(y)}^{h_2(y)} f(x,\: y) \dd{x} \dd{y}.
 \end{equation*}
 \subsection{Polar Coordinates}
 To determine the area of a region defined using polar coordinates, 
@@ -917,7 +923,7 @@ the function can be integrated w.r.t. the radius $r$, and the angle $\theta$.
 \section{Differential Equations}
 \begin{definition}[Differential Equations]
     A differential equation (DE) is an equation which involves the derivatives of
-    one of more unknown functions (called dependent variables), that are with respect
+    one or more unknown functions (called dependent variables), that are with respect
     to one or more independent variables.
 \end{definition}
 \begin{definition}[Ordinary Differential Equations]
