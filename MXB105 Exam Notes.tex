@@ -51,18 +51,21 @@
         \centering
         \begin{tabular}{>{$}c<{$} | >{$}c<{$}}
             \toprule
-            f(x)                             & f'(x)                                            \\
+            f(x)                               & f'(x)                                            \\
             \midrule
-            u(x)v(x)                         & u'v + uv'                                        \\
-            \frac{u(x)}{v(x)}                & \frac{u'v - uv'}{v^2}                            \\
-            u\bigl( v\left( x \right) \bigr) & \dv{u}{v}\dv{v}{x}                               \\
+            u(x)v(x)                           & u'v + uv'                                        \\
+            \displaystyle\frac{u(x)}{v(x)}     & \displaystyle\frac{u'v - uv'}{v^2}               \\
+            u\bigl( v\left( x \right) \bigr)   & u'\bigl( v(x) \bigr)v'(x)                        \\
             \midrule
-            \sin{\left( ax \right)}          & a\cos{\left( ax \right)}                         \\
-            \cos{\left( ax \right)}          & -a\sin{\left( ax \right)}                        \\
-            \tan{\left( ax \right)}          & a\sec^2{\left( ax \right)}                       \\
-            \cot{\left( ax \right)}          & -a\csc^2{\left( ax \right)}                      \\
-            \sec{\left( ax \right)}          & a\sec{\left( ax \right)}\tan{\left( ax \right)}  \\
-            \csc{\left( ax \right)}          & -a\csc{\left( ax \right)}\cot{\left( ax \right)} \\
+            x^{n}                              & nx^{n - 1}                                       \\
+            \ln{\bigl( u\left(x\right) \bigr)} & \displaystyle\frac{u'(x)}{u(x)}                  \\
+            \midrule
+            \sin{\left( ax \right)}            & a\cos{\left( ax \right)}                         \\
+            \cos{\left( ax \right)}            & -a\sin{\left( ax \right)}                        \\
+            \tan{\left( ax \right)}            & a\sec^2{\left( ax \right)}                       \\
+            \cot{\left( ax \right)}            & -a\csc^2{\left( ax \right)}                      \\
+            \sec{\left( ax \right)}            & a\sec{\left( ax \right)}\tan{\left( ax \right)}  \\
+            \csc{\left( ax \right)}            & -a\csc{\left( ax \right)}\cot{\left( ax \right)} \\
             \bottomrule
         \end{tabular}
     \end{table}
@@ -76,13 +79,13 @@
     \end{align*}
     \subsubsection*{Partial Fraction Decomposition}
     \begin{align*}
-        ax+b                & \to \displaystyle \frac{A}{ax+b}                                                \\
-        \left(ax+b\right)^k & \to \displaystyle \frac{A_1}{ax+b} + \cdots + \frac{A_k}{\left( ax+b \right)^k}
+        ax+b                & \to \frac{A}{ax+b}                                                \\
+        \left(ax+b\right)^k & \to \frac{A_1}{ax+b} + \cdots + \frac{A_k}{\left( ax+b \right)^k}
     \end{align*}
     \begin{align*}
-        ax^2+bx+c                                       & \to \displaystyle \frac{A}{ax^2+bx+c}                \\
-        \left(ax^2+bx+c\right)^k                        & \to \displaystyle \frac{A_1x+B_1}{ax^2+bx+c}         \\
-        + \frac{A_2x+B_2}{\left( ax^2+bx+c \right)^2} + & \cdots + \frac{A_kx+B_k}{\left( ax^2+bx+c \right)^k}
+        ax^2+bx+c                    & \to \frac{A}{ax^2+bx+c}                              \\
+        \left(ax^2+bx+c\right)^k     & \to                                                  \\
+        \frac{A_1x+B_1}{ax^2+bx+c} + & \cdots + \frac{A_kx+B_k}{\left( ax^2+bx+c \right)^k}
     \end{align*}
     \subsubsection*{Integration Techniques}
     \begin{align*}
@@ -119,17 +122,17 @@
     \subsubsection*{Differentiability}
     $f(x)$ is differentiable at $x=x_0$ iff
     \begin{equation*}
-        \lim_{x\to x_0} \frac{f(x)-f(x_0)}{x-x_0}
+        f'(x_0) = \lim_{x\to x_0} \frac{f(x)-f(x_0)}{x-x_0}
     \end{equation*}
     exists. This defines the derivative
     \begin{equation*}
-        f'(x_0) = \lim_{h\to 0} \frac{f(x_0+h)-f(x_0)}{h}
+        f'(x_0) = \lim_{h\to 0} \frac{f(x_0+h)-f(x_0)}{h}.
     \end{equation*}
     Differentiability implies continuity.
     \subsubsection*{Mean Value Theorem}
     If $f(x)$ is continuous and differentiable on $I:\left[ a,\:b \right]$, then
     \begin{equation*}
-        \exists c\in I:f'(c)=\frac{f(b)-f(a)}{b-a}
+        \exists c\in I:f'(c)=\frac{f(b)-f(a)}{b-a}.
     \end{equation*}
     \subsubsection*{Definite Integrals}
     \begin{equation*}
@@ -149,19 +152,7 @@
         f(x) = \sum_{n=0}^{\infty} \frac{f^{\left( n \right)}(x_0)}{n!}\left( x-x_0 \right)^n
     \end{equation*}
     \textbf{Maclaurin Series:} $x_0 = 0$.
-
-    \textbf{Power Series:} $\sum_{n=0}^{\infty} c_n\left( x-x_0 \right)^n$
-
-    For a series of the form $\displaystyle\sum_{i=i_0}^\infty a_i$:
-    \subsubsection*{Alternating Series Test}
-    Given $a_i = \left( -1 \right)^i b_i$ and $b_i>0$.
-
-    If $b_{i+1}\leqslant b_i$ \& $\lim_{i\to\infty}b_i=0$, then
-    convergent, else inconclusive.
-    \subsubsection*{Ratio Test}
-    If $\lim_{i\to\infty}\abs{\frac{a_{i+1}}{a_i}} < 1$,
-    then convergent, else divergent. The ratio test is inconclusive if
-    $\displaystyle \lim_{i\to\infty}\abs{\frac{a_{i+1}}{a_i}} = 1$.
+    \subsubsection*{Common Maclaurin Series}
     \begin{table}[H]
         \centering
         \begin{tabular}{c | c | c}
@@ -177,6 +168,21 @@
             \bottomrule
         \end{tabular}
     \end{table}
+    \textbf{Power Series:} $\sum_{n=0}^{\infty} c_n\left( x-x_0 \right)^n$
+    \subsubsection*{Series Tests}
+    For a series of the form $\displaystyle\sum_{i=i_0}^\infty a_i$:
+    \subsubsection*{Alternating Series Test}
+    Given $a_i = \left( -1 \right)^i b_i$ and $b_i>0$.
+
+    If $b_{i+1}\leqslant b_i$ \& $\lim_{i\to\infty}b_i=0$, then
+    convergent, else inconclusive.
+    \subsubsection*{Ratio Test}
+    Given $\rho = \lim_{i\to\infty}\abs{\frac{a_{i+1}}{a_i}}$.
+    \begin{align*}
+        \rho < 1 & : \text{convergent}   \\
+        \rho > 1 & : \text{divergent}    \\
+        \rho = 1 & : \text{inconclusive}
+    \end{align*}
     \subsubsection*{Multivariable Functions}
     \begin{equation*}
         f:\mathbb{R}^n\to\mathbb{R}
@@ -196,7 +202,7 @@
     For $f=f\bigl(\symbfit{x}(t_1,\: \ldots,\: t_n)\bigr)$ with
     $\symbfit{x}=\mqty[x_1 & \cdots & x_m]$
     \begin{equation*}
-        \pdv{f}{t_i} = \symbf{\nabla}f \cdot \partial_{t_i}\symbfit{x}
+        \pdv{f}{t_i} = \symbf{\nabla}f \cdot \partial_{t_i}\symbfit{x}.
     \end{equation*}
     \subsubsection*{Directional Derivative}
     \begin{align*}
@@ -222,7 +228,7 @@
     enclosed between the surface $z=f(x,\: y)$ and the region $\Omega$ is
     defined by
     \begin{equation*}
-        V = \iint\limits_{\Omega} f(x,\: y) \dd{A}
+        V = \iint\limits_{\Omega} f(x,\: y) \dd{A}.
     \end{equation*}
     If $\Omega$ is a region bounded by $a \leq x \leq b$ and $c \leq y \leq d$, then
     \begin{align*}
@@ -230,6 +236,9 @@
                                                & = \int_a^b\int_c^d f(x,\: y) \dd{y} \dd{x}
     \end{align*}
     \subsubsection*{Type I Regions}
+    \begin{equation*}
+        \iint\limits_{\Omega} f(x,\: y) \dd{A} = \int_a^b\int_{g_1(x)}^{g_2(x)} f(x,\: y) \dd{y} \dd{x}
+    \end{equation*}
     \textbf{Bounded left \& right by:}
     \begin{equation*}
         x=a \text{ and } x=b
@@ -239,10 +248,10 @@
         y=g_1(x) \text{ and } y=g_2(x)
     \end{equation*}
     where $g_1(x) \leq g_2(x)$ for $a \leq x \leq b$:
-    \begin{equation*}
-        \iint\limits_{\Omega} f(x,\: y) \dd{A} = \int_a^b\int_{g_1(x)}^{g_2(x)} f(x,\: y) \dd{y} \dd{x}
-    \end{equation*}
     \subsubsection*{Type II Regions}
+    \begin{equation*}
+        \iint\limits_{\Omega} f(x,\: y) \dd{A} = \int_c^d\int_{h_1(x)}^{h_2(x)} f(x,\: y) \dd{x} \dd{y}
+    \end{equation*}
     \textbf{Bounded left \& right by:}
     \begin{equation*}
         x=h_1(y) \text{ and } x=h_2(y)
@@ -251,12 +260,13 @@
     \begin{equation*}
         y=c \text{ and } y=d
     \end{equation*}
-    where $h_1(y) \leq h_2(y)$ for $c \leq y \leq d$, then
-    \begin{equation*}
-        \iint\limits_{\Omega} f(x,\: y) \dd{A} = \int_c^d\int_{h_1(x)}^{h_2(x)} f(x,\: y) \dd{x} \dd{y}
-    \end{equation*}
-    To integrate, solve the inner integrals first.
+    where $h_1(y) \leq h_2(y)$ for $c \leq y \leq d$.
 
+    To integrate, solve the inner integrals first.
+    \subsubsection*{Vector Valued Functions}
+    \begin{equation*}
+        \symbf{r}:\mathbb{R} \to \mathbb{R}^n
+    \end{equation*}
     The \textbf{domain} of $\symbf{r}(t)$ is the intersection of the domains
     of its components.
 
@@ -264,7 +274,7 @@
     curve as the value of the parameter increases.
 
     \textbf{Limits}, \textbf{derivatives} and \textbf{integrals} are all \textit{component-wise}. Each component has its \underline{own} constant of integration.
-    \subsubsection*{Parametric Line}
+    \subsubsection*{Parametric Lines}
     \begin{equation*}
         \symbf{l}(t) = \symbfit{P}_0 + t\symbfit{v}
     \end{equation*}
@@ -273,7 +283,7 @@
     If $\symbf{r}(t)$ is differentiable at
     $t_0$ and $\symbf{r'}(t_0)\ne\symbf{0}$
     \begin{equation*}
-        \symbf{l}(t) = \symbf{r}(t_0)+t\symbf{r'}(t_0)
+        \symbf{l}(t) = \symbf{r}(t_0)+t\symbf{r'}(t_0).
     \end{equation*}
     \subsubsection*{Curves of Intersection}
     Choose one of the variables as the parameter, and express the remaining variables in terms of that parameter.
@@ -285,6 +295,7 @@
     \textbf{Order:} highest derivative in DE.
 
     \textbf{Autonomous DE:} does not depend explicitly on the independent variable.
+    \subsubsection*{Qualitative Analysis}
     \begin{equation*}
         \dv{y}{t} = f(y)
     \end{equation*}
@@ -298,27 +309,27 @@
 
     \textbf{Semi-Stable:} if one tends toward FP, and another tends away from FP
     \subsubsection*{Directly Integrable ODEs}
-    For $\dv{y}{x} = f(x)$
+    For $\dv{y}{x} = f(x)$:
     \begin{equation*}
-        y(x) = \int f(x) \dd{x}
+        y(x) = \int f(x) \dd{x}.
     \end{equation*}
     \subsubsection*{Separable ODEs}
-    For $\dv{y}{x} = p(x) q(y)$
+    For $\dv{y}{x} = p(x) q(y)$:
     \begin{equation*}
-        \int \frac{1}{q(y)} \dv{y}{x} \dd{x} = \int p(x) \dd{x}
+        \int \frac{1}{q(y)} \dv{y}{x} \dd{x} = \int p(x) \dd{x}.
     \end{equation*}
     \subsubsection*{Linear ODEs}
     For $\dv{y}{x} + p(x)y = q(x)$, use the \textit{integrating factor}:
     $I(x) = \e^{\int p(x) \dd{x}}$, so that
     \begin{equation*}
-        y(x) = \frac{1}{I(x)} \int I(x) q(x) \dd{x}
+        y(x) = \frac{1}{I(x)} \int I(x) q(x) \dd{x}.
     \end{equation*}
     \subsubsection*{Exact ODEs}
     $P(x,\: y) + Q(x,\: y)\dv{y}{x} = 0$
     has the solution
     $\Psi(x,\: y) = c$
-    iff it is exact, namely when
-    $P_y = Q_x$
+    iff it is exact, namely, when
+    $P_y = Q_x$,
     where $P = \Psi_x$ and $Q = \Psi_y$. Then
     \begin{gather*}
         \Psi(x,\: y) = \int P(x,\: y) \dd{x} + f(y) \\
@@ -378,28 +389,27 @@
     \textbf{Spring force:} $F_s = -k y$
 
     \textbf{Damping force:} $F_d = -\gamma y'$
-
-    \begin{tabular}[H]{c c}
-        $m$: mass         & $k$: spring constant   \\
-        $\gamma$: damping & $f(t)$: external force
-    \end{tabular}
+    \begin{align*}
+        m      & : \text{mass}    & k    & : \text{spring constant} \\
+        \gamma & : \text{damping} & f(t) & : \text{external force}
+    \end{align*}
     \subsubsection*{Electrical Circuits}
     The sum of voltages around a loop equals 0.
     \begin{align*}
         v(t) - iR - L \dv{i}{t} - \frac{q}{C}      & = 0    \\
         L \dv[2]{q}{t} + R\dv{q}{t} + \frac{1}{C}q & = v(t)
     \end{align*}
-    where $i = \dv{q}{t}$.
+    where $\displaystyle i = \dv{q}{t}$.
     \subsubsection*{Voltage drop across various elements:}
     \begin{align*}
         v_R & = iR          \\
-        v_C & = q/C         \\
+        v_C & = \frac{q}{C} \\
         v_L & = L \dv{i}{t}
     \end{align*}
-    \begin{tabular}[H]{c c}
-        $R$: resistance & $C$: capacitance       \\
-        $L$: inductance & $v(t)$: voltage supply
-    \end{tabular}
+    \begin{align*}
+        R & : \text{resistance} & C    & : \text{capacitance}    \\
+        L & : \text{inductance} & v(t) & : \text{voltage supply}
+    \end{align*}
 \end{multicols}
 \begin{table}[H]
     \centering
