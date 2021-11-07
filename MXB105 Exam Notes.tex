@@ -208,6 +208,11 @@
         \symbf{\nabla}_{\symbfit{u}}f
          & = \symbf{\nabla}f \cdot \symbfit{u}
     \end{align*}
+    where $\symbfit{u}$ is a unit vector and the slope is given by $\norm{\symbf{\nabla}_{\symbfit{u}}f}$.
+    \subsubsection*{Direction of Greatest Ascent}
+    \begin{align*}
+        \max_{\norm{\symbfit{u}} = 1} \symbf{\nabla}_{\symbfit{u}}f = \symbf{\nabla}f
+    \end{align*}
     where the slope is given by $\norm{\symbf{\nabla}_{\symbfit{u}}f}$.
     \subsubsection*{Critical Points}
     $(x_0,\: y_0)$ is a critical point if $\symbf{\nabla}f(x_0,\: y_0) = 0$
@@ -339,9 +344,6 @@
     \begin{equation*}
         a_2(x)y'' + a_1(x)y' + a_0(x)y = F(x)
     \end{equation*}
-    \textbf{Homogeneous:} $F(x) = 0$
-
-    \textbf{Nonhomogeneous:} $F(x) \neq 0$
     \subsubsection*{Initial Values}
     \begin{align*}
         y(x_0) = y_0 \quad y'(x_0) = y_1
