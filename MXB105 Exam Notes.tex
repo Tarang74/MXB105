@@ -78,12 +78,11 @@
         \cos^2{\left( x \right)} & = \frac{1+\cos{\left( 2x \right)}}{2}
     \end{align*}
     \subsubsection*{Partial Fraction Decomposition}
+    Given the LHS in the denominator, substitute the RHS.
     \begin{align*}
-        ax+b                & \to \frac{A}{ax+b}                                                \\
         \left(ax+b\right)^k & \to \frac{A_1}{ax+b} + \cdots + \frac{A_k}{\left( ax+b \right)^k}
     \end{align*}
     \begin{align*}
-        ax^2+bx+c                    & \to \frac{A}{ax^2+bx+c}                              \\
         \left(ax^2+bx+c\right)^k     & \to                                                  \\
         \frac{A_1x+B_1}{ax^2+bx+c} + & \cdots + \frac{A_kx+B_k}{\left( ax^2+bx+c \right)^k}
     \end{align*}
@@ -177,7 +176,7 @@
     If $b_{i+1}\leqslant b_i$ \& $\lim_{i\to\infty}b_i=0$, then
     convergent, else inconclusive.
     \subsubsection*{Ratio Test}
-    Given $\rho = \lim_{i\to\infty}\abs{\frac{a_{i+1}}{a_i}}$.
+    Given $\rho = \lim_{i\to\infty}\abs{\frac{a_{i+1}}{a_i}}$:
     \begin{align*}
         \rho < 1 & : \text{convergent}   \\
         \rho > 1 & : \text{divergent}    \\
@@ -356,7 +355,11 @@
         y_2(x) = v\left(x\right) y_1(x)
     \end{equation*}
     $v(x)$ can be determined by substituting $y_2$ into the ODE, using $w(x) = v'(x)$.
-    \subsubsection*{Homogeneous ODEs}
+    \subsubsection*{General Solution}
+    \begin{equation*}
+        y(x) = y_H(x) + y_P(x)
+    \end{equation*}
+    \subsubsection*{Homogeneous Solution}
     \begin{equation*}
         y_H(x) = \e^{\lambda x}
     \end{equation*}
@@ -373,11 +376,7 @@
     \begin{equation*}
         y_H(x) = \e^{\alpha x}\bigl( c_1\cos{\left( \beta x \right)} + c_2 \sin{\left( \beta x \right)} \bigr)
     \end{equation*}
-    \subsubsection*{Nonhomogeneous ODEs}
-    \begin{equation*}
-        y(x) = y_H(x) + y_P(x).
-    \end{equation*}
-    \subsubsection*{Method of Undetermined Coefficients}
+    \subsubsection*{Particular Solution}
     \emph{See table below.}
     Substitute $y_P$ into the nonhomogeneous ODE, and solve the undetermined coefficients.
     \subsubsection*{Spring and Mass Systems}
