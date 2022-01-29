@@ -35,10 +35,10 @@
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
 
-\titleformat*\subsubsection{\raggedright\bfseries}
+\titleformat*\subsection{\raggedright\bfseries}
 
 \begin{document}
-\titlespacing*\subsubsection{0pt}{1ex}{1ex}
+\titlespacing*\subsection{0pt}{1ex}{1ex}
 
 \setlength{\abovecaptionskip}{-5pt}
 \setlength{\textfloatsep}{0pt}
@@ -47,7 +47,7 @@
 \setlength{\belowdisplayskip}{1pt}
 
 \begin{multicols}{3}
-    \subsubsection*{Derivative Rules}
+    \subsection*{Derivative Rules}
     \begin{table}[H]
         \centering
         \begin{tabular}{>{$}c<{$} | >{$}c<{$}}
@@ -70,7 +70,7 @@
             \bottomrule
         \end{tabular}
     \end{table}
-    \subsubsection*{Trigonometric Identities}
+    \subsection*{Trigonometric Identities}
     \begin{align*}
         1                        & = \sin^2{\left( x \right)} + \cos^2{\left( x \right)} \\
         \sin{\left( 2x \right)}  & = 2\sin{\left( x \right)}\cos{\left( x \right)}       \\
@@ -78,7 +78,7 @@
         \sin^2{\left( x \right)} & = \frac{1-\cos{\left( 2x \right)}}{2}                 \\
         \cos^2{\left( x \right)} & = \frac{1+\cos{\left( 2x \right)}}{2}
     \end{align*}
-    \subsubsection*{Partial Fraction Decomposition}
+    \subsection*{Partial Fraction Decomposition}
     Given the LHS in the denominator, substitute the RHS.
     \begin{align*}
         \left(ax+b\right)^k & \to \frac{A_1}{ax+b} + \cdots + \frac{A_k}{\left( ax+b \right)^k}
@@ -87,13 +87,13 @@
         \left(ax^2+bx+c\right)^k     & \to                                                  \\
         \frac{A_1x+B_1}{ax^2+bx+c} + & \cdots + \frac{A_kx+B_k}{\left( ax^2+bx+c \right)^k}
     \end{align*}
-    \subsubsection*{Integration Techniques}
+    \subsection*{Integration Techniques}
     \begin{align*}
         \int u \dd{v}                                          & = uv - \int v \dd{u} \\
         \int f\bigl(g\left( x \right)\bigr)\dv{g(x)}{x} \dd{x} & = \int f(u) \dd{u}
     \end{align*}
     where $u = g(x)$.
-    \subsubsection*{Trigonometric Substitutions}
+    \subsection*{Trigonometric Substitutions}
     \begin{table}[H]
         \centering
         \begin{tabular}{>{$}c<{$} | >{$}c<{$}}
@@ -106,10 +106,10 @@
             \bottomrule
         \end{tabular}
     \end{table}
-    \subsubsection*{L'H\^opital's Rule}
+    \subsection*{L'H\^opital's Rule}
     If $\displaystyle \lim_{x\to x_0}f(x)=\lim_{x\to x_0}g(x)=0$ or $\pm\infty$, then
     $\displaystyle \lim_{x\to x_0}\frac{f(x)}{g(x)} = \lim_{x\to x_0}\frac{f'(x)}{g'(x)}$.
-    \subsubsection*{Continuity}
+    \subsection*{Continuity}
     $f(x)$ continuous at $c$ iff $\displaystyle \lim_{x\to c} f(x) = f(c)$.
 
     $f(x)$ is continuous on $I:\left( a,\:b \right)$ if it is continuous
@@ -117,9 +117,9 @@
 
     $f(x)$ is continuous on $I:\left[ a,\:b \right]$ if it is continuous
     for all $x\in I$, but only right continuous at $a$ and left continuous at $b$.
-    \subsubsection*{Intermediate Value Theorem}
+    \subsection*{Intermediate Value Theorem}
     If $f(x)$ is continuous on $I:\left[ a, \: b \right]$ and $f(a) \leq c \leq f(b)$, then $\exists x\in I:f(x)=c$.
-    \subsubsection*{Differentiability}
+    \subsection*{Differentiability}
     $f(x)$ is differentiable at $x=x_0$ iff
     \begin{equation*}
         f'(x_0) = \lim_{x\to x_0} \frac{f(x)-f(x_0)}{x-x_0}
@@ -129,30 +129,30 @@
         f'(x_0) = \lim_{h\to 0} \frac{f(x_0+h)-f(x_0)}{h}.
     \end{equation*}
     Differentiability implies continuity.
-    \subsubsection*{Mean Value Theorem}
+    \subsection*{Mean Value Theorem}
     If $f(x)$ is continuous and differentiable on $I:\left[ a,\:b \right]$, then
     \begin{equation*}
         \exists c\in I:f'(c)=\frac{f(b)-f(a)}{b-a}.
     \end{equation*}
-    \subsubsection*{Definite Integrals}
+    \subsection*{Definite Integrals}
     \begin{equation*}
         A = \int_a^b f(x) \dd{x}
     \end{equation*}
-    \subsubsection*{Fundamental Theorem of Calculus}
+    \subsection*{Fundamental Theorem of Calculus}
     \begin{align*}
         \int_a^b \dv{x}F(x) \dd{x} & = F(b) - F(a) \\
         \dv{x}\int_a^x f(t) \dd{t} & = f(x)
     \end{align*}
-    \subsubsection*{Taylor Polynomials}
+    \subsection*{Taylor Polynomials}
     \begin{equation*}
         f(x) \approx p_n(x) = \sum_{k=0}^n \frac{f^{\left( k \right)}(x_0)}{k!} \left( x-x_0 \right)^k
     \end{equation*}
-    \subsubsection*{Taylor Series}
+    \subsection*{Taylor Series}
     \begin{equation*}
         f(x) = \sum_{n=0}^{\infty} \frac{f^{\left( n \right)}(x_0)}{n!}\left( x-x_0 \right)^n
     \end{equation*}
     \textbf{Maclaurin Series:} $x_0 = 0$.
-    \subsubsection*{Common Maclaurin Series}
+    \subsection*{Common Maclaurin Series}
     \begin{table}[H]
         \centering
         \begin{tabular}{c | c | c}
@@ -169,25 +169,25 @@
         \end{tabular}
     \end{table}
     \textbf{Power Series:} $\sum_{n=0}^{\infty} c_n\left( x-x_0 \right)^n$
-    \subsubsection*{Series Tests}
+    \subsection*{Series Tests}
     For a series of the form $\displaystyle\sum_{i=i_0}^\infty a_i$:
-    \subsubsection*{Alternating Series Test}
+    \subsection*{Alternating Series Test}
     Given $a_i = \left( -1 \right)^i b_i$ and $b_i>0$.
 
     If $b_{i+1}\leqslant b_i$ \& $\lim_{i\to\infty}b_i=0$, then
     convergent, else inconclusive.
-    \subsubsection*{Ratio Test}
+    \subsection*{Ratio Test}
     Given $\rho = \lim_{i\to\infty}\abs{\frac{a_{i+1}}{a_i}}$:
     \begin{align*}
         \rho < 1 & : \text{convergent}   \\
         \rho > 1 & : \text{divergent}    \\
         \rho = 1 & : \text{inconclusive}
     \end{align*}
-    \subsubsection*{Multivariable Functions}
+    \subsection*{Multivariable Functions}
     \begin{equation*}
         f:\mathbb{R}^n\to\mathbb{R}
     \end{equation*}
-    \subsubsection*{Level Curves}
+    \subsection*{Level Curves}
     \begin{equation*}
         L_c\left( f \right) = \bigl\{ \left( x,\: y \right) : f\left(x,\: y\right) = c\bigr\}
     \end{equation*}
@@ -198,13 +198,13 @@
     \textbf{Partial Derivatives:} w.r.t one variable, others held constant.
 
     \textbf{Gradient:} $\symbf{\nabla} = \avec[\big]{\partial_{x_1},\: \partial_{x_2},\: \dots,\: \partial_{x_n}}$
-    \subsubsection*{Multivariable Chain Rule}
+    \subsection*{Multivariable Chain Rule}
     For $f=f\bigl(\symbfit{x}(t_1,\: \ldots,\: t_n)\bigr)$ with
     $\symbfit{x}=\mqty[x_1 & \cdots & x_m]$
     \begin{equation*}
         \pdv{f}{t_i} = \symbf{\nabla}f \cdot \partial_{t_i}\symbfit{x}.
     \end{equation*}
-    \subsubsection*{Directional Derivatives}
+    \subsection*{Directional Derivatives}
     \begin{align*}
         \symbf{\nabla}_{\symbfit{u}}f
          & = \symbf{\nabla}f \cdot \symbfit{u}
@@ -215,10 +215,10 @@
         \max_{\norm{\symbfit{u}} = 1} \symbf{\nabla}_{\symbfit{u}}f = \symbf{\nabla}f
     \end{align*}
     If $\symbf{\nabla}f\neq 0$, $\symbf{\nabla}f$ is a normal vector to the level curve at $\symbfit{x}_0$.
-    \subsubsection*{Critical Points}
+    \subsection*{Critical Points}
     $(x_0,\: y_0)$ is a critical point if $\symbf{\nabla}f(x_0,\: y_0) = \symbf{0}$
     or if $\symbf{\nabla}f(x_0,\: y_0)$ is undefined.
-    \subsubsection*{Classification of Critical Points}
+    \subsection*{Classification of Critical Points}
     \begin{equation*}
         D = f_{xx}f_{yy} - \left( f_{xy} \right)^2
     \end{equation*}
@@ -228,7 +228,7 @@
         \item[$D < 0$:] saddle point
         \item[$D = 0$:] inconclusive
     \end{description}
-    \subsubsection*{Double Integrals}
+    \subsection*{Double Integrals}
     The volume of the solid
     enclosed between the surface $z=f(x,\: y)$ and the region $\Omega$ is
     defined by
@@ -240,7 +240,7 @@
         \iint\limits_{\Omega} f(x,\: y) \dd{A} & = \int_c^d\int_a^b f(x,\: y) \dd{x} \dd{y} \\
                                                & = \int_a^b\int_c^d f(x,\: y) \dd{y} \dd{x}
     \end{align*}
-    \subsubsection*{Type I Regions}
+    \subsection*{Type I Regions}
     \begin{equation*}
         \iint\limits_{\Omega} f(x,\: y) \dd{A} = \int_a^b\int_{g_1(x)}^{g_2(x)} f(x,\: y) \dd{y} \dd{x}
     \end{equation*}
@@ -253,7 +253,7 @@
         y=g_1(x) \text{ and } y=g_2(x)
     \end{equation*}
     where $g_1(x) \leq g_2(x)$ for $a \leq x \leq b$:
-    \subsubsection*{Type II Regions}
+    \subsection*{Type II Regions}
     \begin{equation*}
         \iint\limits_{\Omega} f(x,\: y) \dd{A} = \int_c^d\int_{h_1(x)}^{h_2(x)} f(x,\: y) \dd{x} \dd{y}
     \end{equation*}
@@ -268,7 +268,7 @@
     where $h_1(y) \leq h_2(y)$ for $c \leq y \leq d$.
 
     To integrate, solve the inner integrals first.
-    \subsubsection*{Vector Valued Functions}
+    \subsection*{Vector Valued Functions}
     \begin{equation*}
         \symbf{r}:\mathbb{R} \to \mathbb{R}^n
     \end{equation*}
@@ -279,33 +279,33 @@
     curve as the value of the parameter increases.
 
     \textbf{Limits}, \textbf{derivatives} and \textbf{integrals} are all \textit{component-wise}. Each component has its \underline{own} constant of integration.
-    \subsubsection*{Parametric Lines}
+    \subsection*{Parametric Lines}
     \begin{equation*}
         \symbf{l}(t) = \symbfit{P}_0 + t\symbfit{v}
     \end{equation*}
     where $\symbf{l}(t)$ passes through $\symbfit{P}_0$, and is parallel to $\symbfit{v}$.
-    \subsubsection*{Tangent Lines}
+    \subsection*{Tangent Lines}
     If $\symbf{r}(t)$ is differentiable at
     $t_0$ and $\symbf{r'}(t_0)\ne\symbf{0}$
     \begin{equation*}
         \symbf{l}(t) = \symbf{r}(t_0)+t\symbf{r'}(t_0).
     \end{equation*}
-    \subsubsection*{Curves of Intersection}
+    \subsection*{Curves of Intersection}
     Choose one of the variables as the parameter, and express the remaining variables in terms of that parameter.
-    \subsubsection*{Arc Length}
+    \subsection*{Arc Length}
     \begin{equation*}
         S = \int_a^b \norm{\symbf{r'}(t)} \dd{t}
     \end{equation*}
-    \subsubsection*{Ordinary Differential Equations}
+    \subsection*{Ordinary Differential Equations}
     \textbf{Order:} highest derivative in DE.
 
     \textbf{Autonomous DE:} does not depend explicitly on the independent variable.
-    \subsubsection*{Qualitative Analysis}
+    \subsection*{Qualitative Analysis}
     \begin{equation*}
         \dv{y}{t} = f(y)
     \end{equation*}
     A fixed point is the value of $y$ for which $f(y) = 0$.
-    \subsubsection*{Stability of Fixed Points}
+    \subsection*{Stability of Fixed Points}
     Given a positive/negative perturbation from a fixed point, that point is
 
     \textbf{Stable:} if both tend toward FP
@@ -313,23 +313,23 @@
     \textbf{Unstable:} if both tend away from FP
 
     \textbf{Semi-Stable:} if one tends toward FP, and another tends away from FP
-    \subsubsection*{Directly Integrable ODEs}
+    \subsection*{Directly Integrable ODEs}
     For $\dv{y}{x} = f(x)$:
     \begin{equation*}
         y(x) = \int f(x) \dd{x}.
     \end{equation*}
-    \subsubsection*{Separable ODEs}
+    \subsection*{Separable ODEs}
     For $\dv{y}{x} = p(x) q(y)$:
     \begin{equation*}
         \int \frac{1}{q(y)} \dv{y}{x} \dd{x} = \int p(x) \dd{x}.
     \end{equation*}
-    \subsubsection*{Linear ODEs}
+    \subsection*{Linear ODEs}
     For $\dv{y}{x} + p(x)y = q(x)$, use the \textit{integrating factor}:
     $I(x) = \e^{\int p(x) \dd{x}}$, so that
     \begin{equation*}
         y(x) = \frac{1}{I(x)} \int I(x) q(x) \dd{x}.
     \end{equation*}
-    \subsubsection*{Exact ODEs}
+    \subsection*{Exact ODEs}
     $P(x,\: y) + Q(x,\: y)\dv{y}{x} = 0$
     has the solution
     $\Psi(x,\: y) = c$
@@ -341,48 +341,48 @@
         \Psi(x,\: y) = \int Q(x,\: y) \dd{y} + g(x)
     \end{gather*}
     and $f(y)$ and $g(x)$ can be determined by solving these equations simultaneously.
-    \subsubsection*{Second-Order ODEs}
+    \subsection*{Second-Order ODEs}
     \begin{equation*}
         a_2(x)y'' + a_1(x)y' + a_0(x)y = F(x)
     \end{equation*}
-    \subsubsection*{Initial Values}
+    \subsection*{Initial Values}
     \begin{align*}
         y(x_0) = y_0 \quad y'(x_0) = y_1
     \end{align*}
-    \subsubsection*{Boundary Values}
+    \subsection*{Boundary Values}
     \begin{align*}
         y(x_0) = y_0 \quad y(x_1) = y_1
     \end{align*}
-    \subsubsection*{Reduction of Order}
+    \subsection*{Reduction of Order}
     \begin{equation*}
         y_2(x) = v\left(x\right) y_1(x)
     \end{equation*}
     $v(x)$ can be determined by substituting $y_2$ into the ODE, using $w(x) = v'(x)$.
-    \subsubsection*{General Solution}
+    \subsection*{General Solution}
     \begin{equation*}
         y(x) = y_H(x) + y_P(x)
     \end{equation*}
-    \subsubsection*{Homogeneous Solution}
+    \subsection*{Homogeneous Solution}
     \begin{equation*}
         y_H(x) = \e^{\lambda x}
     \end{equation*}
-    \subsubsection*{Real Distinct Roots}
+    \subsection*{Real Distinct Roots}
     \begin{equation*}
         y_H(x) = c_1\e^{\lambda_1 x} + c_2\e^{\lambda_2 x}
     \end{equation*}
-    \subsubsection*{Real Repeated Roots}
+    \subsection*{Real Repeated Roots}
     \begin{equation*}
         y_H(x) = c_1\e^{\lambda x} + c_2 t\e^{\lambda x}
     \end{equation*}
-    \subsubsection*{Complex Conjugate Roots}
+    \subsection*{Complex Conjugate Roots}
     Given $\lambda = \alpha \pm \beta i$:
     \begin{equation*}
         y_H(x) = \e^{\alpha x}\bigl( c_1\cos{\left( \beta x \right)} + c_2 \sin{\left( \beta x \right)} \bigr)
     \end{equation*}
-    \subsubsection*{Particular Solution}
+    \subsection*{Particular Solution}
     \emph{See table below.}
     Substitute $y_P$ into the nonhomogeneous ODE, and solve the undetermined coefficients.
-    \subsubsection*{Spring and Mass Systems}
+    \subsection*{Spring and Mass Systems}
     \begin{equation*}
         m y'' + \gamma y' + k y = f(t)
     \end{equation*}
@@ -395,14 +395,14 @@
         m      & : \text{mass}    & k    & : \text{spring constant} \\
         \gamma & : \text{damping} & f(t) & : \text{external force}
     \end{align*}
-    \subsubsection*{Electrical Circuits}
+    \subsection*{Electrical Circuits}
     The sum of voltages around a loop equals 0.
     \begin{align*}
         v(t) - iR - L \dv{i}{t} - \frac{q}{C}      & = 0    \\
         L \dv[2]{q}{t} + R\dv{q}{t} + \frac{1}{C}q & = v(t)
     \end{align*}
     where $\displaystyle i = \dv{q}{t}$.
-    \subsubsection*{Voltage drop across various elements:}
+    \subsection*{Voltage drop across various elements:}
     \begin{align*}
         v_R & = iR          \\
         v_C & = \frac{q}{C} \\
