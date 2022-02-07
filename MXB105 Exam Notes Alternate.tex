@@ -6,24 +6,33 @@
 \usepackage{changepage} % Modify page width
 \usepackage{multicol} % Use multiple columns
 \usepackage{titlesec} % Modify section heading styles
+\usepackage{tikz} % 
+\usetikzlibrary{quotes,angles}
 
+%% A4 page
 \geometry{
 	a4paper,
 	margin = 10mm
 }
 
+%% Hide horizontal rule 
+\renewcommand{\headrulewidth}{0pt}
+
+%% Hide page numbers
 \pagenumbering{gobble}
 
-\usepackage{tikz}
-\usetikzlibrary{quotes,angles}
+%% Multi-columns setup
+\setlength\columnsep{4pt}
 
-\setlength{\columnsep}{4pt}
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{0pt}
+%% Paragraph setup
+\setlength\parindent{0pt}
+\setlength\parskip{0pt}
 
+%% Customise section heading styles
 \titleformat*\section{\raggedright\bfseries}
 
 \begin{document}
+% Modify spacing
 \titlespacing*\section{0pt}{1ex}{1ex}
 %
 \setlength{\abovecaptionskip}{-5pt}
