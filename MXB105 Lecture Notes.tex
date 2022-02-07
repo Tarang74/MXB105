@@ -2,41 +2,19 @@
 \documentclass{article}
 \usepackage{LaTeX-Submodule/template}
 
-\usepackage{chngcntr} % Reset counter within sections
+% Additional packages & macros
 \usepackage{multicol}
 
-% Create nice frames
-\usepackage{mdframed}
-\mdfsetup{skipabove=\topskip,skipbelow=\topskip}
-\mdfdefinestyle{exampledefault}{%
-	rightline=true,
-	innerleftmargin=10,innerrightmargin=10,
-	leftmargin=20,rightmargin=20,
-	topline=false,bottomline=false,
-	frametitlefont=\bf\large
-}
-\mdfdefinestyle{exampledefaultcols}{%
-	rightline=false,leftline=true,
-	innerleftmargin=5,innerrightmargin=5,
-	leftmargin=0,rightmargin=0,
-	topline=false,bottomline=false,
-	frametitlefont=\bf\large
-}
-
-\counterwithin*{equation}{section}
-\counterwithin*{equation}{subsection}
-
-\pagestyle{fancy}
-\setlength\headheight{24pt}
+% Header and footer
+\newcommand{\className}{Calculus and Differential Equations}
+\newcommand{\classTime}{Semester 2, 2021}
+\newcommand{\classInstructorName}{Dr Vivien Challis}
 
 \lhead{\className}
 \rhead{\leftmark}
 \cfoot{\thepage}
 
-\newcommand{\className}{Calculus and Differential Equations}
-\newcommand{\classTime}{Semester 2, 2021}
-\newcommand{\classInstructorName}{Dr Vivien Challis}
-
+% Copyright
 \usepackage[
     type={CC},
     modifier={by-nc-sa},
@@ -48,7 +26,7 @@
 \date{}
 
 \begin{document}
-
+%
 \begin{titlepage}
     \vspace*{\fill}
     \begin{center}
@@ -69,10 +47,10 @@
     \thispagestyle{empty}
 \end{titlepage}
 \newpage
-
+%
 \tableofcontents
 \newpage
-
+%
 \section{Integration Techniques}
 \subsection{Table of Derivatives}
 Let $f(x)$ be a function, and $a\in\mathbb{R}$ be a constant.
