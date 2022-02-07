@@ -10,9 +10,9 @@
 \newcommand{\classTime}{Semester 2, 2021}
 \newcommand{\classInstructorName}{Dr Vivien Challis}
 
-\lhead{\className}
-\rhead{\leftmark}
-\cfoot{\thepage}
+\fancyhead[L]{\className}
+\fancyhead[R]{\leftmark}
+\fancyfoot[C]{\thepage}
 
 % Copyright
 \usepackage[
@@ -41,7 +41,7 @@
     \end{center}
     \begin{center}
         \textsc{Rohan Boas \quad\quad Tarang Janawalkar}
-\end{center}
+    \end{center}
     \vspace*{\fill}
     \doclicenseThis
     \thispagestyle{empty}
@@ -59,26 +59,26 @@ Let $f(x)$ be a function, and $a\in\mathbb{R}$ be a constant.
     \centering
     \begin{tabular}{>{$}c<{$} | >{$}c<{$}}
         \toprule
-            f & \dv{f}{x} \\
+        f                                                                        & \dv{f}{x}                                      \\
         \midrule
-            x^a & a x^{a-1} \\
-            \sqrt{x} & \displaystyle \frac{1}{2\sqrt{x}} \\
-            a^x & \ln{\left( a \right)} a^x \\
-            \e^x & \e^x \\
-            \log_a{\left( x \right)}, \: a\in \mathbb{R}\backslash\left\{ 0 \right\} & \displaystyle \frac{1}{x\ln{\left( a \right)}} \\[8pt]
-            \ln{\left( x \right)} & \displaystyle \frac{1}{x} \\[5pt]
+        x^a                                                                      & a x^{a-1}                                      \\
+        \sqrt{x}                                                                 & \displaystyle \frac{1}{2\sqrt{x}}              \\
+        a^x                                                                      & \ln{\left( a \right)} a^x                      \\
+        \e^x                                                                     & \e^x                                           \\
+        \log_a{\left( x \right)}, \: a\in \mathbb{R}\backslash\left\{ 0 \right\} & \displaystyle \frac{1}{x\ln{\left( a \right)}} \\[8pt]
+        \ln{\left( x \right)}                                                    & \displaystyle \frac{1}{x}                      \\[5pt]
         \bottomrule
     \end{tabular}
     \begin{tabular}{>{$}c<{$} | >{$}c<{$}}
         \toprule
-            f & \dv{f}{x} \\
+        f                                & \dv{f}{x}                                              \\
         \midrule
-            a & 0 \\
-            x & 1 \\
-            a_1 u(x) \pm a_2 v(x) & \displaystyle a_1\dv{u}{x} \pm a_2\dv{v}{x} \\[8pt]
-            u(x)v(x) & \displaystyle \dv{u}{x}v + u\dv{v}{x} \\[10pt]
-            \displaystyle \frac{u(x)}{v(x)} & \displaystyle \frac{\dv{u}{x}v - u\dv{v}{x}}{{v(x)}^2} \\[8pt]
-            u\bigl( v\left( x \right) \bigr) & \displaystyle \dv{u}{v}\dv{v}{x} \\[5pt]
+        a                                & 0                                                      \\
+        x                                & 1                                                      \\
+        a_1 u(x) \pm a_2 v(x)            & \displaystyle a_1\dv{u}{x} \pm a_2\dv{v}{x}            \\[8pt]
+        u(x)v(x)                         & \displaystyle \dv{u}{x}v + u\dv{v}{x}                  \\[10pt]
+        \displaystyle \frac{u(x)}{v(x)}  & \displaystyle \frac{\dv{u}{x}v - u\dv{v}{x}}{{v(x)}^2} \\[8pt]
+        u\bigl( v\left( x \right) \bigr) & \displaystyle \dv{u}{v}\dv{v}{x}                       \\[5pt]
         \bottomrule
     \end{tabular}
 \end{table}
@@ -87,26 +87,26 @@ Let $f(x)$ be a function, and $a\in\mathbb{R}$ be a constant.
     \centering
     \begin{tabular}{>{$}c<{$} | >{$}c<{$}}
         \toprule
-            f & \dv{f}{x} \\
+        f                       & \dv{f}{x}                                        \\
         \midrule
-            \sin{\left( ax \right)} &  a\cos{\left( ax \right)} \\
-            \cos{\left( ax \right)} & -a\sin{\left( ax \right)} \\
-            \tan{\left( ax \right)} &  a\sec^2{\left( ax \right)} \\
-            \cot{\left( ax \right)} & -a\csc^2{\left( ax \right)} \\
-            \sec{\left( ax \right)} &  a\sec{\left( ax \right)}\tan{\left( ax \right)} \\
-            \csc{\left( ax \right)} & -a\csc{\left( ax \right)}\cot{\left( ax \right)} \\[5pt]
+        \sin{\left( ax \right)} & a\cos{\left( ax \right)}                         \\
+        \cos{\left( ax \right)} & -a\sin{\left( ax \right)}                        \\
+        \tan{\left( ax \right)} & a\sec^2{\left( ax \right)}                       \\
+        \cot{\left( ax \right)} & -a\csc^2{\left( ax \right)}                      \\
+        \sec{\left( ax \right)} & a\sec{\left( ax \right)}\tan{\left( ax \right)}  \\
+        \csc{\left( ax \right)} & -a\csc{\left( ax \right)}\cot{\left( ax \right)} \\[5pt]
         \bottomrule
     \end{tabular}
     \begin{tabular}{>{$}c<{$} | >{$}c<{$}}
         \toprule
-            f & \dv{f}{x} \\
+        f                          & \dv{f}{x}                                   \\
         \midrule
-            \arcsin{\left( ax \right)} & \displaystyle  \frac{a}{\sqrt{1-a^2x^2}} \\[8pt]
-            \arccos{\left( ax \right)} & \displaystyle -\frac{a}{\sqrt{1-a^2x^2}} \\[8pt]
-            \arctan{\left( ax \right)} & \displaystyle  \frac{a}{1+a^2x^2} \\[8pt]
-            \arccot{\left( ax \right)} & \displaystyle -\frac{a}{1+a^2x^2} \\[8pt]
-            \arcsec{\left( ax \right)} & \displaystyle  \frac{1}{x\sqrt{a^2x^2 - 1}} \\[8pt]
-            \arccsc{\left( ax \right)} & \displaystyle -\frac{1}{x\sqrt{a^2x^2 - 1}} \\[8pt]
+        \arcsin{\left( ax \right)} & \displaystyle  \frac{a}{\sqrt{1-a^2x^2}}    \\[8pt]
+        \arccos{\left( ax \right)} & \displaystyle -\frac{a}{\sqrt{1-a^2x^2}}    \\[8pt]
+        \arctan{\left( ax \right)} & \displaystyle  \frac{a}{1+a^2x^2}           \\[8pt]
+        \arccot{\left( ax \right)} & \displaystyle -\frac{a}{1+a^2x^2}           \\[8pt]
+        \arcsec{\left( ax \right)} & \displaystyle  \frac{1}{x\sqrt{a^2x^2 - 1}} \\[8pt]
+        \arccsc{\left( ax \right)} & \displaystyle -\frac{1}{x\sqrt{a^2x^2 - 1}} \\[8pt]
         \bottomrule
     \end{tabular}
 \end{table}
@@ -116,32 +116,32 @@ Let $f(x)$ be a function, and $a\in\mathbb{R}$ be a constant.
     \hspace*{-1cm}
     \begin{tabular}{>{$}c<{$} | >{$}c<{$}}
         \toprule
-            f & \dv{f}{x} \\
+        f                        & \dv{f}{x}                                         \\
         \midrule
-            \sinh{\left( ax \right)} &  a\cosh{\left( ax \right)} \\
-            \cosh{\left( ax \right)} &  a\sinh{\left( ax \right)} \\
-            \tanh{\left( ax \right)} &  a\sech^2{\left( ax \right)} \\
-            \coth{\left( ax \right)} & -a\csch^2{\left( ax \right)} \\
-            \sech{\left( ax \right)} & -a\sech{\left( ax \right)}\tan{\left( ax \right)} \\
-            \csch{\left( ax \right)} & -a\csch{\left( ax \right)}\cot{\left( ax \right)} \\[5pt]
+        \sinh{\left( ax \right)} & a\cosh{\left( ax \right)}                         \\
+        \cosh{\left( ax \right)} & a\sinh{\left( ax \right)}                         \\
+        \tanh{\left( ax \right)} & a\sech^2{\left( ax \right)}                       \\
+        \coth{\left( ax \right)} & -a\csch^2{\left( ax \right)}                      \\
+        \sech{\left( ax \right)} & -a\sech{\left( ax \right)}\tan{\left( ax \right)} \\
+        \csch{\left( ax \right)} & -a\csch{\left( ax \right)}\cot{\left( ax \right)} \\[5pt]
         \bottomrule
     \end{tabular}
     \begin{tabular}{>{$}c<{$} | >{$}c<{$}}
         \toprule
-            f & \dv{f}{x} \\
+        f                           & \dv{f}{x}                                \\
         \midrule
-            \arcsinh{\left( ax \right)} & \displaystyle  \frac{a}{\sqrt{1+a^2x^2}} \\[8pt]
-            \arccosh{\left( ax \right)} & \displaystyle  \frac{a}{\sqrt{1-a^2x^2}} \\[8pt]
-            \arctanh{\left( ax \right)} & \displaystyle  \frac{a}{1-a^2x^2} \\[8pt]
+        \arcsinh{\left( ax \right)} & \displaystyle  \frac{a}{\sqrt{1+a^2x^2}} \\[8pt]
+        \arccosh{\left( ax \right)} & \displaystyle  \frac{a}{\sqrt{1-a^2x^2}} \\[8pt]
+        \arctanh{\left( ax \right)} & \displaystyle  \frac{a}{1-a^2x^2}        \\[8pt]
         \bottomrule
     \end{tabular}
     \begin{tabular}{>{$}c<{$} | >{$}c<{$}}
         \toprule
-            f & \dv{f}{x} \\
+        f                           & \dv{f}{x}                                                             \\
         \midrule
-            \arccoth{\left( ax \right)} & \displaystyle  \frac{a}{1-a^2x^2} \\[8pt]
-            \arcsech{\left( ax \right)} & \displaystyle -\frac{1}{a\left( 1+ax \right)\sqrt{\frac{1-ax}{1+ax}}} \\[8pt]
-            \arccsch{\left( ax \right)} & \displaystyle -\frac{1}{ax^2\sqrt{1+\frac{1}{a^2x^2}}} \\[8pt]
+        \arccoth{\left( ax \right)} & \displaystyle  \frac{a}{1-a^2x^2}                                     \\[8pt]
+        \arcsech{\left( ax \right)} & \displaystyle -\frac{1}{a\left( 1+ax \right)\sqrt{\frac{1-ax}{1+ax}}} \\[8pt]
+        \arccsch{\left( ax \right)} & \displaystyle -\frac{1}{ax^2\sqrt{1+\frac{1}{a^2x^2}}}                \\[8pt]
         \bottomrule
     \end{tabular}
     \hspace*{-1cm}
@@ -150,24 +150,24 @@ Let $f(x)$ be a function, and $a\in\mathbb{R}$ be a constant.
 \subsection{Trigonometric Identities}
 \subsubsection{Pythagorean Identities}
 \begin{equation*}
-	\sin^2{\left( x \right)} + \cos^2{\left( x \right)} = 1
+    \sin^2{\left( x \right)} + \cos^2{\left( x \right)} = 1
 \end{equation*}
 Dividing by either the sine or cosine function gives:
 \begin{align*}
-	\tan^2{\left( x \right)} + 1 &= \sec^2{\left( x \right)} \\
-	1 + \cot^2{\left( x \right)} &= \csc^2{\left( x \right)}
+    \tan^2{\left( x \right)} + 1 & = \sec^2{\left( x \right)} \\
+    1 + \cot^2{\left( x \right)} & = \csc^2{\left( x \right)}
 \end{align*}
 \subsubsection{Double-Angle Identities}
 \begin{align*}
-    \sin{\left( 2x \right)} &= 2\sin{\left( x \right)}\cos{\left( x \right)}              & \csc{\left( 2x \right)} &= \frac{\sec{\left( x \right)}\csc{\left( x \right)}}{2} \\[5pt]
-    \cos{\left( 2x \right)} &= \cos^2{\left( x \right)} - \sin^2{\left( x \right)}        & \sec{\left( 2x \right)} &= \frac{\sec^2{\left( x \right)}\csc^2{\left( x \right)}}{\csc^2{\left( x \right)}-\sec^2{\left( x \right)}} \\[5pt]
-	\tan{\left( 2x \right)} &= \frac{2\tan{\left( x \right)}}{1-\tan^2{\left( x \right)}} & \cot{\left( 2x \right)} &= \frac{\cot^2{\left( x \right)}-1}{2\cot{\left( x \right)}}
+    \sin{\left( 2x \right)} & = 2\sin{\left( x \right)}\cos{\left( x \right)}              & \csc{\left( 2x \right)} & = \frac{\sec{\left( x \right)}\csc{\left( x \right)}}{2}                                                     \\[5pt]
+    \cos{\left( 2x \right)} & = \cos^2{\left( x \right)} - \sin^2{\left( x \right)}        & \sec{\left( 2x \right)} & = \frac{\sec^2{\left( x \right)}\csc^2{\left( x \right)}}{\csc^2{\left( x \right)}-\sec^2{\left( x \right)}} \\[5pt]
+    \tan{\left( 2x \right)} & = \frac{2\tan{\left( x \right)}}{1-\tan^2{\left( x \right)}} & \cot{\left( 2x \right)} & = \frac{\cot^2{\left( x \right)}-1}{2\cot{\left( x \right)}}
 \end{align*}
 \subsubsection{Power Reducing Identities}
 \begin{align*}
-    \sin^2{\left( x \right)} &= \frac{1-\cos{\left( 2x \right)}}{2}                         & \csc^2{\left( x \right)} &= \frac{2}{1-\cos{\left( 2x \right)}} \\[5pt]
-    \cos^2{\left( x \right)} &= \frac{1+\cos{\left( 2x \right)}}{2}                         & \sec^2{\left( x \right)} &= \frac{2}{1+\cos{\left( 2x \right)}} \\[5pt]
-	\tan^2{\left( x \right)} &= \frac{1-\cos{\left( 2x \right)}}{1+\cos{\left( 2x \right)}} & \cot^2{\left( x \right)} &= \frac{1+\cos{\left( 2x \right)}}{1-\cos{\left( 2x \right)}}
+    \sin^2{\left( x \right)} & = \frac{1-\cos{\left( 2x \right)}}{2}                         & \csc^2{\left( x \right)} & = \frac{2}{1-\cos{\left( 2x \right)}}                         \\[5pt]
+    \cos^2{\left( x \right)} & = \frac{1+\cos{\left( 2x \right)}}{2}                         & \sec^2{\left( x \right)} & = \frac{2}{1+\cos{\left( 2x \right)}}                         \\[5pt]
+    \tan^2{\left( x \right)} & = \frac{1-\cos{\left( 2x \right)}}{1+\cos{\left( 2x \right)}} & \cot^2{\left( x \right)} & = \frac{1+\cos{\left( 2x \right)}}{1-\cos{\left( 2x \right)}}
 \end{align*}
 \subsection{Partial Fractions}
 \begin{definition}[Partial Fraction Decomposition]
@@ -178,21 +178,21 @@ Dividing by either the sine or cosine function gives:
     \centering
     \begin{tabular}{c | c}
         \toprule
-            \textbf{Factor in denominator} & \textbf{Term in partial fraction decomposition} \\
+        \textbf{Factor in denominator}                  & \textbf{Term in partial fraction decomposition}                                                                                                 \\
         \midrule
-            $ax+b$ & $\displaystyle \frac{A}{ax+b}$ \\[10pt]
-            $\left(ax+b\right)^k, \: k \in \mathbb{N}$ & $\displaystyle \frac{A_1}{ax+b} + \frac{A_2}{\left( ax+b \right)^2} + \cdots + \frac{A_k}{\left( ax+b \right)^k}$ \\[10pt]
-            $ax^2+bx+c$ & $\displaystyle \frac{A}{ax^2+bx+c}$ \\[10pt]
-            $\left(ax^2+bx+c\right)^k, \: k \in \mathbb{N}$ & $\displaystyle \frac{A_1x+B_1}{ax^2+bx+c} + \frac{A_2x+B_2}{\left( ax^2+bx+c \right)^2} + \cdots + \frac{A_kx+B_k}{\left( ax^2+bx+c \right)^k}$ \\[10pt]
+        $ax+b$                                          & $\displaystyle \frac{A}{ax+b}$                                                                                                                  \\[10pt]
+        $\left(ax+b\right)^k, \: k \in \mathbb{N}$      & $\displaystyle \frac{A_1}{ax+b} + \frac{A_2}{\left( ax+b \right)^2} + \cdots + \frac{A_k}{\left( ax+b \right)^k}$                               \\[10pt]
+        $ax^2+bx+c$                                     & $\displaystyle \frac{A}{ax^2+bx+c}$                                                                                                             \\[10pt]
+        $\left(ax^2+bx+c\right)^k, \: k \in \mathbb{N}$ & $\displaystyle \frac{A_1x+B_1}{ax^2+bx+c} + \frac{A_2x+B_2}{\left( ax^2+bx+c \right)^2} + \cdots + \frac{A_kx+B_k}{\left( ax^2+bx+c \right)^k}$ \\[10pt]
         \bottomrule
     \end{tabular}
     \caption{Partial Fraction Forms}
 \end{table}
 \subsection{Integration by Parts}
 \begin{theorem}
-\begin{equation*}
-    \int u \dd{v} = uv - \int v \dd{u}
-\end{equation*}
+    \begin{equation*}
+        \int u \dd{v} = uv - \int v \dd{u}
+    \end{equation*}
 \end{theorem}
 \subsection{Integration by Substitution}
 \begin{theorem}
@@ -206,10 +206,10 @@ Dividing by either the sine or cosine function gives:
     \centering
     \begin{tabular}{>{$}c<{$} | >{$}c<{$} >{$}c<{$} | >{$}c<{$}}
         \toprule
-        \text{\textbf{Form}} & \text{\textbf{Substitution}} & \text{\textbf{Result}} & \text{\textbf{Domain}} \\
+        \text{\textbf{Form}}      & \text{\textbf{Substitution}}                           & \text{\textbf{Result}}           & \text{\textbf{Domain}}                                                             \\
         \midrule
-        \left(a^2-b^2x^2\right)^n & \displaystyle x=\frac{a}{b}\sin{\left( \theta \right)} & a^2\cos^2{\left( \theta \right)} & \theta\in \left[ -\frac{\pi}{2},\: \frac{\pi}{2} \right] \\[8pt]
-        \left(a^2+b^2x^2\right)^n & \displaystyle x=\frac{a}{b}\tan{\left( \theta \right)} & a^2\sec^2{\left( \theta \right)} & \theta\in \left( -\frac{\pi}{2},\: \frac{\pi}{2} \right) \\[8pt]
+        \left(a^2-b^2x^2\right)^n & \displaystyle x=\frac{a}{b}\sin{\left( \theta \right)} & a^2\cos^2{\left( \theta \right)} & \theta\in \left[ -\frac{\pi}{2},\: \frac{\pi}{2} \right]                           \\[8pt]
+        \left(a^2+b^2x^2\right)^n & \displaystyle x=\frac{a}{b}\tan{\left( \theta \right)} & a^2\sec^2{\left( \theta \right)} & \theta\in \left( -\frac{\pi}{2},\: \frac{\pi}{2} \right)                           \\[8pt]
         \left(b^2x^2-a^2\right)^n & \displaystyle x=\frac{a}{b}\sec{\left( \theta \right)} & a^2\tan^2{\left( \theta \right)} & \theta\in \left[ 0,\: \frac{\pi}{2} \right) \cup \left(\frac{\pi}{2},\: \pi\right] \\
         \bottomrule
     \end{tabular}
@@ -225,10 +225,10 @@ Dividing by either the sine or cosine function gives:
 \end{theorem}
 \begin{definition}[Finite limits using the $\varepsilon$-$\delta$ definition]
     \begin{equation*}
-		\lim_{x\to x_0} f(x) = L \iff \forall\varepsilon>0: \exists\delta>0: \forall x \in I: 0<\abs{x-x_0}<\delta \implies \abs{f(x)-L}<\varepsilon
-	\end{equation*}
+        \lim_{x\to x_0} f(x) = L \iff \forall\varepsilon>0: \exists\delta>0: \forall x \in I: 0<\abs{x-x_0}<\delta \implies \abs{f(x)-L}<\varepsilon
+    \end{equation*}
 \end{definition}
-\begin{theorem}[L'H\^opital's Rule]
+\begin{theorem}[L'Hôpital's Rule]
     For two differentiable functions $f(x)$ and $g(x)$.
     If $\displaystyle \lim_{x\to x_0}f(x)=\lim_{x\to x_0}g(x)=0$,
     or $\displaystyle \lim_{x\to x_0}f(x)=\displaystyle \lim_{x\to x_0}g(x)=\pm\infty$,
@@ -241,12 +241,12 @@ Dividing by either the sine or cosine function gives:
 \end{theorem}
 \begin{theorem}[Continuity over an Interval]
     $f(x)$ is continuous on $I$ if $f(x)$ is continuous for all $x\in I$.
-\begin{itemize}
-    \item $f(x)$ is continuous on $I:\left( a,\:b \right)$ if it is continuous
-        for all $x\in I$.
-    \item $f(x)$ is continuous on $I:\left[ a,\:b \right]$ if it is continuous
-        for all $x\in I$, but only right continuous at $a$ and left continuous at $b$.
-\end{itemize}
+    \begin{itemize}
+        \item $f(x)$ is continuous on $I:\left( a,\:b \right)$ if it is continuous
+              for all $x\in I$.
+        \item $f(x)$ is continuous on $I:\left[ a,\:b \right]$ if it is continuous
+              for all $x\in I$, but only right continuous at $a$ and left continuous at $b$.
+    \end{itemize}
     If $f(x)$  is continuous on $\left(-\infty,\:\infty\right)$, $f(x)$ is
     continuous everywhere.
 \end{theorem}
@@ -289,21 +289,19 @@ Dividing by either the sine or cosine function gives:
         A = \int_a^b f(x) \dd{x}
     \end{equation*}
 \end{theorem}
-\begin{figure}[H]
-	\begin{mdframed}[style=exampledefault,frametitle={Properties of Definite Integrals}]
-		\begin{theorem}
-			Suppose that $f(x)$ and $g(x)$ are continuous on the interval $I$,
-            with $a,\:b,\:c\in I$, with $a < c < b$, and $k\in\mathbb{R}$ then
-			\begin{enumerate}[label=\normalfont\alph*)]
-				\item $\displaystyle\int_a^a f(x) \dd{x} = 0$.
-				\item $\displaystyle\int_a^b f(x) \dd{x} = -\int_b^a f(x) \dd{x}$.
-				\item $\displaystyle\int_a^b kf(x) \dd{x} = k\int_a^b f(x) \dd{x}$.
-				\item $\displaystyle\int_a^b \bigl(f(x) \pm g(x)\bigr) \dd{x} = \int_a^b f(x) \dd{x} \pm \int_a^b g(x) \dd{x}$.
-				\item $\displaystyle\int_a^b f(x) \dd{x} = \int_a^c f(x) \dd{x} + \int_c^b f(x) \dd{x}$.
-			\end{enumerate}
-		\end{theorem}
-	\end{mdframed}
-\end{figure}
+\begin{tcolorboxlarge}[title={Properties of Definite Integrals}]
+    \begin{theorem}
+        Suppose that $f(x)$ and $g(x)$ are continuous on the interval $I$,
+        with $a,\:b,\:c\in I$, with $a < c < b$, and $k\in\mathbb{R}$ then
+        \begin{enumerate}[label=\normalfont\alph*)]
+            \item $\displaystyle\int_a^a f(x) \dd{x} = 0$.
+            \item $\displaystyle\int_a^b f(x) \dd{x} = -\int_b^a f(x) \dd{x}$.
+            \item $\displaystyle\int_a^b kf(x) \dd{x} = k\int_a^b f(x) \dd{x}$.
+            \item $\displaystyle\int_a^b \bigl(f(x) \pm g(x)\bigr) \dd{x} = \int_a^b f(x) \dd{x} \pm \int_a^b g(x) \dd{x}$.
+            \item $\displaystyle\int_a^b f(x) \dd{x} = \int_a^c f(x) \dd{x} + \int_c^b f(x) \dd{x}$.
+        \end{enumerate}
+    \end{theorem}
+\end{tcolorboxlarge}
 \subsection{Riemann Sums}
 \begin{theorem}\label{theorem:1d_riemann_sums}
     Let $A$ be the area under $f(x)$ on the interval $\left[ a,\:b \right]$,
@@ -403,8 +401,8 @@ infinite series (definite integrals) and antiderivatives
     \end{equation*}
     holds at a point $x$ iff
     \begin{align*}
-        \lim_{n\to\infty} \left[ f(x) - \sum_{k=0}^{n} \frac{f^{\left( k \right)}(x_0)}{k!} \left( x-x_0 \right)^k \right] &= 0 \\
-        \lim_{n\to\infty} R_n(x) &= 0
+        \lim_{n\to\infty} \left[ f(x) - \sum_{k=0}^{n} \frac{f^{\left( k \right)}(x_0)}{k!} \left( x-x_0 \right)^k \right] & = 0 \\
+        \lim_{n\to\infty} R_n(x)                                                                                           & = 0
     \end{align*}
 \end{theorem}
 \begin{definition}[Interval of Convergence]
@@ -423,46 +421,46 @@ infinite series (definite integrals) and antiderivatives
         \abs{x - a} > R
     \end{equation*}
     The behaviour of the power series on the boundary, that is, where
-    $\abs{x - a} = R$, can be determined by substituting $x = R + a$ and 
+    $\abs{x - a} = R$, can be determined by substituting $x = R + a$ and
     $x = -R + a$ into the series, for the upper and lower boundaries, respectively.
 \end{definition}
 \subsection{Convergence Tests}
 For any power series of the form $\displaystyle\sum_{i=i_0}^\infty a_i$.
-\begin{mdframed}[style=exampledefaultcols,frametitle={Alternating Series}]
+\begin{tcolorboxlarge}[title={Alternating Series}]
     \textbf{Conditions} $a_i = \left( -1 \right)^i b_i$ or
     $a_i = \left( -1 \right)^{i+1} b_i$. $b_i>0$.
     \begin{equation*}
         \text{Is $b_{i+1}\leqslant b_i$ \& $\lim_{i\to\infty}b_i=0$?}\:
         \begin{cases}
             \text{YES} & \text{$\sum a_i$ Converges} \\
-            \text{NO} & \text{Inconclusive}
+            \text{NO}  & \text{Inconclusive}
         \end{cases}
     \end{equation*}
-\end{mdframed}
-\begin{mdframed}[style=exampledefaultcols,frametitle={Ratio Test}]
+\end{tcolorboxlarge}
+\begin{tcolorboxlarge}[title={Ratio Test}]
     \begin{equation*}
         \text{Is $\lim_{i\to\infty}\abs{\frac{a_{i+1}}{a_i}} < 1$?}\:
         \begin{cases}
             \text{YES} & \text{$\sum a_i$ Converges} \\
-            \text{NO} & \text{$\sum a_i$ Diverges}
+            \text{NO}  & \text{$\sum a_i$ Diverges}
         \end{cases}
     \end{equation*}
     The ratio test is inconclusive if
     $\displaystyle \lim_{i\to\infty}\frac{a_{i+1}}{a_i} = 1$.
-\end{mdframed}
+\end{tcolorboxlarge}
 \subsection{Table of Maclaurin Series}
 \begin{table}[H]
     \centering
     \begin{tabular}{c | c | c}
         \toprule
-        \textbf{Function} & \textbf{Series} & \textbf{Interval of Convergence} \\
+        \textbf{Function}                       & \textbf{Series}                                                                               & \textbf{Interval of Convergence} \\
         \midrule
-        $\e^{x}$ & $\displaystyle \sum_{n=0}^{\infty} \frac{x^n}{n!}$ & $-\infty < x < \infty$ \\[14pt]
-        $\sin{\left( x \right)}$ & $\displaystyle \sum_{n=0}^{\infty} \left( -1 \right)^n \frac{x^{2n+1}}{\left( 2n+1 \right)!}$ & $-\infty < x < \infty$ \\[14pt]
-        $\cos{\left( x \right)}$ & $\displaystyle \sum_{n=0}^{\infty} \left( -1 \right)^n \frac{x^{2n}}{\left( 2n \right)!}$ & $-\infty < x < \infty$ \\[14pt]
-        $\displaystyle \frac{1}{1-x}$ & $\displaystyle \sum_{n=0}^{\infty} x^n$ & $-1 < x < 1$ \\[14pt]
-        $\displaystyle \frac{1}{1+x^2}$ & $\displaystyle \sum_{n=0}^{\infty} \left( -1 \right)^n x^{2n}$ & $-1 < x < 1$ \\[14pt]
-        $\displaystyle \ln{\left( 1+x \right)}$ & $\displaystyle \sum_{n=0}^{\infty} \left( -1 \right)^{n+1} \frac{x^n}{n}$ & $-1 < x \leq 1$ \\[14pt]
+        $\e^{x}$                                & $\displaystyle \sum_{n=0}^{\infty} \frac{x^n}{n!}$                                            & $-\infty < x < \infty$           \\[14pt]
+        $\sin{\left( x \right)}$                & $\displaystyle \sum_{n=0}^{\infty} \left( -1 \right)^n \frac{x^{2n+1}}{\left( 2n+1 \right)!}$ & $-\infty < x < \infty$           \\[14pt]
+        $\cos{\left( x \right)}$                & $\displaystyle \sum_{n=0}^{\infty} \left( -1 \right)^n \frac{x^{2n}}{\left( 2n \right)!}$     & $-\infty < x < \infty$           \\[14pt]
+        $\displaystyle \frac{1}{1-x}$           & $\displaystyle \sum_{n=0}^{\infty} x^n$                                                       & $-1 < x < 1$                     \\[14pt]
+        $\displaystyle \frac{1}{1+x^2}$         & $\displaystyle \sum_{n=0}^{\infty} \left( -1 \right)^n x^{2n}$                                & $-1 < x < 1$                     \\[14pt]
+        $\displaystyle \ln{\left( 1+x \right)}$ & $\displaystyle \sum_{n=0}^{\infty} \left( -1 \right)^{n+1} \frac{x^n}{n}$                     & $-1 < x \leq 1$                  \\[14pt]
         \bottomrule
     \end{tabular}
     \caption{Maclaurin series of common functions.}
@@ -480,7 +478,7 @@ For any power series of the form $\displaystyle\sum_{i=i_0}^\infty a_i$.
 \end{definition}
 \subsection{Level Curves}
 \begin{definition}
-    The level curves or \textit{contour curves} of a function of two variables are 
+    The level curves or \textit{contour curves} of a function of two variables are
     curves along which the function has a constant value.
     \begin{equation*}
         L_c\left( f \right) = \bigl\{ \left( x,\: y \right) : f\left(x,\: y\right) = c\bigr\}
@@ -490,12 +488,12 @@ For any power series of the form $\displaystyle\sum_{i=i_0}^\infty a_i$.
 \end{definition}
 \subsection{Limits and Continuity}
 \begin{definition}[Finite Limit of Multivariable Functions using the
-    $\varepsilon$-$\delta$ Definition]
+        $\varepsilon$-$\delta$ Definition]
     \begin{align*}
-		\lim_{(x_1,\: \ldots,\: x_n)\to (c_1,\: \ldots,\: c_n)} f(x_1,\: \ldots,\: x_n) = L
-        &\iff\forall\varepsilon>0: \exists\delta>0: \forall (x_1,\: \ldots,\: x_n) \in I: \\
-        0<\abs{x_1-c_1,\: \ldots,\: x_n-c_n}<\delta &\implies \abs{f(x_1,\: \ldots,\: x_n)-L}<\varepsilon
-	\end{align*}
+        \lim_{(x_1,\: \ldots,\: x_n)\to (c_1,\: \ldots,\: c_n)} f(x_1,\: \ldots,\: x_n) = L
+                                                    & \iff\forall\varepsilon>0: \exists\delta>0: \forall (x_1,\: \ldots,\: x_n) \in I: \\
+        0<\abs{x_1-c_1,\: \ldots,\: x_n-c_n}<\delta & \implies \abs{f(x_1,\: \ldots,\: x_n)-L}<\varepsilon
+    \end{align*}
 \end{definition}
 \begin{theorem}[Limits along Smooth Curves]
     If $f(x,\: y) \to L$ as $(x,\: y) \to (x_0,\: y_0)$, then
@@ -517,7 +515,7 @@ Recognising continuous functions:
 \begin{itemize}
     \item A sum, difference or product of continuous functions is continuous.
     \item A quotient of continuous functions is continuous except where the
-        denominator is zero.
+          denominator is zero.
     \item A composition of continuous functions is continuous.
 \end{itemize}
 \subsection{Partial Derivatives}
@@ -550,8 +548,8 @@ Recognising continuous functions:
     The directional derivative $\symbf{\nabla}_{\symbfit{u}}f$ is the rate at
     which the function $f$ changes in the direction $\symbfit{u}$.
     \begin{align*}
-        \symbf{\nabla}_{\symbfit{u}}f &= \lim_{h \to 0} \frac{f(\symbfit{x} + h\symbfit{u}) - f(\symbfit{x})}{h} \\
-        &= \symbf{\nabla}f \cdot \symbfit{u}
+        \symbf{\nabla}_{\symbfit{u}}f & = \lim_{h \to 0} \frac{f(\symbfit{x} + h\symbfit{u}) - f(\symbfit{x})}{h} \\
+                                      & = \symbf{\nabla}f \cdot \symbfit{u}
     \end{align*}
     where the slope is given by $\norm{\symbf{\nabla}_{\symbfit{u}}f}$.
 \end{definition}
@@ -579,9 +577,9 @@ Recognising continuous functions:
     Given that $\symbfit{u}$ is a unit vector, the dot product definition
     gives
     \begin{align}
-        \symbf{\nabla}_{\symbfit{u}}f &= \symbf{\nabla}f \cdot \symbfit{u} \nonumber \\
-        &= \norm{\symbf{\nabla}f} \norm{\symbfit{u}} \cos{\left( \theta \right)} \nonumber \\
-        &= \norm{\symbf{\nabla}f} \cos{\left( \theta \right)} \label{directional_derivative}
+        \symbf{\nabla}_{\symbfit{u}}f & = \symbf{\nabla}f \cdot \symbfit{u} \nonumber                                       \\
+                                      & = \norm{\symbf{\nabla}f} \norm{\symbfit{u}} \cos{\left( \theta \right)} \nonumber   \\
+                                      & = \norm{\symbf{\nabla}f} \cos{\left( \theta \right)} \label{directional_derivative}
     \end{align}
     \hyperref[directional_derivative]{Equation \ref{directional_derivative}} is
     maximised when $\cos{\left( \theta \right)}$ is maximised. Thus the
@@ -607,9 +605,9 @@ Recognising continuous functions:
         \centering
         \begin{tabular}{c c c}
             \toprule
-            \textbf{Leibniz} & \textbf{Euler} & \textbf{Legendre} \\
+            \textbf{Leibniz}             & \textbf{Euler}      & \textbf{Legendre} \\
             \midrule
-            $\displaystyle\pdv{f}{y}{x}$ & $\partial_{x y}{f}$ & $f_{x y}$ \\
+            $\displaystyle\pdv{f}{y}{x}$ & $\partial_{x y}{f}$ & $f_{x y}$         \\
             \bottomrule
         \end{tabular}
         \caption{Mixed Partial Derivative Notation}
@@ -620,9 +618,9 @@ Recognising continuous functions:
         \centering
         \begin{tabular}{c c c}
             \toprule
-            \textbf{Leibniz} & \textbf{Euler} & \textbf{Legendre} \\
+            \textbf{Leibniz}             & \textbf{Euler}      & \textbf{Legendre} \\
             \midrule
-            $\displaystyle\pdv[2]{f}{x}$ & $\partial^2_{x}{f}$ & $f_{x x}$ \\
+            $\displaystyle\pdv[2]{f}{x}$ & $\partial^2_{x}{f}$ & $f_{x x}$         \\
             \bottomrule
         \end{tabular}
         \caption{Second-Order Partial Derivative Notation}
@@ -636,18 +634,18 @@ Recognising continuous functions:
     \begin{equation*}
         \symbf{H} =
         \mqty[
-            \partial^2_{x_1} & \cdots & \partial_{x_nx_1} \\
-            \vdots & \ddots & \vdots \\
-            \partial_{x_1x_n} & \cdots & \partial^2_{x_n}
+        \partial^2_{x_1} & \cdots & \partial_{x_nx_1} \\
+        \vdots & \ddots & \vdots \\
+        \partial_{x_1x_n} & \cdots & \partial^2_{x_n}
         ]
     \end{equation*}
     Operating on the function $f(x,\: y)$ gives
     \begin{equation*}
         \symbf{H}_f =
         \mqty[
-            \partial^2_{x_1}f & \cdots & \partial_{x_nx_1}f \\
-            \vdots & \ddots & \vdots \\
-            \partial_{x_1x_n}f & \cdots & \partial^2_{x_n}f
+        \partial^2_{x_1}f & \cdots & \partial_{x_nx_1}f \\
+        \vdots & \ddots & \vdots \\
+        \partial_{x_1x_n}f & \cdots & \partial^2_{x_n}f
         ]
     \end{equation*}
 \end{definition}
@@ -661,10 +659,10 @@ or if $\symbf{\nabla}f(x_0,\: y_0)$ is undefined.
 The nature of a critical point can be classified using the second derivative test:
 \begin{itemize}
     \item if $\left.\det{\left(\mathbf{H}_f\right)}\right|_{(x_0,\: y_0)} > 0$, then the point is a local minima or maxima
-    \begin{itemize}
-        \item if $f_{xx}(x_0, \: y_0) < 0$, then the point is a local maxima
-        \item if $f_{xx}(x_0, \: y_0) > 0$, then the point is a local minima\footnote[1]{For the local minima/maxima, the second derivative can also be taken w.r.t. $y$.}
-    \end{itemize}
+          \begin{itemize}
+              \item if $f_{xx}(x_0, \: y_0) < 0$, then the point is a local maxima
+              \item if $f_{xx}(x_0, \: y_0) > 0$, then the point is a local minima\footnote[1]{For the local minima/maxima, the second derivative can also be taken w.r.t. $y$.}
+          \end{itemize}
     \item if $\left.\det{\left(\mathbf{H}_f\right)}\right|_{(x_0,\: y_0)} < 0$, then the point is a saddle point
     \item if $\left.\det{\left(\mathbf{H}_f\right)}\right|_{(x_0,\: y_0)} = 0$, then the test is inconclusive.
 \end{itemize}
@@ -699,32 +697,30 @@ The nature of a critical point can be classified using the second derivative tes
         = \sum_{k=1}^{\infty} f(x_k^\ast,\: y_k^\ast) \Delta A_k
     \end{equation*}
 \end{definition}
-\begin{figure}[H]
-	\begin{mdframed}[style=exampledefault,frametitle={Properties of Double Integrals}]
-		\begin{theorem}
-            Suppose that $f(x,\: y) $ and $g(x,\: y)$ are continuous on $\Omega$,
-            and $\Omega$ can be subdivided into $\Omega_1$ and $\Omega_2$, then
-			\begin{enumerate}[label=\normalfont\alph*)]
-				\item $\displaystyle\iint\limits_\Omega kf(x,\: y) \dd{A}
-                    = k\iint\limits_\Omega f(x,\: y) \dd{A}$.
-				\item $\displaystyle\iint\limits_\Omega f(x,\: y) + g(x,\: y) \dd{A}
-                    = \iint\limits_\Omega f(x,\: y) \dd{A} + \iint\limits_\Omega g(x,\: y) \dd{A}$.
-                \item $\displaystyle\iint\limits_\Omega f(x,\: y) \dd{A}
-                    = \iint\limits_{\Omega_1} f(x,\: y) \dd{A} + \iint\limits_{\Omega_2} f(x,\: y) \dd{A}$.
-			\end{enumerate}
-		\end{theorem}
-	\end{mdframed}
-\end{figure}
+\begin{tcolorboxlarge}[title={Properties of Double Integrals}]
+    \begin{theorem}
+        Suppose that $f(x,\: y) $ and $g(x,\: y)$ are continuous on $\Omega$,
+        and $\Omega$ can be subdivided into $\Omega_1$ and $\Omega_2$, then
+        \begin{enumerate}[label=\normalfont\alph*)]
+            \item $\displaystyle\iint\limits_\Omega kf(x,\: y) \dd{A}
+                        = k\iint\limits_\Omega f(x,\: y) \dd{A}$.
+            \item $\displaystyle\iint\limits_\Omega f(x,\: y) + g(x,\: y) \dd{A}
+                        = \iint\limits_\Omega f(x,\: y) \dd{A} + \iint\limits_\Omega g(x,\: y) \dd{A}$.
+            \item $\displaystyle\iint\limits_\Omega f(x,\: y) \dd{A}
+                        = \iint\limits_{\Omega_1} f(x,\: y) \dd{A} + \iint\limits_{\Omega_2} f(x,\: y) \dd{A}$.
+        \end{enumerate}
+    \end{theorem}
+\end{tcolorboxlarge}
 \subsection{Rectangular Regions}
 If $\Omega$ is a region bounded by $a \leq x \leq b$ and $c \leq y \leq d$, then
 \begin{equation*}
     \iint\limits_{\Omega} f(x,\: y) \dd{A} = \int_c^d\int_a^b f(x,\: y) \dd{x} \dd{y} = \int_a^b\int_c^d f(x,\: y) \dd{y} \dd{x}
 \end{equation*}
 \subsection{Nonrectangular Regions}
-If the limits of integration depend on the variable $x$ or $y$, then the region 
+If the limits of integration depend on the variable $x$ or $y$, then the region
 may be classified as Type I or Type II.
 \subsubsection{Type I Regions}
-If the region is: 
+If the region is:
 \begin{description}
     \item[Bounded on the left \& right by:] $x=a$ and $x=b$
     \item[Bounded below \& above by:] $y=g_1(x)$ and $y=g_2(x)$
@@ -734,7 +730,7 @@ where $g_1(x) \leq g_2(x)$ for $a \leq x \leq b$, then
     \iint\limits_{\Omega} f(x,\: y) \dd{A} = \int_a^b\int_{g_1(x)}^{g_2(x)} f(x,\: y) \dd{y} \dd{x}.
 \end{equation*}
 \subsubsection{Type II Regions}
-If the region is: 
+If the region is:
 \begin{description}
     \item[Bounded on the left \& right by:] $x=h_1(y)$ and $x=h_2(y)$
     \item[Bounded below \& above by:] $y=c$ and $y=d$
@@ -744,11 +740,11 @@ where $h_1(y) \leq h_2(y)$ for $c \leq y \leq d$, then
     \iint\limits_{\Omega} f(x,\: y) \dd{A} = \int_c^d\int_{h_1(y)}^{h_2(y)} f(x,\: y) \dd{x} \dd{y}.
 \end{equation*}
 \subsection{Polar Coordinates}
-To determine the area of a region defined using polar coordinates, 
+To determine the area of a region defined using polar coordinates,
 the function can be integrated w.r.t. the radius $r$, and the angle $\theta$.
 \begin{equation*}
     \iint\limits_{\Omega} f(r,\: \theta) \dd{A} = \int_{\theta_1}^{\theta_2}\int_{r_1(\theta)}^{r_2(\theta)} f\left(r,\: \theta\right) r \dd{r} \dd{\theta}.
-\end{equation*} 
+\end{equation*}
 \subsection{Volume of a Three Variable Function}
 \begin{definition}
     If $f$ is a function of three variables that is continuous and nonnegative
@@ -762,7 +758,7 @@ the function can be integrated w.r.t. the radius $r$, and the angle $\theta$.
     Using planes parallel to the coordinate planes, the
     region $\Omega$ can be divided into $n$ boxes, where
     boxes containing points outside of $\Omega$ are discarded.
-    The volume of the $k$th remaining box at the arbitrary point 
+    The volume of the $k$th remaining box at the arbitrary point
     $(x_k^\ast,\: y_k^\ast,\: z_k^\ast)$ is $\Delta V_k$.
     Thus the product $f(x_k^\ast,\: y_k^\ast,\: z_k^\ast)\Delta V_k$
     is the volume of the $k$th box, and the sum of all $n$ volumes over
@@ -779,22 +775,20 @@ the function can be integrated w.r.t. the radius $r$, and the angle $\theta$.
         = \sum_{k=1}^{\infty} f(x_k^\ast,\: y_k^\ast,\: z_k^\ast) \Delta V_k
     \end{equation*}
 \end{definition}
-\begin{figure}[H]
-	\begin{mdframed}[style=exampledefault,frametitle={Properties of Triple Integrals}]
-		\begin{theorem}
-            Suppose that $f(x,\: y,\: z) $ and $g(x,\: y,\: z)$ are continuous on $\Omega$,
-            and $\Omega$ can be subdivided into $\Omega_1$ and $\Omega_2$ then
-			\begin{enumerate}[label=\normalfont\alph*)]
-				\item $\displaystyle\iiint\limits_\Omega kf(x,\: y,\: z) \dd{V}
-                    = k\iiint\limits_\Omega f(x,\: y,\: z) \dd{V}$.
-				\item $\displaystyle\iiint\limits_\Omega f(x,\: y,\: z) + g(x,\: y,\: z) \dd{V}
-                    = \iiint\limits_\Omega f(x,\: y,\: z) \dd{V} + \iiint\limits_\Omega g(x,\: y,\: z) \dd{V}$.
-                \item $\displaystyle\iiint\limits_\Omega f(x,\: y,\: z) \dd{V}
-                    = \iiint\limits_{\Omega_1} f(x,\: y,\: z) \dd{V} + \iiint\limits_{\Omega_2} f(x,\: y,\: z) \dd{V}$.
-			\end{enumerate}
-		\end{theorem}
-	\end{mdframed}
-\end{figure}
+\begin{tcolorboxlarge}[title={Properties of Triple Integrals}]
+    \begin{theorem}
+        Suppose that $f(x,\: y,\: z) $ and $g(x,\: y,\: z)$ are continuous on $\Omega$,
+        and $\Omega$ can be subdivided into $\Omega_1$ and $\Omega_2$ then
+        \begin{enumerate}[label=\normalfont\alph*)]
+            \item $\displaystyle\iiint\limits_\Omega kf(x,\: y,\: z) \dd{V}
+                        = k\iiint\limits_\Omega f(x,\: y,\: z) \dd{V}$.
+            \item $\displaystyle\iiint\limits_\Omega f(x,\: y,\: z) + g(x,\: y,\: z) \dd{V}
+                        = \iiint\limits_\Omega f(x,\: y,\: z) \dd{V} + \iiint\limits_\Omega g(x,\: y,\: z) \dd{V}$.
+            \item $\displaystyle\iiint\limits_\Omega f(x,\: y,\: z) \dd{V}
+                        = \iiint\limits_{\Omega_1} f(x,\: y,\: z) \dd{V} + \iiint\limits_{\Omega_2} f(x,\: y,\: z) \dd{V}$.
+        \end{enumerate}
+    \end{theorem}
+\end{tcolorboxlarge}
 \newpage
 \section{Vector-Valued Functions}
 % Conventions:
@@ -938,7 +932,7 @@ For the autonomous differential equation
     A fixed point is the value of $y$ for which $f(y) = 0$.
 \end{definition}
 \begin{definition}[Stability]
-    By analysing the behaviour of $f(y)$ given a perturbation near fixed points, 
+    By analysing the behaviour of $f(y)$ given a perturbation near fixed points,
     we can determine the stability of those fixed points.
     \begin{table}[H]
         \centering
@@ -946,9 +940,9 @@ For the autonomous differential equation
             \toprule
             \textbf{Behaviour in Positive/Negative Directions} & \textbf{Stability} \\
             \midrule
-            Both toward fixed point & stable \\
-            Both away from fixed point & unstable \\
-            One toward and one away from fixed point & semi-stable \\
+            Both toward fixed point                            & stable             \\
+            Both away from fixed point                         & unstable           \\
+            One toward and one away from fixed point           & semi-stable        \\
             \bottomrule
         \end{tabular}
     \end{table}
@@ -1124,22 +1118,22 @@ forms of $y_P$ based on $F$.
     \centering
     \begin{tabular}{c | c}
         \toprule
-        $F(x)$ form & $y_P(x)$ guess \\
+        $F(x)$ form                                                        & $y_P(x)$ guess                                                          \\
         \midrule
-        a constant & A \\
-        a polynomial of degree $n$ & $\displaystyle \sum_{i = 0}^n A_i x^i$ \\
-        $\e^{kx}$ & $A \e^{kx}$ \\
+        a constant                                                         & A                                                                       \\
+        a polynomial of degree $n$                                         & $\displaystyle \sum_{i = 0}^n A_i x^i$                                  \\
+        $\e^{kx}$                                                          & $A \e^{kx}$                                                             \\
         $\cos{\left( \omega x \right)}$ or $\sin{\left( \omega x \right)}$ & $A_0 \cos{\left( \omega x \right)} + A_1 \sin{\left( \omega x \right)}$ \\
         \bottomrule
     \end{tabular}
     \caption{Particular solutions for undetermined coefficients.}
     % \label{}
 \end{table}
-Once the form of the particular solution has been determined, it can be substituted into the 
+Once the form of the particular solution has been determined, it can be substituted into the
 nonhomogeneous ODE, to determine the undetermined coefficients.
 \subsection{Special Forms}
 \subsubsection{Product of Forms}
-If $F(x)$ is a product of the functions shown above, then the 
+If $F(x)$ is a product of the functions shown above, then the
 particular solutions are also multiplied together and any constants are simplified.
 \subsubsection{Sum of Forms}
 If $F(x)$ is a sum of the functions shown above, then the
@@ -1182,14 +1176,14 @@ The voltage drop across various elements is given below:
     \item[Voltage drop across a capacitor:] $q/C$
     \item[Voltage drop across an inductor:] $L \dv{i}{t}$
 \end{description}
-where $R$ is the resistance measured in Ohms (\si{\ohm}), 
-$C$ is the capacitance measured in Farads (\si{\farad}), 
+where $R$ is the resistance measured in Ohms (\si{\ohm}),
+$C$ is the capacitance measured in Farads (\si{\farad}),
 and $L$ is the inductance measured in Henrys (\si{\henry}).
 
-Kirchhoff's Voltage law states that the sum of voltages around a loop equals 0. 
+Kirchhoff's Voltage law states that the sum of voltages around a loop equals 0.
 Therefore in an RLC circuit, with a voltage source supplying $v(t)\si{\volt}$,
 \begin{align*}
-    v(t) - iR - L \dv{i}{t} - \frac{q}{C} & = 0 \\
+    v(t) - iR - L \dv{i}{t} - \frac{q}{C}      & = 0     \\
     L \dv[2]{q}{t} + R\dv{q}{t} + \frac{1}{C}q & = v(t).
 \end{align*}
 \end{document}

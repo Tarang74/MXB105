@@ -7,27 +7,37 @@
 \usepackage{multicol} % Use multiple columns
 \usepackage{titlesec} % Modify section heading styles
 
+%% A4 page
 \geometry{
 	a4paper,
 	margin = 10mm
 }
 
+%% Hide horizontal rule 
+\renewcommand{\headrulewidth}{0pt}
+
+%% Hide page numbers
 \pagenumbering{gobble}
 
-\setlength{\columnsep}{4pt}
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{0pt}
+%% Multi-columns setup
+\setlength\columnsep{4pt}
 
+%% Paragraph setup
+\setlength\parindent{0pt}
+\setlength\parskip{0pt}
+
+%% Customise section heading styles
 \titleformat*\section{\raggedright\bfseries}
 
 \begin{document}
+% Modify spacing
 \titlespacing*\section{0pt}{1ex}{1ex}
 %
-\setlength{\abovecaptionskip}{-5pt}
-\setlength{\textfloatsep}{0pt}
+\setlength\abovecaptionskip{-5pt}
+\setlength\textfloatsep{0pt}
 %
-\setlength{\abovedisplayskip}{1pt}
-\setlength{\belowdisplayskip}{1pt}
+\setlength\abovedisplayskip{1pt}
+\setlength\belowdisplayskip{1pt}
 %
 \begin{multicols}{3}
     \section*{Derivative Rules}
@@ -89,7 +99,7 @@
             \bottomrule
         \end{tabular}
     \end{table}
-    \section*{L'H\^opital's Rule}
+    \section*{L'Hôpital's Rule}
     If $\displaystyle \lim_{x\to x_0}f(x)=\lim_{x\to x_0}g(x)=0$ or $\pm\infty$, then
     $\displaystyle \lim_{x\to x_0}\frac{f(x)}{g(x)} = \lim_{x\to x_0}\frac{f'(x)}{g'(x)}$.
     \section*{Continuity}
