@@ -6,11 +6,12 @@
 \usepackage{multicol}
 
 % Header and footer
-\newcommand{\className}{Calculus and Differential Equations}
-\newcommand{\classTime}{Semester 2, 2021}
-\newcommand{\classInstructorName}{Dr Vivien Challis}
+\newcommand{\unitName}{Calculus and Differential Equations}
+\newcommand{\unitTime}{Semester 2, 2021}
+\newcommand{\unitCoordinator}{Dr Vivien Challis}
+\newcommand{\documentAuthors}{\textsc{Rohan Boas} \quad\quad \textsc{Tarang Janawalkar}}
 
-\fancyhead[L]{\className}
+\fancyhead[L]{\unitName}
 \fancyhead[R]{\leftmark}
 \fancyfoot[C]{\thepage}
 
@@ -30,23 +31,15 @@
 \begin{titlepage}
     \vspace*{\fill}
     \begin{center}
-        \LARGE{\textbf{\className}}
-        \texorpdfstring{\\}{ }
-        \texorpdfstring{\vspace{0.1in}}{ }
-        \normalsize{\classTime}
-        \texorpdfstring{\\}{ }
-        \texorpdfstring{\vspace{0.2in}}{ }
-        \normalsize\textit{\classInstructorName}
-        \texorpdfstring{\\}{ }
-    \end{center}
-    \begin{center}
-        \textsc{Rohan Boas \quad\quad Tarang Janawalkar}
+        \LARGE{\textbf{\unitName}} \\[0.1in]
+        \normalsize{\unitTime} \\[0.2in]
+        \normalsize\textit{\unitCoordinator} \\[0.2in]
+        \documentAuthors
     \end{center}
     \vspace*{\fill}
     \doclicenseThis
     \thispagestyle{empty}
 \end{titlepage}
-\newpage
 %
 \tableofcontents
 \newpage
