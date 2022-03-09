@@ -186,7 +186,7 @@
             \toprule
             \textbf{Function}         & \textbf{Series Term}                                        & \textbf{Conv.}           \\
             \midrule
-            \(\e^{x}\)                  & \(\frac{x^n}{n!}\)                                            & all \(x\)                  \\
+            \(e^{x}\)                  & \(\frac{x^n}{n!}\)                                            & all \(x\)                  \\
             \(\sin{\left( x \right)}\)  & \(\left( -1 \right)^n \frac{x^{2n+1}}{\left( 2n+1 \right)!}\) & all \(x\)                  \\
             \(\cos{\left( x \right)}\)  & \(\left( -1 \right)^n \frac{x^{2n}}{\left( 2n \right)!}\)     & all \(x\)                  \\
             \(\frac{1}{1-x}\)           & \(x^n\)                                                       & \(\left( -1,\: 1 \right)\) \\
@@ -349,7 +349,7 @@
     \end{equation*}
     \section*{Linear ODEs}
     For \(\dv{y}{x} + p(x)y = q(x)\), use the \textit{integrating factor}:
-    \(I(x) = \e^{\int p(x) \dd{x}}\), so that
+    \(I(x) = e^{\int p(x) \dd{x}}\), so that
     \begin{equation*}
         y(x) = \frac{1}{I(x)} \int I(x) q(x) \dd{x}.
     \end{equation*}
@@ -388,20 +388,20 @@
     \end{equation*}
     \section*{Homogeneous Solution}
     \begin{equation*}
-        y_H(x) = \e^{\lambda x}
+        y_H(x) = e^{\lambda x}
     \end{equation*}
     \section*{Real Distinct Roots}
     \begin{equation*}
-        y_H(x) = c_1\e^{\lambda_1 x} + c_2\e^{\lambda_2 x}
+        y_H(x) = c_1e^{\lambda_1 x} + c_2e^{\lambda_2 x}
     \end{equation*}
     \section*{Real Repeated Roots}
     \begin{equation*}
-        y_H(x) = c_1\e^{\lambda x} + c_2 t\e^{\lambda x}
+        y_H(x) = c_1e^{\lambda x} + c_2 te^{\lambda x}
     \end{equation*}
     \section*{Complex Conjugate Roots}
     Given \(\lambda = \alpha \pm \beta i\):
     \begin{equation*}
-        y_H(x) = \e^{\alpha x}\bigl( c_1\cos{\left( \beta x \right)} + c_2 \sin{\left( \beta x \right)} \bigr)
+        y_H(x) = e^{\alpha x}\bigl( c_1\cos{\left( \beta x \right)} + c_2 \sin{\left( \beta x \right)} \bigr)
     \end{equation*}
     \section*{Particular Solution}
     \begin{table}[H]
@@ -412,7 +412,7 @@
             \midrule
             constant                                                           & A                                      \\
             polynomial degree \(n\)                                              & \(\displaystyle \sum_{i = 0}^n A_i x^i\) \\
-            \(\e^{kx}\)                                                          & \(A \e^{kx}\)                            \\
+            \(e^{kx}\)                                                          & \(A e^{kx}\)                            \\
             \(\cos{\left( \omega x \right)}\) or \(\sin{\left( \omega x \right)}\) & \(A_0 \cos{\left( \omega x \right)}\)    \\ & \(+ A_1 \sin{\left( \omega x \right)}\) \\
             \bottomrule
         \end{tabular}

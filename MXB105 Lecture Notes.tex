@@ -57,7 +57,7 @@ Let \(f(x)\) be a function, and \(a\in\mathbb{R}\) be a constant.
         \(x^a\)                                                                    & \(a x^{a-1}\)                                    \\
         \(\sqrt{x}\)                                                               & \(\displaystyle \frac{1}{2\sqrt{x}}\)            \\
         \(a^x\)                                                                    & \(\ln{\left(a\right)} a^x\)                      \\
-        \(\e^x\)                                                                   & \(\e^x\)                                         \\
+        \(e^x\)                                                                   & \(e^x\)                                         \\
         \(\log_a{\left(x\right)}, \: a\in \mathbb{R}\backslash\left\{ 0 \right\}\) & \(\displaystyle \frac{1}{x\ln{\left(a\right)}}\) \\[8pt]
         \(\ln{\left(x\right)}\)                                                    & \(\displaystyle \frac{1}{x}\)                    \\[5pt]
         \bottomrule
@@ -448,7 +448,7 @@ For any power series of the form \(\displaystyle\sum_{i=i_0}^\infty a_i\).
         \toprule
         \textbf{Function}                         & \textbf{Series}                                                                                 & \textbf{Interval of Convergence} \\
         \midrule
-        \(\e^{x}\)                                & \(\displaystyle \sum_{n=0}^{\infty} \frac{x^n}{n!}\)                                            & \(-\infty < x < \infty\)         \\[14pt]
+        \(e^{x}\)                                & \(\displaystyle \sum_{n=0}^{\infty} \frac{x^n}{n!}\)                                            & \(-\infty < x < \infty\)         \\[14pt]
         \(\sin{\left( x \right)}\)                & \(\displaystyle \sum_{n=0}^{\infty} \left( -1 \right)^n \frac{x^{2n+1}}{\left( 2n+1 \right)!}\) & \(-\infty < x < \infty\)         \\[14pt]
         \(\cos{\left( x \right)}\)                & \(\displaystyle \sum_{n=0}^{\infty} \left( -1 \right)^n \frac{x^{2n}}{\left( 2n \right)!}\)     & \(-\infty < x < \infty\)         \\[14pt]
         \(\displaystyle \frac{1}{1-x}\)           & \(\displaystyle \sum_{n=0}^{\infty} x^n\)                                                       & \(-1 < x < 1\)                   \\[14pt]
@@ -979,7 +979,7 @@ For a differential equation of the form
 \end{equation*}
 we can use the integrating factor
 \begin{equation*}
-    I(x) = \e^{\int p(x) \dd{x}}
+    I(x) = e^{\int p(x) \dd{x}}
 \end{equation*}
 so that
 \begin{equation*}
@@ -1058,7 +1058,7 @@ A second-order constant-coefficient homogeneous ODE
 \end{equation*}
 has solutions of the form
 \begin{equation*}
-    y(x) = \e^{\lambda x}.
+    y(x) = e^{\lambda x}.
 \end{equation*}
 \subsection{Characteristic Equation}
 Substituting this form into the ODE gives the characteristic equation
@@ -1074,17 +1074,17 @@ This equation has three distinct cases.
 \subsubsection{Real Distinct Roots}
 For two real and distinct roots, \(\lambda_1\) and \(\lambda_2\), the general solution is
 \begin{equation*}
-    y(x) = c_1\e^{\lambda_1 x} + c_2\e^{\lambda_2 x}
+    y(x) = c_1e^{\lambda_1 x} + c_2e^{\lambda_2 x}
 \end{equation*}
 \subsubsection{Real Repeated Roots}
 For the real repeated root, \(\lambda\), the general solution is
 \begin{equation*}
-    y(x) = c_1\e^{\lambda x} + c_2 t\e^{\lambda x}
+    y(x) = c_1e^{\lambda x} + c_2 te^{\lambda x}
 \end{equation*}
 \subsubsection{Complex Conjugate Roots}
 For two complex conjugate roots, \(\lambda = \alpha \pm \beta i\), the general solution is
 \begin{equation*}
-    y(x) = \e^{\alpha x}\bigl( c_1\cos{\left( \beta x \right)} + c_2 \sin{\left( \beta x \right)} \bigr)
+    y(x) = e^{\alpha x}\bigl( c_1\cos{\left( \beta x \right)} + c_2 \sin{\left( \beta x \right)} \bigr)
 \end{equation*}
 \section{Nonhomogeneous ODEs}
 A second-order constant-coefficient nonhomogeneous ODE
@@ -1115,7 +1115,7 @@ forms of \(y_P\) based on \(F\).
         \midrule
         a constant                                                             & A                                                                         \\
         a polynomial of degree \(n\)                                           & \(\displaystyle \sum_{i = 0}^n A_i x^i\)                                  \\
-        \(\e^{kx}\)                                                            & \(A \e^{kx}\)                                                             \\
+        \(e^{kx}\)                                                            & \(A e^{kx}\)                                                             \\
         \(\cos{\left( \omega x \right)}\) or \(\sin{\left( \omega x \right)}\) & \(A_0 \cos{\left( \omega x \right)} + A_1 \sin{\left( \omega x \right)}\) \\
         \bottomrule
     \end{tabular}
