@@ -82,8 +82,8 @@
     \end{align*}
     \section*{Integration Techniques}
     \begin{align*}
-        \int u \dd{v}                                          & = uv - \int v \dd{u} \\
-        \int f\bigl(g\left( x \right)\bigr)\dv{g(x)}{x} \dd{x} & = \int f(u) \dd{u}
+        \int u \odif{v}                                          & = uv - \int v \odif{u} \\
+        \int f\bigl(g\left( x \right)\bigr)\odv{g(x)}{x} \odif{x} & = \int f(u) \odif{u}
     \end{align*}
     where \(u = g(x)\).
     \section*{Trigonometric Substitutions}
@@ -129,12 +129,12 @@
     \end{equation*}
     \section*{Definite Integrals}
     \begin{equation*}
-        A = \int_a^b f(x) \dd{x}
+        A = \int_a^b f(x) \odif{x}
     \end{equation*}
     \section*{Fundamental Theorem of Calculus}
     \begin{align*}
-        \int_a^b \dv{x}F(x) \dd{x} & = F(b) - F(a) \\
-        \dv{x}\int_a^x f(t) \dd{t} & = f(x)
+        \int_a^b \odv{x}F(x) \odif{x} & = F(b) - F(a) \\
+        \odv{x}\int_a^x f(t) \odif{t} & = f(x)
     \end{align*}
     \section*{Taylor Polynomials}
     \begin{equation*}
@@ -226,16 +226,16 @@
     enclosed between the surface \(z=f(x,\: y)\) and the region \(\Omega\) is
     defined by
     \begin{equation*}
-        V = \iint\limits_{\Omega} f(x,\: y) \dd{A}.
+        V = \iint\limits_{\Omega} f(x,\: y) \odif{A}.
     \end{equation*}
     If \(\Omega\) is a region bounded by \(a \leq x \leq b\) and \(c \leq y \leq d\), then
     \begin{align*}
-        \iint\limits_{\Omega} f(x,\: y) \dd{A} & = \int_c^d\int_a^b f(x,\: y) \dd{x} \dd{y} \\
-                                               & = \int_a^b\int_c^d f(x,\: y) \dd{y} \dd{x}
+        \iint\limits_{\Omega} f(x,\: y) \odif{A} & = \int_c^d\int_a^b f(x,\: y) \odif{x} \odif{y} \\
+                                               & = \int_a^b\int_c^d f(x,\: y) \odif{y} \odif{x}
     \end{align*}
     \section*{Type I Regions}
     \begin{equation*}
-        \iint\limits_{\Omega} f(x,\: y) \dd{A} = \int_a^b\int_{g_1(x)}^{g_2(x)} f(x,\: y) \dd{y} \dd{x}
+        \iint\limits_{\Omega} f(x,\: y) \odif{A} = \int_a^b\int_{g_1(x)}^{g_2(x)} f(x,\: y) \odif{y} \odif{x}
     \end{equation*}
     \textbf{Bounded left \& right by:}
     \begin{equation*}
@@ -248,7 +248,7 @@
     where \(g_1(x) \leq g_2(x)\) for \(a \leq x \leq b\):
     \section*{Type II Regions}
     \begin{equation*}
-        \iint\limits_{\Omega} f(x,\: y) \dd{A} = \int_c^d\int_{h_1(x)}^{h_2(x)} f(x,\: y) \dd{x} \dd{y}
+        \iint\limits_{\Omega} f(x,\: y) \odif{A} = \int_c^d\int_{h_1(x)}^{h_2(x)} f(x,\: y) \odif{x} \odif{y}
     \end{equation*}
     \textbf{Bounded left \& right by:}
     \begin{equation*}
@@ -287,7 +287,7 @@
     Choose one of the variables as the parameter, and express the remaining variables in terms of that parameter.
     \section*{Arc Length}
     \begin{equation*}
-        S = \int_a^b \norm{\symbf{r'}(t)} \dd{t}
+        S = \int_a^b \norm{\symbf{r'}(t)} \odif{t}
     \end{equation*}
     \section*{Ordinary Differential Equations}
     \textbf{Order:} highest derivative in DE\@.
@@ -295,7 +295,7 @@
     \textbf{Autonomous DE:} does not depend explicitly on the independent variable.
     \section*{Qualitative Analysis}
     \begin{equation*}
-        \dv{y}{t} = f(y)
+        \odv{y}{t} = f(y)
     \end{equation*}
     A fixed point is the value of \(y\) for which \(f(y) = 0\).
     \section*{Stability of Fixed Points}
@@ -307,31 +307,31 @@
 
     \textbf{Semi-Stable:} if one tends toward FP, and another tends away from FP
     \section*{Directly Integrable ODEs}
-    For \(\dv{y}{x} = f(x)\):
+    For \(\odv{y}{x} = f(x)\):
     \begin{equation*}
-        y(x) = \int f(x) \dd{x}.
+        y(x) = \int f(x) \odif{x}.
     \end{equation*}
     \section*{Separable ODEs}
-    For \(\dv{y}{x} = p(x) q(y)\):
+    For \(\odv{y}{x} = p(x) q(y)\):
     \begin{equation*}
-        \int \frac{1}{q(y)} \dv{y}{x} \dd{x} = \int p(x) \dd{x}.
+        \int \frac{1}{q(y)} \odv{y}{x} \odif{x} = \int p(x) \odif{x}.
     \end{equation*}
     \section*{Linear ODEs}
-    For \(\dv{y}{x} + p(x)y = q(x)\), use the \textit{integrating factor}:
-    \(I(x) = e^{\int p(x) \dd{x}}\), so that
+    For \(\odv{y}{x} + p(x)y = q(x)\), use the \textit{integrating factor}:
+    \(I(x) = e^{\int p(x) \odif{x}}\), so that
     \begin{equation*}
-        y(x) = \frac{1}{I(x)} \int I(x) q(x) \dd{x}.
+        y(x) = \frac{1}{I(x)} \int I(x) q(x) \odif{x}.
     \end{equation*}
     \section*{Exact ODEs}
-    \(P(x,\: y) + Q(x,\: y)\dv{y}{x} = 0\)
+    \(P(x,\: y) + Q(x,\: y)\odv{y}{x} = 0\)
     has the solution
     \(\Psi(x,\: y) = c\)
     iff it is exact, namely, when
     \(P_y = Q_x\),
     where \(P = \Psi_x\) and \(Q = \Psi_y\). Then
     \begin{gather*}
-        \Psi(x,\: y) = \int P(x,\: y) \dd{x} + f(y) \\
-        \Psi(x,\: y) = \int Q(x,\: y) \dd{y} + g(x)
+        \Psi(x,\: y) = \int P(x,\: y) \odif{x} + f(y) \\
+        \Psi(x,\: y) = \int Q(x,\: y) \odif{y} + g(x)
     \end{gather*}
     and \(f(y)\) and \(g(x)\) can be determined by solving these equations simultaneously.
     \section*{Second-Order ODEs}
@@ -391,15 +391,15 @@
     \section*{Electrical Circuits}
     The sum of voltages around a loop equals 0.
     \begin{align*}
-        v(t) - iR - L \dv{i}{t} - \frac{q}{C}      & = 0    \\
-        L \dv[2]{q}{t} + R\dv{q}{t} + \frac{1}{C}q & = v(t)
+        v(t) - iR - L \odv{i}{t} - \frac{q}{C}      & = 0    \\
+        L \odv[2]{q}{t} + R\odv{q}{t} + \frac{1}{C}q & = v(t)
     \end{align*}
-    where \(\displaystyle i = \dv{q}{t}\).
+    where \(\displaystyle i = \odv{q}{t}\).
     \section*{Voltage drop across various elements:}
     \begin{align*}
         v_R & = iR          \\
         v_C & = \frac{q}{C} \\
-        v_L & = L \dv{i}{t}
+        v_L & = L \odv{i}{t}
     \end{align*}
     \begin{align*}
         R & : \text{resistance} & C    & : \text{capacitance}    \\
