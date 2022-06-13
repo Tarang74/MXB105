@@ -4,6 +4,13 @@
 
 ### Semester 2, 2021
 
+---
+
+## Downloads
+
+Lecture notes download: [MXB105 Lecture Notes PDF](https://www.github.com/Tarang74/MXB105/raw/main/MXB105%20Lecture%20Notes.pdf)
+Exam notes download: [MXB105 Exam Notes PDF](https://www.github.com/Tarang74/MXB105/raw/main/MXB105%20Exam%20Notes.pdf)
+
 Thanks to [rjboas](https://github.com/rjboas) for the collaboration.
 
 ---
@@ -33,4 +40,3 @@ This repository provides **lecture notes** and **exam notes** for **MXB105 - Cal
 ![Copyright](https://licensebuttons.net/l/by-nc-sa/4.0/88x31.png)
 
 This work is licensed under a [Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/).
- 
