@@ -211,7 +211,7 @@ Dividing by either the sine or cosine function gives:
         \midrule
         \(\left(a^2-b^2x^2\right)^n\) & \(\displaystyle x=\frac{a}{b}\sin{\left( \theta \right)}\) & \(a^2\cos^2{\left( \theta \right)}\) & \(\theta\in \left[ -\frac{\pi}{2},\: \frac{\pi}{2} \right]\)                           \\[8pt]
         \(\left(a^2+b^2x^2\right)^n\) & \(\displaystyle x=\frac{a}{b}\tan{\left( \theta \right)}\) & \(a^2\sec^2{\left( \theta \right)}\) & \(\theta\in \left( -\frac{\pi}{2},\: \frac{\pi}{2} \right)\)                           \\[8pt]
-        \(\left(b^2x^2-a^2\right)^n\) & \(\displaystyle x=\frac{a}{b}\sec{\left( \theta \right)}\) & \(a^2\tan^2{\left( \theta \right)}\) & \(\theta\in \left[ 0,\: \frac{\pi}{2} \right) \cup \left(\frac{\pi}{2},\: \pi\right]\) \\ % chktex 9
+        \(\left(b^2x^2-a^2\right)^n\) & \(\displaystyle x=\frac{a}{b}\sec{\left( \theta \right)}\) & \(a^2\tan^2{\left( \theta \right)}\) & \(\theta\in \left[ 0,\: \frac{\pi}{2} \right) \cup \left(\frac{\pi}{2},\: \pi\right]\) \\
         \bottomrule
     \end{tabular}
     \caption{Trigonometric substitutions for various forms.}
@@ -299,7 +299,7 @@ Dividing by either the sine or cosine function gives:
         Suppose that \(f\left( x \right)\) and \(g\left( x \right)\) are continuous on the
         interval \(I\), with \(a,\:b,\:c\in I\), with \(a < c < b\), and
         \(k\in\R\) then
-        \begin{enumerate}[label=\normalfont\alph*)] % chktex 9 chktex 10
+        \begin{enumerate}[label=\normalfont\alph*)]
             \item \(\displaystyle\int_a^a f\left( x \right) \odif{x} = 0\).
             \item \(\displaystyle\int_a^b f\left( x \right) \odif{x} = -\int_b^a f\left( x \right) \odif{x}\).
             \item \(\displaystyle\int_a^b kf\left( x \right) \odif{x} = k\int_a^b f\left( x \right) \odif{x}\).
@@ -419,7 +419,7 @@ between infinite series (definite integrals) and antiderivatives
     values for which that series converges.
 \end{definition}
 \begin{definition}[Radius of Convergence]
-    The radius of convergence \(R\) is a nonnegative real number or
+    The radius of convergence \(R\) is a non-negative real number or
     \(\infty\) such that a power series converges if
     \begin{equation*}
         \abs{x - a} < R
@@ -596,7 +596,7 @@ Recognising continuous functions:
     \begin{equation*}
         \min_{\norm{\symbf{u}} = 1} \symbf{\nabla}_{\symbf{u}}f = -\symbf{\nabla}f
     \end{equation*}
-    where the slope is given by \(-\norm{\symbf{\nabla}f}\).
+    where the slope is \(-\norm{\symbf{\nabla}f}\).
 \end{theorem}
 \begin{proof}
     Given that \(\symbf{u}\) is a unit vector, the dot product
@@ -607,12 +607,12 @@ Recognising continuous functions:
                                     & = \norm{\symbf{\nabla}f} \cos{\left( \theta \right)} \label{directional_derivative}
     \end{align}
     \hyperref[directional_derivative]{Equation~\ref{directional_derivative}}
-    is maximised when \(\cos{\left( \theta \right)}\) is maximised. Thus
-    the maximum slope is given by
+    is maximised when \(\cos{\left( \theta \right)}\) is maximised. Thus,
+    the maximum slope is
     \begin{equation*}
         \max \symbf{\nabla}_{\symbf{u}}f = \norm{\symbf{\nabla}f}
     \end{equation*}
-    and the direction of greatest ascent is given by
+    and the direction of greatest ascent is
     \begin{equation*}
         \symbf{u} = \symbf{\nabla}f
     \end{equation*}
@@ -705,7 +705,7 @@ derivative test:
 \subsection{Volume under a Two Variable Function}
 \begin{definition}
     If \(f\) is a function of two variables that is continuous and
-    nonnegative on a region \(\Omega\) in the \(xy\)-plane, then the
+    non-negative on a region \(\Omega\) in the \(xy\)-plane, then the
     volume of the solid enclosed between the surface \(z=f\left( x,\: y \right)\) and
     the region \(\Omega\) is defined by
     \begin{equation}
@@ -718,7 +718,7 @@ derivative test:
     can be divided into \(n\) rectangles, where any rectangles outside
     \(\Omega\) are discarded. The area of the \(k\)th remaining
     rectangle at the arbitrary point \(\left( x_k^\ast,\: y_k^\ast \right)\) is given
-    by \(\Delta A_k\). Thus the product
+    by \(\Delta A_k\). Thus, the product
     \(f\left( x_k^\ast,\: y_k^\ast \right)\Delta A_k\) is the volume of the \(k\)th
     rectangular parallelepiped, and the sum of all \(n\) volumes over
     the region \(\Omega\) approximate the volume \(V\) of the entire
@@ -742,7 +742,7 @@ derivative test:
         Suppose that \(f\left( x,\: y \right) \) and \(g\left( x,\: y \right)\) are continuous on
         \(\Omega\), and \(\Omega\) can be subdivided into \(\Omega_1\)
         and \(\Omega_2\), then
-        \begin{enumerate}[label=\normalfont\alph*)] % chktex 9 chktex 10
+        \begin{enumerate}[label=\normalfont\alph*)]
             \item \(\displaystyle\iint\limits_\Omega kf\left( x,\: y \right) \odif{A}
                   = k\iint\limits_\Omega f\left( x,\: y \right) \odif{A}\).
             \item \(\displaystyle\iint\limits_\Omega f\left( x,\: y \right) + g\left( x,\: y \right) \odif{A}
@@ -758,7 +758,7 @@ If \(\Omega\) is a region bounded by \(a \leq x \leq b\) and \(c \leq y
 \begin{equation*}
     \iint\limits_{\Omega} f\left( x,\: y \right) \odif{A} = \int_c^d\int_a^b f\left( x,\: y \right) \odif{x} \odif{y} = \int_a^b\int_c^d f\left( x,\: y \right) \odif{y} \odif{x}
 \end{equation*}
-\subsection{Nonrectangular Regions}
+\subsection{Non-rectangular Regions}
 If the limits of integration depend on the variable \(x\) or \(y\),
 then the region may be classified as Type I or Type II\@.
 \subsubsection{Type I Regions}
@@ -793,7 +793,7 @@ function can be integrated w.r.t.\ the radius \(r\), and the angle
 \subsection{Volume of a Three Variable Function}
 \begin{definition}
     If \(f\) is a function of three variables that is continuous and
-    nonnegative on a region \(\Omega\) in the \(xyz\)-space, then the
+    non-negative on a region \(\Omega\) in the \(xyz\)-space, then the
     volume enclosed by \(f\left( x,\: y, \: z \right)\) and the region \(\Omega\) is
     defined by
     \begin{equation}
@@ -804,9 +804,9 @@ function can be integrated w.r.t.\ the radius \(r\), and the angle
 \begin{proof}
     Using planes parallel to the coordinate planes, the region
     \(\Omega\) can be divided into \(n\) boxes, where boxes containing
-    points outside of \(\Omega\) are discarded. The volume of the
+    points outside \(\Omega\) are discarded. The volume of the
     \(k\)th remaining box at the arbitrary point
-    \(\left( x_k^\ast,\: y_k^\ast,\: z_k^\ast \right)\) is \(\Delta V_k\). Thus the
+    \(\left( x_k^\ast,\: y_k^\ast,\: z_k^\ast \right)\) is \(\Delta V_k\). Thus, the
     product \(f\left( x_k^\ast,\: y_k^\ast,\: z_k^\ast \right)\Delta V_k\) is the
     volume of the \(k\)th box, and the sum of all \(n\) volumes over the
     region \(\Omega\) approximate the volume \(V\) of the entire solid.
@@ -827,7 +827,7 @@ function can be integrated w.r.t.\ the radius \(r\), and the angle
         Suppose that \(f\left( x,\: y,\: z \right) \) and \(g\left( x,\: y,\: z \right)\) are
         continuous on \(\Omega\), and \(\Omega\) can be subdivided into
         \(\Omega_1\) and \(\Omega_2\) then
-        \begin{enumerate}[label=\normalfont\alph*)] % chktex 9 chktex 10
+        \begin{enumerate}[label=\normalfont\alph*)]
             \item \(\displaystyle\iiint\limits_\Omega kf\left( x,\: y,\: z \right) \odif{V}
                   = k\iiint\limits_\Omega f\left( x,\: y,\: z \right) \odif{V}\).
             \item \(\displaystyle\iiint\limits_\Omega f\left( x,\: y,\: z \right) + g\left( x,\: y,\: z \right) \odif{V}
@@ -1013,7 +1013,7 @@ autonomous differential equation
 \end{definition}
 \begin{definition}[Sample Solutions]
     Using a phase line, we sketch the behaviour of sample solutions of
-    \(f\left( y \right)\). where the curves asymptote toward stable (also
+    \(f\left( y \right)\) where the curves asymptote toward stable (also
     semi-stable) fixed points, and diverge from unstable (also
     semi-stable) fixed points.
 \end{definition}
@@ -1105,7 +1105,7 @@ A linear second-order differential equation is of the form
     differential equation, then the linear combination of these
     solutions
     \begin{equation*}
-        y\left( x \right) = c_1 y_1\left( x \right) + c_2 y_2\left( x \right) + \cdots + c_n y_n\left( x \right).
+        y\left( x \right) = c_1 y_1\left( x \right) + c_2 y_2\left( x \right) + \cdots + c_n y_n\left( x \right)
     \end{equation*}
     also satisfies the ODE\@.
 \end{theorem}
@@ -1164,9 +1164,9 @@ A second-order constant-coefficient nonhomogeneous ODE
 \begin{equation*}
     a_2y'' + a_1y' + a_0y = F\left( x \right)
 \end{equation*}
-has a general solutions of the form
+has a general solution of the form
 \begin{equation*}
-    y\left( x \right) = y_H\left( x \right) + y_P\left( x \right).
+    y\left( x \right) = y_H\left( x \right) + y_P\left( x \right)
 \end{equation*}
 where \(y_H\left( x \right)\) satisfies
 \begin{equation*}
@@ -1186,7 +1186,7 @@ that it would take. The following table summarises appropriate forms of
         \toprule
         \(F\left( x \right)\) form                                             & \(y_P\left( x \right)\) guess                                             \\
         \midrule
-        a constant                                                             & A                                                                         \\
+        a constant                                                             & \(A\)                                                                     \\
         a polynomial of degree \(n\)                                           & \(\displaystyle \sum_{i = 0}^n A_i x^i\)                                  \\
         \(e^{kx}\)                                                             & \(A e^{kx}\)                                                              \\
         \(\cos{\left( \omega x \right)}\) or \(\sin{\left( \omega x \right)}\) & \(A_0 \cos{\left( \omega x \right)} + A_1 \sin{\left( \omega x \right)}\) \\
@@ -1207,7 +1207,7 @@ constants are simplified.
 If \(F\left( x \right)\) is a sum of the functions shown above, then
 the particular solutions are also added together.
 \subsubsection{Linearly Dependent Forms}
-If \(F\left( x \right)\) is similar to any homogenous solution, then by
+If \(F\left( x \right)\) is similar to any homogeneous solution, then by
 \textit{definition} of a homogeneous solution, the solution will be
 \(0\). Hence, \(y_P\) must be multiplied by \(x\) to ensure that the
 particular solution is linearly independent to the homogeneous
@@ -1251,11 +1251,11 @@ where \(R\) is the resistance measured in Ohms (\unit{\Omega}),
 \(C\) is the capacitance measured in Farads (\unit{F}),
 and \(L\) is the inductance measured in Henrys (\unit{H}).
 Kirchhoff's Voltage law states that the sum of voltages around a loop
-equals 0. Therefore in an RLC circuit, with a voltage source supplying
+equals 0. Therefore, in an RLC circuit, with a voltage source supplying
 \(v\left( t \right)\unit{V}\),
 \begin{align*}
     v\left( t \right) - iR - L \odv{i}{t} - \frac{q}{C} & = 0                  \\
     L \odv[2]{q}{t} + R\odv{q}{t} + \frac{1}{C}q        & = v\left( t \right).
 \end{align*}
 \end{document}
-% chktex 17
+
