@@ -1,6 +1,7 @@
-%!TEX program = xelatex
+%!TEX TS-program = xelatex
+%!TEX options = -aux-directory=Debug -shell-escape -file-line-error -interaction=nonstopmode -halt-on-error -synctex=1 "%DOC%"
 \documentclass{article}
-\usepackage{LaTeX-Submodule/template}
+\input{LaTeX-Submodule/template.tex}
 
 % Additional packages and macros
 \usepackage{changepage} % Modify page width
@@ -97,8 +98,8 @@
             \coordinate (B) at (1.5cm,1.0cm);
             \coordinate (C) at (1.5cm,-1.0cm);
             \draw (A) -- node[above]{\( a \)}
-            (B) -- node[right]{\( x \)}
-            (C) -- node[below]{\( \sqrt{a^2-x^2} \)}(A);
+            (B) -- node[right]{\( b x \)}
+            (C) -- node[below]{\( \sqrt{a^2-b^2x^2} \)}(A);
             \draw (C) -- (A) -- (B) pic [draw,angle radius=9mm,"\( \theta \)"]
                 {angle=C--A--B};
             \draw (1.25cm,-1.0cm) rectangle (1.5cm,-0.75cm);
@@ -111,8 +112,8 @@
             \coordinate (A) at (-1.5cm,-1.0cm);
             \coordinate (B) at (1.5cm,1.0cm);
             \coordinate (C) at (1.5cm,-1.0cm);
-            \draw (A) -- node [above, rotate=33] {\( \sqrt{a^2+x^2} \)} (B);
-            \draw (B) -- node[right]{\( x \)} (C);
+            \draw (A) -- node [above, rotate=33] {\( \sqrt{a^2+b^2x^2} \)} (B);
+            \draw (B) -- node[right]{\( bx \)} (C);
             \draw (C) -- node[below]{\( a \)}(A);
             \draw (C) -- (A) -- (B) pic [draw,angle radius=9mm,"\( \theta \)"]
                 {angle=C--A--B};
@@ -126,8 +127,8 @@
             \coordinate (A) at (-1.5cm,-1.0cm);
             \coordinate (B) at (1.5cm,1.0cm);
             \coordinate (C) at (1.5cm,-1.0cm);
-            \draw (A) -- node[above]{\( x \)}
-            (B) -- node[below, rotate=90]{\( \sqrt{x^2-a^2} \)}
+            \draw (A) -- node[above]{\( bx \)}
+            (B) -- node[below, rotate=90]{\( \sqrt{b^2x^2-a^2} \)}
             (C) -- node[below]{\( a \)}(A);
             \draw (C) -- (A) -- (B) pic [draw,angle radius=9mm,"\( \theta \)"]
                 {angle=C--A--B};
@@ -213,7 +214,7 @@
     \section*{Multivariable Functions}
     \textbf{Partial Derivatives} are done w.r.t one variable, other variables unchanged.
 
-    The \textbf{Gradient} is \(\symbf{\nabla}f = \avec[\big]{\pdv{f}{x},\: \pdv{f}{y},\: \dots}\)
+    The \textbf{Gradient} is \(\symbf{\nabla}f = \abracket[\big]{\pdv{f}{x},\: \pdv{f}{y},\: \dots}\)
     \section*{Level Curves}
     \begin{equation*}
         L_c\left( f \right) = \bigl\{ \left( x,\: y \right) : f\left(x,\: y\right) = c\bigr\}
