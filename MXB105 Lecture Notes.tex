@@ -50,277 +50,211 @@
 \tableofcontents
 \newpage
 %
-\section{Integration Techniques}
-\subsection{Table of Derivatives}
-Let \(f\left( x \right)\) be a function, and \(a\in\R\) be a constant.
-\begin{table}[H]
-    \renewcommand*{\arraystretch}{1.5}
-    \centering
-    \begin{tabular}{c c}
-        \toprule
-        \(f\)                                                              & \(\odv{f}{x}\)                                   \\
-        \midrule
-        \(x^a\)                                                            & \(a x^{a-1}\)                                    \\
-        \(\sqrt{x}\)                                                       & \(\displaystyle \frac{1}{2\sqrt{x}}\)            \\
-        \(a^x\)                                                            & \(\ln{\left(a\right)} a^x\)                      \\
-        \(e^x\)                                                            & \(e^x\)                                          \\
-        \(\log_a{\left(x\right)}, \: a\in \R\backslash\left\{ 0 \right\}\) & \(\displaystyle \frac{1}{x\ln{\left(a\right)}}\) \\[8pt]
-        \(\ln{\left(x\right)}\)                                            & \(\displaystyle \frac{1}{x}\)                    \\[5pt]
-        \bottomrule
-    \end{tabular}
-    \begin{tabular}{c c}
-        \toprule
-        \(f\)                                                         & \(\odv{f}{x}\)                                                            \\
-        \midrule
-        \(a\)                                                         & \(0\)                                                                     \\
-        \(x\)                                                         & \(1\)                                                                     \\
-        \(a_1 u\left( x \right) \pm a_2 v\left( x \right)\)           & \(\displaystyle a_1\odv{u}{x} \pm a_2\odv{v}{x}\)                         \\[8pt]
-        \(u\left( x \right)v\left( x \right)\)                        & \(\displaystyle \odv{u}{x}v + u\odv{v}{x}\)                               \\[10pt]
-        \(\displaystyle \frac{u\left( x \right)}{v\left( x \right)}\) & \(\displaystyle \frac{\odv{u}{x}v - u\odv{v}{x}}{{v\left( x \right)}^2}\) \\[8pt]
-        \(u\bigl(v\left(x \right) \bigr)\)                            & \(\displaystyle \odv{u}{v}\odv{v}{x}\)                                    \\[5pt]
-        \bottomrule
-    \end{tabular}
-\end{table}
-\begin{table}[H]
-    \renewcommand*{\arraystretch}{1.5}
-    \centering
-    \begin{tabular}{c c}
-        \toprule
-        \(f\)                       & \(\odv{f}{x}\)                                       \\
-        \midrule
-        \(\sin{\left( ax \right)}\) & \(a\cos{\left( ax \right)}\)                         \\
-        \(\cos{\left( ax \right)}\) & \(-a\sin{\left( ax \right)}\)                        \\
-        \(\tan{\left( ax \right)}\) & \(a\sec^2{\left( ax \right)}\)                       \\
-        \(\cot{\left( ax \right)}\) & \(-a\csc^2{\left( ax \right)}\)                      \\
-        \(\sec{\left( ax \right)}\) & \(a\sec{\left( ax \right)}\tan{\left( ax \right)}\)  \\
-        \(\csc{\left( ax \right)}\) & \(-a\csc{\left( ax \right)}\cot{\left( ax \right)}\) \\[5pt]
-        \bottomrule
-    \end{tabular}
-    \begin{tabular}{c c}
-        \toprule
-        \(f\)                          & \(\odv{f}{x}\)                                  \\
-        \midrule
-        \(\arcsin{\left( ax \right)}\) & \(\displaystyle  \frac{a}{\sqrt{1-a^2x^2}}\)    \\[8pt]
-        \(\arccos{\left( ax \right)}\) & \(\displaystyle -\frac{a}{\sqrt{1-a^2x^2}}\)    \\[8pt]
-        \(\arctan{\left( ax \right)}\) & \(\displaystyle  \frac{a}{1+a^2x^2}\)           \\[8pt]
-        \(\arccot{\left( ax \right)}\) & \(\displaystyle -\frac{a}{1+a^2x^2}\)           \\[8pt]
-        \(\arcsec{\left( ax \right)}\) & \(\displaystyle  \frac{1}{x\sqrt{a^2x^2 - 1}}\) \\[8pt]
-        \(\arccsc{\left( ax \right)}\) & \(\displaystyle -\frac{1}{x\sqrt{a^2x^2 - 1}}\) \\[8pt]
-        \bottomrule
-    \end{tabular}
-\end{table}
-\begin{table}[H]
-    \renewcommand*{\arraystretch}{1.5}
-    \centering
-    \hspace*{-1cm}
-    \begin{tabular}{c c}
-        \toprule
-        \(f\)                        & \(\odv{f}{x}\)                                        \\
-        \midrule
-        \(\sinh{\left( ax \right)}\) & \(a\cosh{\left( ax \right)}\)                         \\
-        \(\cosh{\left( ax \right)}\) & \(a\sinh{\left( ax \right)}\)                         \\
-        \(\tanh{\left( ax \right)}\) & \(a\sech^2{\left( ax \right)}\)                       \\
-        \(\coth{\left( ax \right)}\) & \(-a\csch^2{\left( ax \right)}\)                      \\
-        \(\sech{\left( ax \right)}\) & \(-a\sech{\left( ax \right)}\tan{\left( ax \right)}\) \\
-        \(\csch{\left( ax \right)}\) & \(-a\csch{\left( ax \right)}\cot{\left( ax \right)}\) \\[5pt]
-        \bottomrule
-    \end{tabular}
-    \begin{tabular}{c c}
-        \toprule
-        \(f\)                           & \(\odv{f}{x}\)                              \\
-        \midrule
-        \(\arcsinh{\left( ax \right)}\) & \(\displaystyle \frac{a}{\sqrt{1+a^2x^2}}\) \\[8pt]
-        \(\arccosh{\left( ax \right)}\) & \(\displaystyle \frac{a}{\sqrt{1-a^2x^2}}\) \\[8pt]
-        \(\arctanh{\left( ax \right)}\) & \(\displaystyle \frac{a}{1-a^2x^2}\)        \\[8pt]
-        \bottomrule
-    \end{tabular}
-    \begin{tabular}{c c}
-        \toprule
-        \(f\)                           & \(\odv{f}{x}\)                                                            \\
-        \midrule
-        \(\arccoth{\left( ax \right)}\) & \(\displaystyle  \frac{a}{1-a^2x^2}\)                                     \\[8pt]
-        \(\arcsech{\left( ax \right)}\) & \(\displaystyle -\frac{1}{a\left( 1+ax \right)\sqrt{\frac{1-ax}{1+ax}}}\) \\[8pt]
-        \(\arccsch{\left( ax \right)}\) & \(\displaystyle -\frac{1}{ax^2\sqrt{1+\frac{1}{a^2x^2}}}\)                \\[8pt]
-        \bottomrule
-    \end{tabular}
-    \hspace*{-1cm}
-    \caption{Derivatives of Elementary Functions}
-\end{table}
-\subsection{Trigonometric Identities}
-\subsubsection{Pythagorean Identities}
-\begin{equation*}
-    \sin^2{\left( x \right)} + \cos^2{\left( x \right)} = 1
-\end{equation*}
-Dividing by either the sine or cosine function gives:
-\begin{align*}
-    \tan^2{\left( x \right)} + 1 & = \sec^2{\left( x \right)} \\
-    1 + \cot^2{\left( x \right)} & = \csc^2{\left( x \right)}
-\end{align*}
-\subsubsection{Double-Angle Identities}
-\begin{align*}
-    \sin{\left( 2x \right)} & = 2\sin{\left( x \right)}\cos{\left( x \right)}              & \csc{\left( 2x \right)} & = \frac{\sec{\left( x \right)}\csc{\left( x \right)}}{2}                                                     \\[5pt]
-    \cos{\left( 2x \right)} & = \cos^2{\left( x \right)} - \sin^2{\left( x \right)}        & \sec{\left( 2x \right)} & = \frac{\sec^2{\left( x \right)}\csc^2{\left( x \right)}}{\csc^2{\left( x \right)}-\sec^2{\left( x \right)}} \\[5pt]
-    \tan{\left( 2x \right)} & = \frac{2\tan{\left( x \right)}}{1-\tan^2{\left( x \right)}} & \cot{\left( 2x \right)} & = \frac{\cot^2{\left( x \right)}-1}{2\cot{\left( x \right)}}
-\end{align*}
-\subsubsection{Power Reducing Identities}
-\begin{align*}
-    \sin^2{\left( x \right)} & = \frac{1-\cos{\left( 2x \right)}}{2}                         & \csc^2{\left( x \right)} & = \frac{2}{1-\cos{\left( 2x \right)}}                         \\[5pt]
-    \cos^2{\left( x \right)} & = \frac{1+\cos{\left( 2x \right)}}{2}                         & \sec^2{\left( x \right)} & = \frac{2}{1+\cos{\left( 2x \right)}}                         \\[5pt]
-    \tan^2{\left( x \right)} & = \frac{1-\cos{\left( 2x \right)}}{1+\cos{\left( 2x \right)}} & \cot^2{\left( x \right)} & = \frac{1+\cos{\left( 2x \right)}}{1-\cos{\left( 2x \right)}}
-\end{align*}
-\subsection{Partial Fractions}
-\begin{definition}[Partial Fraction Decomposition]
-    \textbf{Partial fraction decomposition} is a \linebreak method where
-    a rational function \(\displaystyle \frac{P\left( x \right)}{Q\left( x \right)}\) is rewritten
-    as a sum of fraction.
+\section{Analysis of Functions}
+\subsection{Functions}
+\begin{definition}[Function]
+    A function \(f: X \to Y\) is a relation between a set of inputs
+    \(X\) and outputs \(Y\), which assigns exactly one output to each
+    input. The set \(X\) is called the \textbf{domain} of \(f\), and the
+    set \(Y\) is called the \textbf{codomain} of \(f\). Often, the set
+    of possible values that \(f\) can take is restricted to a
+    \textit{subset} of the codomain, called the \textbf{image}
+    (or range) of \(f\).
 \end{definition}
-\begin{table}[H]
-    \renewcommand*{\arraystretch}{1.5}
-    \centering
-    \begin{tabular}{c c}
-        \toprule
-        \textbf{Factor in denominator}            & \textbf{Term in partial fraction decomposition}                                                                                                    \\
-        \midrule
-        \(ax+b\)                                  & \(\displaystyle \frac{A}{ax+b}\)                                                                                                                   \\[10pt]
-        \(\left(ax+b\right)^k, \: k \in \N\)      & \(\displaystyle \frac{A_1}{ax+b} + \frac{A_2}{\left( ax+b \right)^2} + \cdots + \frac{A_k}{\left( ax+b \right)^k}\)                                \\[10pt]
-        \(ax^2+bx+c\)                             & \(\displaystyle \frac{A}{ax^2+bx+c}\)                                                                                                              \\[10pt]
-        \(\left(ax^2+bx+c\right)^k, \: k \in \N\) & \(\displaystyle \frac{A_1x+B_1}{ax^2+bx+c} + \frac{A_2x+B_2}{\left( ax^2+bx+c \right)^2} + \cdots + \frac{A_k x+B_k}{\left( ax^2+bx+c \right)^k}\) \\[10pt]
-        \bottomrule
-    \end{tabular}
-    \caption{Partial Fraction Forms}
-\end{table}
-\subsection{Integration by Parts}
-\begin{theorem}
-    \begin{equation*}
-        \int u \odif{v} = uv - \int v \odif{u}
-    \end{equation*}
-\end{theorem}
-\subsection{Integration by Substitution}
-\begin{theorem}
-    \begin{equation*}
-        \int f\bigl(g\left( x \right)\bigr)\odv{g\left( x \right)}{x} \odif{x} = \int f\left( u \right) \odif{u}, \: \text{where } u = g\left( x \right)
-    \end{equation*}
-\end{theorem}
-\subsection{Trigonometric Substitutions}
-\begin{table}[H]
-    \renewcommand*{\arraystretch}{1.5}
-    \centering
-    \begin{tabular}{c c c c}
-        \toprule
-        \textbf{Form}                 & \textbf{Substitution}                                      & \textbf{Result}                      & \textbf{Domain}                                                                        \\
-        \midrule
-        \(\left(a^2-b^2x^2\right)^n\) & \(\displaystyle x=\frac{a}{b}\sin{\left( \theta \right)}\) & \(a^2\cos^2{\left( \theta \right)}\) & \(\theta\in \left[ -\frac{\pi}{2},\: \frac{\pi}{2} \right]\)                           \\[8pt]
-        \(\left(a^2+b^2x^2\right)^n\) & \(\displaystyle x=\frac{a}{b}\tan{\left( \theta \right)}\) & \(a^2\sec^2{\left( \theta \right)}\) & \(\theta\in \left( -\frac{\pi}{2},\: \frac{\pi}{2} \right)\)                           \\[8pt]
-        \(\left(b^2x^2-a^2\right)^n\) & \(\displaystyle x=\frac{a}{b}\sec{\left( \theta \right)}\) & \(a^2\tan^2{\left( \theta \right)}\) & \(\theta\in \left[ 0,\: \frac{\pi}{2} \right) \cup \left(\frac{\pi}{2},\: \pi\right]\) \\
-        \bottomrule
-    \end{tabular}
-    \caption{Trigonometric substitutions for various forms.}
-\end{table}
-\newpage
-\section{Limits, Continuity, and Differentiability}
+As an example, consider the function \(f: \R \to \R\) defined by
+\(f\left( x \right) = x^2\). The domain of this function is \(\R\),
+the codomain is \(\R\), and the image is \(\R^+\), as the square of any
+real number is always positive.
 \subsection{Limits}
-\begin{theorem}[Limits]
-    \(\displaystyle\lim_{x\to x_0} f\left( x \right)\) exists if and only if
-    \(\displaystyle\lim_{x\to {x_0}^+} f\left( x \right)\) and
-    \(\displaystyle\lim_{x\to {x_0}^-} f\left( x \right)\) exist and are equal.
-\end{theorem}
-\begin{definition}[Finite limits using the \(\varepsilon\)-\(\delta\) definition]
+\begin{definition}[Limit of a function]
+    A limit is the value a function approaches as the input approaches
+    some value. Limits are used to define concepts in calculus and
+    analysis, such as continuity, differentiation, and integration.
+    The limit of the function \(f\left( x \right)\) is written as
     \begin{equation*}
-        \lim_{x\to x_0} f\left( x \right) = L \iff \forall\varepsilon>0: \exists\delta>0: \forall x \in I: 0<\abs{x-x_0}<\delta \implies \abs{f\left( x \right)-L}<\varepsilon
+        \lim_{x\to x_0} f\left( x \right) = L,
+    \end{equation*}
+    which means that as \(x\) approaches \(x_0\), the value of
+    \(f\left( x \right)\) approaches \(L\). We can alternatively denote
+    this using right arrows:
+    \begin{equation*}
+        f\left( x \right) \to L \text{ as } x \to x_0.
     \end{equation*}
 \end{definition}
+\begin{definition}[\(\varepsilon\)-\(\delta\) definition of a limit]
+    The function \(f: I \to \R\) tends to \(L\) as \(x\) tends to
+    \(x_0\) if for every \(\varepsilon > 0\), there exists a
+    \(\delta > 0\) such that for all \(x\) in the domain \(I\),
+    \(0 < \abs*{x - x_0} < \delta\) implies
+    \(\abs*{f\left( x \right) - L} < \varepsilon\):
+    \begin{equation*}
+        \lim_{x\to x_0} f\left( x \right) = L \iff \forall\varepsilon>0: \exists\delta>0: \forall x \in I: 0<\abs*{x-x_0}<\delta \implies \abs*{f\left( x \right)-L}<\varepsilon
+    \end{equation*}
+    This is known as the \(\varepsilon\)-\(\delta\) definition of a
+    limit, formalised by Cauchy and Weierstrass.
+\end{definition}
+For example,
+\begin{equation*}
+    \lim_{x \to 2} 2 x = 4
+\end{equation*}
+because for every \(\varepsilon > 0\), we can take \(\delta = \varepsilon/2\), so that
+\begin{equation*}
+    \left( 0 < \abs*{x - 2} < \delta \iff \abs*{x - 2} < \frac{\varepsilon}{2} \right) \implies \abs*{2x - 4} < \varepsilon
+\end{equation*}
+\begin{definition}[Left- and right-hand limits]
+    Left- and right-hand limits characterise the behaviour of a function
+    as the input approaches a certain value from either the left or
+    right, respectively.
+    The left-hand limit of the function \(f\left( x \right)\) as \(x\)
+    approaches \(x_0\) is the value of the function as \(x\) approaches
+    \(x_0\) from the left, denoted \(\lim_{x\to x_0^-} f\left( x
+    \right)\). The right-hand limit of the function \(f\left( x
+    \right)\) as \(x\) approaches \(x_0\) is the value of the function
+    as \(x\) approaches \(x_0\) from the right, denoted \(\lim_{x\to
+    x_0^+} f\left( x \right)\).
+\end{definition}
+\begin{theorem}[Existence of a limit]
+    The function \(f\left( x \right)\) approaches \(L\) as \(x\)
+    approaches \(x_0\) if and only if the left- and right-hand limits
+    of this function exist and are equal:
+    \begin{equation*}
+        \lim_{x \to x_0} f\left( x \right) = L \iff \lim_{x \to x_0^-} f\left( x \right) = \lim_{x \to x_0^+} f\left( x \right) = L
+    \end{equation*}
+\end{theorem}
 \begin{theorem}[L'Hôpital's Rule]
     For two differentiable functions \(f\left( x \right)\) and \(g\left( x \right)\).
-    If \(\displaystyle \lim_{x\to x_0}f\left( x \right)=\lim_{x\to x_0}g\left( x \right)=0\),
+    If \(\displaystyle \lim_{x\to x_0}f\left( x \right)=\lim_{x\to x_0}g\left( x \right)=0\)
     or \(\displaystyle \lim_{x\to x_0}f\left( x \right)=\displaystyle \lim_{x\to x_0}g\left( x \right)=\pm\infty\),
     then
-    \(\lim_{x\to x_0}\frac{f\left( x \right)}{g\left( x \right)} = \lim_{x\to x_0}\frac{f'\left( x \right)}{g'\left( x \right)}\).
+    \begin{equation*}
+        \lim_{x\to x_0}\frac{f\left( x \right)}{g\left( x \right)} = \lim_{x\to x_0}\frac{f'\left( x \right)}{g'\left( x \right)}.
+    \end{equation*}
 \end{theorem}
 \subsection{Continuity}
-\begin{theorem}[Continuity at a Point]
-    \(f\left( x \right)\) is continuous at \(c\) iff \(\displaystyle \lim_{x\to c} f\left( x \right) = f\left( c \right)\).
+A function is continuous if it does not have any jumps in its graph. In
+other words, a small variation in the input also results in a small
+variation in the output. Functions that do not satisfy this property
+for some value of \(x\) are discontinuous at that point.
+\begin{theorem}[Continuity at a point]
+    The function \(f\left( x \right)\) is continuous at \(c\) if and
+    only if
+    \begin{equation*}
+        \lim_{x\to c} f\left( x \right) = f\left( c \right).
+    \end{equation*}
 \end{theorem}
-\begin{theorem}[Continuity over an Interval]
-    \(f\left( x \right)\) is continuous on \(I\) if \(f\left( x \right)\) is continuous for all
-    \(x\in I\).
+\begin{theorem}[Continuity over an interval]
+    The function \(f\left( x \right)\) is continuous on the interval
+    \(I\) if it is continuous for all values of \(x \in I\). If the two
+    endpoints of this interval are \(a\) and \(b\), then
     \begin{itemize}
-        \item \(f\left( x \right)\) is continuous on \(I:\left( a,\:b \right)\) if it
-              is continuous for all \(x\in I\).
-        \item \(f\left( x \right)\) is continuous on \(I:\left[ a,\:b \right]\) if it
-              is continuous for all \(x\in I\), but only right
-              continuous at \(a\) and left continuous at \(b\).
+        \item \(f\left( x \right)\) is continuous on \(\ointerval{a}{b}\)
+              if it is continuous for all \(x\in \ointerval{a}{b}\).
+        \item \(f\left( x \right)\) is continuous on \(\interval{a}{b}\)
+              if it is continuous for all \(x\in \ointerval{a}{b}\), but
+              only right-continuous at \(a\) and left-continuous at \(b\).
+              That is, the right-hand limit at \(a\) and the left-hand
+              limit at \(b\).
     \end{itemize}
-    If \(f\left( x \right)\) is continuous on \(\left(-\infty,\:\infty\right)\),
-    \(f\left( x \right)\) is continuous everywhere.
+    When \(f\left( x \right)\) is continuous on \(\ointerval{-\infty}{\infty}\),
+    it is said to be continuous \textbf{everywhere}.
 \end{theorem}
-\begin{theorem}[Intermediate Value Theorem]
-    If \(f\left( x \right)\) is continuous on \(I:\left[ a, \: b \right]\) and \(c\)
-    is any number between \(f\left( a \right)\) and \(f\left( b \right)\), inclusive, then there
-    exists an \(x\in I\) such that \(f\left( x \right)=c\).
+\begin{theorem}[Intermediate value theorem]
+    If the function \(f\left( x \right)\) is continuous on
+    \(I:\interval{a}{b}\) and \(c\) is any number between
+    \(f\left( a \right)\) and \(f\left( b \right)\), inclusive, then
+    there exists an \(x\in I\) such that \(f\left( x \right)=c\).
 \end{theorem}
 \subsection{Differentiability}
-\begin{theorem}[Differentiability]
-    \(f\left( x \right)\) is differentiable at \(x=x_0\) iff
+Differentiability is a property of functions that relates to the
+existence of a derivative at each point on some interval. A valuable
+starting point for understanding differentiability is the idea of the
+\textit{average rate of change} of a function \(f\left( x \right)\) on
+some small interval \(\ointerval{x_0}{x_0+h}\) (where \(h\) is small),
+which is given by:
+\begin{equation*}
+    \left. \adv{f}{x} \right\vert_{x = x_0} = \frac{\text{change in output}}{\text{change in input}} = \frac{f\left( x_0+h \right)-f\left( x_0 \right)}{\left( x_0 + h \right) - x_0} = \frac{f\left( x_0+h \right)-f\left( x_0 \right)}{h}.
+\end{equation*}
+The last result is known as a difference quotient.
+\begin{definition}[Differentiablity at a point]
+    A function \(f\left( x \right)\) is differentiable at \(x=x_0\) if
+    the limit
     \begin{equation*}
         \lim_{x\to x_0} \frac{f\left( x \right)-f\left( x_0 \right)}{x-x_0}
     \end{equation*}
     exists. When this limit exists, it defines the derivative
     \begin{equation*}
-        \left.\odv{f}{x}\right|_{x=x_0} = \lim_{h\to 0} \frac{f\left( x_0+h \right)-f\left( x_0 \right)}{h}
+        \left.\odv{f}{x}\right|_{x=x_0} = \lim_{h\to 0} \frac{f\left( x_0+h \right)-f\left( x_0 \right)}{h}.
     \end{equation*}
-\end{theorem}
+    The derivative can be thought of as the \textit{instantaneous}
+    rate of change of the function \(f\left( x \right)\) at the point
+    \(x_0\).
+\end{definition}
+\begin{definition}[Differentiability on an interval]
+    The function \(f\left( x \right)\) is differentiable on an interval
+    \(I\) if \(f\left( x \right)\) is differentiable for all \(x_0\in I\).
+\end{definition}
 \begin{theorem}
-    \(f\left( x \right)\) is differentiable on \(I\) if \(f\left( x \right)\) is differentiable
-    for all \(x_0\in I\).
+    A function that is differentiable at a point is also continuous at
+    that point. In other words, differentiability implies continuity.
 \end{theorem}
-\begin{theorem}
-    Differentiability implies continuity.
-\end{theorem}
-\begin{theorem}[Mean Value Theorem]
-    If \(f\left( x \right)\) is continuous on \(I:\left[ a,\:b \right]\) and
-    differentiable on \(I\), then there exists a point \(c\in I\) such
-    that
+\begin{theorem}[Mean value theorem]
+    If the function \(f\left( x \right)\) is differentiable on
+    \(I:\interval{a}{b}\) (and therefore also continuous on \(I\)), then
+    there exists a point \(c\in I\) where
     \begin{equation*}
         \left.\odv{f}{x}\right|_{x=c}=\frac{f\left( b \right)-f\left( a \right)}{b-a}
     \end{equation*}
 \end{theorem}
-\newpage
-\section{Definite Integrals}
-\begin{theorem}
-    If \(f\left( x \right)\) is continuous on an interval \(I:\left[ a,\:b \right]\),
-    then the net signed area \(A\) between the graph of \(f\left( x \right)\) and the
-    interval \(I\) is
+\section{Definite Integration}
+Definite integrals are used to calculate the signed area of a region
+between a function and the \(x\)-axis. Later we will see an important
+result that relates integration with differentiation allowing us to
+calculate integrals of functions.
+\begin{definition}[Definite integration]
+    If the function \(f\left( x \right)\) is continuous on an interval
+    \(I:\interval{a}{b}\), then the net signed area \(A\) between the
+    graph of \(f\left( x \right)\) on the interval \(I\) is expressed as
     \begin{equation*}
-        A = \int_a^b f\left( x \right) \odif{x}
+        A = \int_a^b f\left( x \right) \odif{x}.
     \end{equation*}
-\end{theorem}
+\end{definition}
 \begin{tcolorboxlarge}[title={Properties of Definite Integrals}]
-    \begin{theorem}
-        Suppose that \(f\left( x \right)\) and \(g\left( x \right)\) are continuous on the
-        interval \(I\), with \(a,\:b,\:c\in I\), with \(a < c < b\), and
-        \(k\in\R\) then
-        \begin{enumerate}[label=\normalfont\alph*)]
-            \item \(\displaystyle\int_a^a f\left( x \right) \odif{x} = 0\).
-            \item \(\displaystyle\int_a^b f\left( x \right) \odif{x} = -\int_b^a f\left( x \right) \odif{x}\).
-            \item \(\displaystyle\int_a^b kf\left( x \right) \odif{x} = k\int_a^b f\left( x \right) \odif{x}\).
-            \item \(\displaystyle\int_a^b \bigl(f\left( x \right) \pm g\left( x \right)\bigr) \odif{x} = \int_a^b f\left( x \right) \odif{x} \pm \int_a^b g\left( x \right) \odif{x}\).
-            \item \(\displaystyle\int_a^b f\left( x \right) \odif{x} = \int_a^c f\left( x \right) \odif{x} + \int_c^b f\left( x \right) \odif{x}\).
-        \end{enumerate}
-    \end{theorem}
+    Suppose that the functions \(f\left( x \right)\) and \(g\left( x \right)\)
+    are continuous on the interval \(I:\interval{a}{b}\), with
+    \(a,\:b,\:c\in I\), with \(a < c < b\), and \(k\in\R\) is some
+    constant. Then,
+    \begin{enumerate}[label=\normalfont\alph*)]
+        \item \(\displaystyle\int_a^a f\left( x \right) \odif{x} = 0\).
+        \item \(\displaystyle\int_a^b f\left( x \right) \odif{x} = -\int_b^a f\left( x \right) \odif{x}\).
+        \item \(\displaystyle\int_a^b kf\left( x \right) \odif{x} = k\int_a^b f\left( x \right) \odif{x}\).
+        \item \(\displaystyle\int_a^b \bigl(f\left( x \right) \pm g\left( x \right)\bigr) \odif{x} = \int_a^b f\left( x \right) \odif{x} \pm \int_a^b g\left( x \right) \odif{x}\).
+        \item \(\displaystyle\int_a^b f\left( x \right) \odif{x} = \int_a^c f\left( x \right) \odif{x} + \int_c^b f\left( x \right) \odif{x}\).
+    \end{enumerate}
 \end{tcolorboxlarge}
 \subsection{Riemann Sums}
 \begin{theorem}
     \label{theorem:1d_riemann_sums}
-    Let \(A\) be the area under \(f\left( x \right)\) on the interval
-    \(\left[ a,\:b \right]\), then
+    The net signed area \(A\) under the function \(f\left( x \right)\)
+    on the interval \(\interval{a}{b}\) can be approximated by a Riemann
+    sum:
     \begin{equation*}
-        \int_a^b f\left( x \right) \odif{x} = \lim_{\max{\Delta x_k}\to 0} \sum_{k=1}^n f\left( x_k \right) \Delta x_k
+        A \approx \sum_{k=1}^n f\left( x_k \right) \Delta x_k
     \end{equation*}
     where \(n\) is the number of rectangles, \(x_k\) is the centre of
     the rectangle \(k\), and \(\Delta x_k\) is the width of the
-    rectangle \(k\). If every rectangle has the same width, then
+    rectangle \(k\). Note these rectangles do not need to be of equal
+    width. In the limit where the widest rectangle's width approaches zero
+    (\(\max{\Delta x_k}\to 0\)), the Riemann sum approaches the definite
+    integral:
     \begin{equation*}
-        \forall k:\Delta x_k = \frac{b-a}{n}
+        A = \int_a^b f\left( x \right) \odif{x} = \lim_{\max{\Delta x_k}\to 0} \sum_{k=1}^n f\left( x_k \right) \Delta x_k
+    \end{equation*}
+    where, as a consequence, the number of rectangles \(n\) also
+    approaches infinity.
+    In the case where every rectangle has the same width, we can express
+    the width of each rectangle as
+    \begin{equation*}
+        \forall k:\Delta x_k = \frac{b-a}{n}.
     \end{equation*}
 \end{theorem}
 \subsection{Fundamental Theorem of Calculus}
@@ -422,20 +356,20 @@ between infinite series (definite integrals) and antiderivatives
     The radius of convergence \(R\) is a non-negative real number or
     \(\infty\) such that a power series converges if
     \begin{equation*}
-        \abs{x - a} < R
+        \abs*{x - a} < R
     \end{equation*}
     and diverges if
     \begin{equation*}
-        \abs{x - a} > R
+        \abs*{x - a} > R
     \end{equation*}
     The behaviour of the power series on the boundary, that is, where
-    \(\abs{x - a} = R\), can be determined by substituting \(x = R + a\)
+    \(\abs*{x - a} = R\), can be determined by substituting \(x = R + a\)
     and \(x = -R + a\) into the series, for the upper and lower
     boundaries, respectively.
 \end{definition}
 \subsection{Convergence Tests}
 For any power series of the form \(\displaystyle\sum_{i=i_0}^\infty
-a_i\).
+a_i x^i\), the following tests can be used to determine convergence.
 \begin{tcolorboxlarge}[title={Alternating Series}]
     \textbf{Conditions} \(a_i = \left( -1 \right)^i b_i\) or
     \(a_i = \left( -1 \right)^{i+1} b_i\). \(b_i>0\).
@@ -449,14 +383,14 @@ a_i\).
 \end{tcolorboxlarge}
 \begin{tcolorboxlarge}[title={Ratio Test}]
     \begin{equation*}
-        \text{Is \(\lim_{i\to\infty}\abs{\frac{a_{i+1}}{a_i}} < 1\)?}\:
+        \text{Is \(\lim_{i\to\infty}\abs*{\frac{a_{i+1}}{a_i}} < 1\)?}\:
         \begin{cases}
             \text{YES} & \text{\(\sum a_i\) Converges} \\
             \text{NO}  & \text{\(\sum a_i\) Diverges}
         \end{cases}
     \end{equation*}
     The ratio test is inconclusive if
-    \(\displaystyle \lim_{i\to\infty}\frac{a_{i+1}}{a_i} = 1\).
+    \(\displaystyle \lim_{i\to\infty}\abs*{\frac{a_{i+1}}{a_i}} = 1\).
 \end{tcolorboxlarge}
 \subsection{Table of Maclaurin Series}
 \begin{table}[H]
@@ -502,7 +436,7 @@ a_i\).
     \begin{align*}
         \lim_{\left( x_1,\: \ldots,\: x_n \right)\to \left( c_1,\: \ldots,\: c_n \right)} f\left( x_1,\: \ldots,\: x_n \right) = L
                                                     & \iff\forall\varepsilon>0: \exists\delta>0: \forall \left( x_1,\: \ldots,\: x_n \right) \in I: \\
-        0<\abs{x_1-c_1,\: \ldots,\: x_n-c_n}<\delta & \implies \abs{f\left( x_1,\: \ldots,\: x_n \right)-L}<\varepsilon
+        0<\abs*{x_1-c_1,\: \ldots,\: x_n-c_n}<\delta & \implies \abs*{f\left( x_1,\: \ldots,\: x_n \right)-L}<\varepsilon
     \end{align*}
 \end{definition}
 \begin{theorem}[Limits along Smooth Curves]
@@ -670,7 +604,7 @@ Recognising continuous functions:
         \begin{bmatrix}
             \pdv[order=2]{f}!{x_1} & \cdots & \pdv{f}!{x_n,x_1}      \\
             \vdots                 & \ddots & \vdots                 \\
-            \pdv{f}!{x_1,x_n}     & \cdots & \pdv[order=2]{f}!{x_n}
+            \pdv{f}!{x_1,x_n}      & \cdots & \pdv[order=2]{f}!{x_n}
         \end{bmatrix}
     \end{equation*}
 \end{definition}
@@ -1207,8 +1141,8 @@ constants are simplified.
 If \(F\left( x \right)\) is a sum of the functions shown above, then
 the particular solutions are also added together.
 \subsubsection{Linearly Dependent Forms}
-If \(F\left( x \right)\) is similar to any homogeneous solution, then by
-\textit{definition} of a homogeneous solution, the solution will be
+If \(F\left( x \right)\) is similar to any homogeneous solution, then
+by \textit{definition} of a homogeneous solution, the solution will be
 \(0\). Hence, \(y_P\) must be multiplied by \(x\) to ensure that the
 particular solution is linearly independent to the homogeneous
 solutions, in order to form a \textit{fundamental set of solutions}.
@@ -1257,5 +1191,174 @@ equals 0. Therefore, in an RLC circuit, with a voltage source supplying
     v\left( t \right) - iR - L \odv{i}{t} - \frac{q}{C} & = 0                  \\
     L \odv[2]{q}{t} + R\odv{q}{t} + \frac{1}{C}q        & = v\left( t \right).
 \end{align*}
+\begin{appendix}
+    \section{Integration Techniques}
+    \subsection{Table of Derivatives}
+    Let \(f\left( x \right)\) be a function, and \(a\in\R\) be a
+    constant.
+    \begin{table}[H]
+        \renewcommand*{\arraystretch}{1.5}
+        \centering
+        \begin{tabular}{c c}
+            \toprule
+            \(f\)                                                              & \(\odv{f}{x}\)                                   \\
+            \midrule
+            \(x^a\)                                                            & \(a x^{a-1}\)                                    \\
+            \(\sqrt{x}\)                                                       & \(\displaystyle \frac{1}{2\sqrt{x}}\)            \\
+            \(a^x\)                                                            & \(\ln{\left(a\right)} a^x\)                      \\
+            \(e^x\)                                                            & \(e^x\)                                          \\
+            \(\log_a{\left(x\right)}, \: a\in \R\backslash\left\{ 0 \right\}\) & \(\displaystyle \frac{1}{x\ln{\left(a\right)}}\) \\[8pt]
+            \(\ln{\left(x\right)}\)                                            & \(\displaystyle \frac{1}{x}\)                    \\[5pt]
+            \bottomrule
+        \end{tabular}
+        \begin{tabular}{c c}
+            \toprule
+            \(f\)                                                         & \(\odv{f}{x}\)                                                            \\
+            \midrule
+            \(a\)                                                         & \(0\)                                                                     \\
+            \(x\)                                                         & \(1\)                                                                     \\
+            \(a_1 u\left( x \right) \pm a_2 v\left( x \right)\)           & \(\displaystyle a_1\odv{u}{x} \pm a_2\odv{v}{x}\)                         \\[8pt]
+            \(u\left( x \right)v\left( x \right)\)                        & \(\displaystyle \odv{u}{x}v + u\odv{v}{x}\)                               \\[10pt]
+            \(\displaystyle \frac{u\left( x \right)}{v\left( x \right)}\) & \(\displaystyle \frac{\odv{u}{x}v - u\odv{v}{x}}{{v\left( x \right)}^2}\) \\[8pt]
+            \(u\bigl(v\left(x \right) \bigr)\)                            & \(\displaystyle \odv{u}{v}\odv{v}{x}\)                                    \\[5pt]
+            \bottomrule
+        \end{tabular}
+    \end{table}
+    \begin{table}[H]
+        \renewcommand*{\arraystretch}{1.5}
+        \centering
+        \begin{tabular}{c c}
+            \toprule
+            \(f\)                       & \(\odv{f}{x}\)                                       \\
+            \midrule
+            \(\sin{\left( ax \right)}\) & \(a\cos{\left( ax \right)}\)                         \\
+            \(\cos{\left( ax \right)}\) & \(-a\sin{\left( ax \right)}\)                        \\
+            \(\tan{\left( ax \right)}\) & \(a\sec^2{\left( ax \right)}\)                       \\
+            \(\cot{\left( ax \right)}\) & \(-a\csc^2{\left( ax \right)}\)                      \\
+            \(\sec{\left( ax \right)}\) & \(a\sec{\left( ax \right)}\tan{\left( ax \right)}\)  \\
+            \(\csc{\left( ax \right)}\) & \(-a\csc{\left( ax \right)}\cot{\left( ax \right)}\) \\[5pt]
+            \bottomrule
+        \end{tabular}
+        \begin{tabular}{c c}
+            \toprule
+            \(f\)                          & \(\odv{f}{x}\)                                  \\
+            \midrule
+            \(\arcsin{\left( ax \right)}\) & \(\displaystyle  \frac{a}{\sqrt{1-a^2x^2}}\)    \\[8pt]
+            \(\arccos{\left( ax \right)}\) & \(\displaystyle -\frac{a}{\sqrt{1-a^2x^2}}\)    \\[8pt]
+            \(\arctan{\left( ax \right)}\) & \(\displaystyle  \frac{a}{1+a^2x^2}\)           \\[8pt]
+            \(\arccot{\left( ax \right)}\) & \(\displaystyle -\frac{a}{1+a^2x^2}\)           \\[8pt]
+            \(\arcsec{\left( ax \right)}\) & \(\displaystyle  \frac{1}{x\sqrt{a^2x^2 - 1}}\) \\[8pt]
+            \(\arccsc{\left( ax \right)}\) & \(\displaystyle -\frac{1}{x\sqrt{a^2x^2 - 1}}\) \\[8pt]
+            \bottomrule
+        \end{tabular}
+    \end{table}
+    \begin{table}[H]
+        \renewcommand*{\arraystretch}{1.5}
+        \centering
+        \hspace*{-1cm}
+        \begin{tabular}{c c}
+            \toprule
+            \(f\)                        & \(\odv{f}{x}\)                                        \\
+            \midrule
+            \(\sinh{\left( ax \right)}\) & \(a\cosh{\left( ax \right)}\)                         \\
+            \(\cosh{\left( ax \right)}\) & \(a\sinh{\left( ax \right)}\)                         \\
+            \(\tanh{\left( ax \right)}\) & \(a\sech^2{\left( ax \right)}\)                       \\
+            \(\coth{\left( ax \right)}\) & \(-a\csch^2{\left( ax \right)}\)                      \\
+            \(\sech{\left( ax \right)}\) & \(-a\sech{\left( ax \right)}\tan{\left( ax \right)}\) \\
+            \(\csch{\left( ax \right)}\) & \(-a\csch{\left( ax \right)}\cot{\left( ax \right)}\) \\[5pt]
+            \bottomrule
+        \end{tabular}
+        \begin{tabular}{c c}
+            \toprule
+            \(f\)                           & \(\odv{f}{x}\)                              \\
+            \midrule
+            \(\arcsinh{\left( ax \right)}\) & \(\displaystyle \frac{a}{\sqrt{1+a^2x^2}}\) \\[8pt]
+            \(\arccosh{\left( ax \right)}\) & \(\displaystyle \frac{a}{\sqrt{1-a^2x^2}}\) \\[8pt]
+            \(\arctanh{\left( ax \right)}\) & \(\displaystyle \frac{a}{1-a^2x^2}\)        \\[8pt]
+            \bottomrule
+        \end{tabular}
+        \begin{tabular}{c c}
+            \toprule
+            \(f\)                           & \(\odv{f}{x}\)                                                            \\
+            \midrule
+            \(\arccoth{\left( ax \right)}\) & \(\displaystyle  \frac{a}{1-a^2x^2}\)                                     \\[8pt]
+            \(\arcsech{\left( ax \right)}\) & \(\displaystyle -\frac{1}{a\left( 1+ax \right)\sqrt{\frac{1-ax}{1+ax}}}\) \\[8pt]
+            \(\arccsch{\left( ax \right)}\) & \(\displaystyle -\frac{1}{ax^2\sqrt{1+\frac{1}{a^2x^2}}}\)                \\[8pt]
+            \bottomrule
+        \end{tabular}
+        \hspace*{-1cm}
+        \caption{Derivatives of Elementary Functions}
+    \end{table}
+    \subsection{Trigonometric Identities}
+    \subsubsection{Pythagorean Identities}
+    \begin{equation*}
+        \sin^2{\left( x \right)} + \cos^2{\left( x \right)} = 1
+    \end{equation*}
+    Dividing by either the sine or cosine function gives:
+    \begin{align*}
+        \tan^2{\left( x \right)} + 1 & = \sec^2{\left( x \right)} \\
+        1 + \cot^2{\left( x \right)} & = \csc^2{\left( x \right)}
+    \end{align*}
+    \subsubsection{Double-Angle Identities}
+    \begin{align*}
+        \sin{\left( 2x \right)} & = 2\sin{\left( x \right)}\cos{\left( x \right)}              & \csc{\left( 2x \right)} & = \frac{\sec{\left( x \right)}\csc{\left( x \right)}}{2}                                                     \\[5pt]
+        \cos{\left( 2x \right)} & = \cos^2{\left( x \right)} - \sin^2{\left( x \right)}        & \sec{\left( 2x \right)} & = \frac{\sec^2{\left( x \right)}\csc^2{\left( x \right)}}{\csc^2{\left( x \right)}-\sec^2{\left( x \right)}} \\[5pt]
+        \tan{\left( 2x \right)} & = \frac{2\tan{\left( x \right)}}{1-\tan^2{\left( x \right)}} & \cot{\left( 2x \right)} & = \frac{\cot^2{\left( x \right)}-1}{2\cot{\left( x \right)}}
+    \end{align*}
+    \subsubsection{Power Reducing Identities}
+    \begin{align*}
+        \sin^2{\left( x \right)} & = \frac{1-\cos{\left( 2x \right)}}{2}                         & \csc^2{\left( x \right)} & = \frac{2}{1-\cos{\left( 2x \right)}}                         \\[5pt]
+        \cos^2{\left( x \right)} & = \frac{1+\cos{\left( 2x \right)}}{2}                         & \sec^2{\left( x \right)} & = \frac{2}{1+\cos{\left( 2x \right)}}                         \\[5pt]
+        \tan^2{\left( x \right)} & = \frac{1-\cos{\left( 2x \right)}}{1+\cos{\left( 2x \right)}} & \cot^2{\left( x \right)} & = \frac{1+\cos{\left( 2x \right)}}{1-\cos{\left( 2x \right)}}
+    \end{align*}
+    \subsection{Partial Fractions}
+    \begin{definition}[Partial Fraction Decomposition]
+        \textbf{Partial fraction decomposition} is a \linebreak method where
+        a rational function \(\displaystyle \frac{P\left( x \right)}{Q\left( x \right)}\) is rewritten
+        as a sum of fraction.
+    \end{definition}
+    \begin{table}[H]
+        \renewcommand*{\arraystretch}{1.5}
+        \centering
+        \begin{tabular}{c c}
+            \toprule
+            \textbf{Factor in denominator}            & \textbf{Term in partial fraction decomposition}                                                                                                    \\
+            \midrule
+            \(ax+b\)                                  & \(\displaystyle \frac{A}{ax+b}\)                                                                                                                   \\[10pt]
+            \(\left(ax+b\right)^k, \: k \in \N\)      & \(\displaystyle \frac{A_1}{ax+b} + \frac{A_2}{\left( ax+b \right)^2} + \cdots + \frac{A_k}{\left( ax+b \right)^k}\)                                \\[10pt]
+            \(ax^2+bx+c\)                             & \(\displaystyle \frac{A}{ax^2+bx+c}\)                                                                                                              \\[10pt]
+            \(\left(ax^2+bx+c\right)^k, \: k \in \N\) & \(\displaystyle \frac{A_1x+B_1}{ax^2+bx+c} + \frac{A_2x+B_2}{\left( ax^2+bx+c \right)^2} + \cdots + \frac{A_k x+B_k}{\left( ax^2+bx+c \right)^k}\) \\[10pt]
+            \bottomrule
+        \end{tabular}
+        \caption{Partial Fraction Forms}
+    \end{table}
+    \subsection{Integration by Parts}
+    \begin{theorem}
+        \begin{equation*}
+            \int u\left( x \right) \odv{v\left( x \right)}{x} \odif{x} = u\left( x \right) v\left( x \right) - \int v\left( x \right) \odv{u\left( x \right)}{x} \odif{x} \implies \int u \odif{v} = uv - \int v \odif{u}
+        \end{equation*}
+    \end{theorem}
+    \subsection{Integration by Substitution}
+    \begin{theorem}
+        \begin{equation*}
+            \int f\bigl(g\left( x \right)\bigr)\odv{g\left( x \right)}{x} \odif{x} = \int f\left( u \right) \odif{u}, \: \text{where } u = g\left( x \right)
+        \end{equation*}
+    \end{theorem}
+    \subsection{Trigonometric Substitutions}
+    \begin{table}[H]
+        \renewcommand*{\arraystretch}{1.5}
+        \centering
+        \begin{tabular}{c c c c}
+            \toprule
+            \textbf{Form}                 & \textbf{Substitution}                                      & \textbf{Result}                      & \textbf{Domain}                                                                        \\
+            \midrule
+            \(\left(a^2-b^2x^2\right)^n\) & \(\displaystyle x=\frac{a}{b}\sin{\left( \theta \right)}\) & \(a^2\cos^2{\left( \theta \right)}\) & \(\theta\in \left[ -\frac{\pi}{2},\: \frac{\pi}{2} \right]\)                           \\[8pt]
+            \(\left(a^2+b^2x^2\right)^n\) & \(\displaystyle x=\frac{a}{b}\tan{\left( \theta \right)}\) & \(a^2\sec^2{\left( \theta \right)}\) & \(\theta\in \left( -\frac{\pi}{2},\: \frac{\pi}{2} \right)\)                           \\[8pt]
+            \(\left(b^2x^2-a^2\right)^n\) & \(\displaystyle x=\frac{a}{b}\sec{\left( \theta \right)}\) & \(a^2\tan^2{\left( \theta \right)}\) & \(\theta\in \left[ 0,\: \frac{\pi}{2} \right) \cup \left(\frac{\pi}{2},\: \pi\right]\) \\
+            \bottomrule
+        \end{tabular}
+        \caption{Trigonometric substitutions for various forms.}
+    \end{table}
+\end{appendix}
 \end{document}
 
